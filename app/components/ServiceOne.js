@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
+
 
 
 const ServiceOne = () => {
@@ -34,7 +35,7 @@ const ServiceOne = () => {
               <div className="service-one__item" style={{ '--accent-color': item.accentColor }}>
                 <div className="service-one__item__image-wrapper">
                   <div className="service-one__item__image kidearn-tilt" data-tilt-options={{ glare: false, maxglare: 0, maxtilt: 7, speed: 700, scale: 1 }}>
-                    <Image src={`/images/${item.image}`} alt="kidearn" width={150} height={150} />
+                    <ExportedImage unoptimized={true} src={`/images/${item.image}`} alt="kidearn" width={150} height={150} />
                   </div>
                   <div className="service-one__item__ball"></div>
                 </div>

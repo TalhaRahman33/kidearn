@@ -1,0 +1,221 @@
+.loginPageForm {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+  
+  
+  .formInputBox {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .formLabel {
+    flex: 0 0 150px; /* Adjust this value to fit your design */
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+  }
+  
+  .loginPageInput {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #faf5f2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loginPageInput:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loginPageMeta {
+    margin-bottom: 20px;
+  }
+  
+  .loginPageCheckedBox input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .kidearnBtn {
+    background-color: #fe6367;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .kidearnBtn:hover {
+    background-color: #ff4a4a;
+  }
+  
+
+
+
+  /* ******************************************************* */
+
+
+
+  .formInputBox {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .formLabel {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .formSelect {
+    width: 100%;
+    padding: 15px;
+
+    border-radius: 5px;
+    background-color: #faf5f2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    font-size: 14px;
+  }
+  
+  .formSelect:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: 0 0 5px #00000033; 
+  }
+  
+
+
+  /* ******************************************* */
+
+
+  .formTextarea {
+    width: 100%;
+    padding: 10px;
+
+    border-radius: 5px;
+    background-color: #faf5f2; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    font-size: 14px; 
+    resize: vertical; 
+  }
+  
+  .formTextarea:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: 0 0 5px #00000033; 
+  }
+  
+
+
+
+  /* ************************************************ */
+
+
+  .customFileInput {
+    width: 100%;
+    padding: 10px;
+ 
+    border-radius: 5px;
+    background-color: #faf5f2; /* Same background color as input fields */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Same shadow as input fields */
+    font-size: 14px; /* Adjust font size if needed */
+    cursor: pointer;
+  }
+  
+  .customFileInput::file-selector-button {
+    background-color: #fe6367; /* Match button color */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .customFileInput::file-selector-button:hover {
+    background-color: #ff4a4a; /* Match hover color */
+  }
+  
+
+
+  /* ///////////////////////////////////////////// */
+
+
+
+  /* Centering the title */
+.loginPageTitle {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  /* Centering the button */
+  .loginPageFormBtnBox {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+
+  /* ***************************************************** */
+
+
+  .loginPageFormBtnBox {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .kidearnBtn {
+    background-color: #fe6367; /* Primary button color */
+    color: white;
+    padding: 12px 24px; /* Increase padding for a more balanced look */
+    border-radius: 8px; /* More rounded corners */
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Slightly larger font size */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 200px; /* Set a fixed width for the button */
+    max-width: 100%; /* Ensure the button doesn't exceed container width */
+  }
+  
+  .kidearnBtn:hover {
+    background-color: #ff4a4a; /* Darker shade for hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  .kidearnBtn:active {
+    background-color: #e63c3c; /* Even darker shade when button is clicked */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Shadow to appear pressed */
+  }
+
+  
+
+
+  /* *********************************************************** */
+
+
+
+ 
+.centered-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .centered-container h1 {
+    font-size: 2.5rem; /* Adjust font size as needed */
+    color: #333; /* Adjust text color as needed */
+    text-align: center; /* Center text within the element */
+  }

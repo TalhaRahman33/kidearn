@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" dir="rtl">
+    <html lang="ar">
 
       <head>
       <meta charSet="UTF-8" />
