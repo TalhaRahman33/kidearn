@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.pricing-one__card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom-btn {
+  /* padding: 12px 24px; */
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-bottom: 10px;
+  background-color: #F25334; 
+  color: #ffffff; 
+  font-size: 16px; 
+  font-weight: bold; 
+  border: 2px solid transparent; 
+  border-radius: 8px; 
+  text-align: center; 
+  text-decoration: none; 
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
+  cursor: pointer;
+}
+
+.white{
+  color: black;
+}
+
+
+
+
+/* **************************************Whatsapp button ************************************* */
+
+.float-whatsapp-button{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:35px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+/* ***********************************Phone Button ********************************** */
+.float-phone-button {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 105px; /* Adjusted to be slightly above the WhatsApp button */
+  right: 40px;
+  background-color: #1cc1e7; 
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+

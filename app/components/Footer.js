@@ -1,6 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import ExportedImage from 'next-image-export-optimizer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+
 
 const Footer = () => {
   return (
@@ -44,7 +48,7 @@ const Footer = () => {
                 <div className="footer-widget footer-widget--about">
                   <Link href="/">
                     <ExportedImage 
-                      src="/images/logo-light.png" 
+                      src="/images/logo12.webp" 
                       width={160} 
                       height={56} 
                       alt="Kidearn HTML Template" 
@@ -66,19 +70,19 @@ const Footer = () => {
                     </li>
                   </ul>
                   <div className="footer-widget__social">
-                    <Link href="https://twitter.com" aria-label="Twitter">
+                    <Link href="#" aria-label="Twitter">
                       <i className="fab fa-twitter" aria-hidden="true"></i>
                       <span className="sr-only">Twitter</span>
                     </Link>
-                    <Link href="https://facebook.com" aria-label="Facebook">
-                      <i className="fab fa-facebook" aria-hidden="true"></i>
-                      <span className="sr-only">Facebook</span>
+                    <Link href="https://www.snapchat.com/add/baytummi" aria-label="Facebook">
+                      <i className="fab fa-snapchat" aria-hidden="true"></i>
+                      <span className="sr-only">Snapchat</span>
                     </Link>
-                    <Link href="https://pinterest.com" aria-label="Pinterest">
+                    <Link href="info@baytummi.com" aria-label="Pinterest">
                       <i className="fab fa-pinterest-p" aria-hidden="true"></i>
                       <span className="sr-only">Pinterest</span>
                     </Link>
-                    <Link href="https://instagram.com" aria-label="Instagram">
+                    <Link href="https://www.instagram.com/baytummi" aria-label="Instagram">
                       <i className="fab fa-instagram" aria-hidden="true"></i>
                       <span className="sr-only">Instagram</span>
                     </Link>
@@ -178,6 +182,26 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        <Link
+  href="https://wa.me/966533466600"
+  className="float-whatsapp-button"
+  target="_blank"
+>
+  <FontAwesomeIcon icon={faWhatsapp} className="" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</Link>
+
+<Link
+  href="tel:+966533466600"
+  className="float-phone-button"
+  target="_blank"
+>
+  <i className="icon-call " />
+</Link>
+
+
+
         <div className="main-footer__bottom">
           <div className="container">
             <div className="main-footer__bottom__inner">

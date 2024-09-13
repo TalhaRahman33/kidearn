@@ -1,12 +1,70 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Footer1 from "../components/Footer1";
 import Link from "next/link";
 
 const ContactPage = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://backend.selsla.net/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            subject,
+            message,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        setShowSuccess(true);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setSubject("");
+        setMessage("");
+        setShowError(false); // Hide error message if any
+      } else {
+        setErrorMessage(data.message || "Message sending failed");
+        setShowError(true);
+        setShowSuccess(false); // Hide success message if any
+      }
+    } catch (error) {
+      setErrorMessage(error.message);
+      setShowError(true);
+      setShowSuccess(false); // Hide success message if any
+    }
+  };
+
   return (
-    <div>
+    <div className='custom-cursor'>
+
+<div className="custom-cursor__cursor"></div>
+<div className="custom-cursor__cursor-two"></div>
+
+    <div className="page-wrapper">
+
       <Header />
 
       <section className="page-header">
@@ -33,49 +91,72 @@ const ContactPage = () => {
               Feel free to write us <br /> anytime
             </h3>
           </div>
-          <form
-            className="contact-one__form contact-form-validated form-one"
-            action="inc/sendemail.php"
-          >
+
+          {showSuccess && (
+            <div className="alert alert-success text-center">
+              Your message has been sent successfully!
+            </div>
+          )}
+          {showError && (
+            <div className="alert alert-danger text-center">{errorMessage}</div>
+          )}
+
+          <form className="contact-one__form form-one" onSubmit={handleSubmit}>
             <div className="form-one__group">
-              <div className="form-one__control ">
-                <input type="text" name="name" placeholder="Your name" />
+              <div className="form-one__control">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder=" اسمك "
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
               </div>
-              <div className="form-one__control ">
-                <input type="email" name="email" placeholder="Email address" />
+              <div className="form-one__control">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder=" بريدك الالكتروني "
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
               </div>
-              <div className="form-one__control ">
-                <input type="text" name="phone" placeholder="Your phone" />
+              <div className="form-one__control">
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="  رقم هاتفك "
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
               </div>
-              <div className="form-one__control ">
-                <input type="text" name="phone" placeholder="Select Program" />
+              <div className="form-one__control">
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="  الموضوع "
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                  required
+                />
               </div>
-              <div className="form-one__control ">
-                <div className="form-one__control__select">
-                  <label className="sr-only" htmlFor="language-select">
-                    Select programs
-                  </label>
-                  <select className="selectpicker" id="language-select">
-                    <option value="Select programs">Select programs</option>
-                    <option value="Select programs 01">
-                      Select programs 01
-                    </option>
-                    <option value="Select programs 02">
-                      Select programs 02
-                    </option>
-                  </select>
-                </div>
-              </div>
+
               <div className="form-one__control form-one__control--full">
                 <textarea
                   name="message"
-                  placeholder="Write a message"
-                  defaultValue={""}
+                  placeholder="  اكتب رسالتك …  "
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
                 />
               </div>
+
               <div className="form-one__control form-one__control--full text-center">
                 <button type="submit" className="kidearn-btn kidearn-btn--xl">
-                  <span>Send a Message</span>
+                  <span> ارسل رسالتك </span>
                 </button>
               </div>
             </div>
@@ -130,7 +211,8 @@ const ContactPage = () => {
           <div className="google-map google-map__contact">
             <iframe
               title="template google map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
+              src="
+https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.499336554684!2d46.6695923!3d24.8125918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee3888003ec6b%3A0xd9b571bed949b0e0!2z2YXYsdmD2LIg2KjZitiqINij2YXZiiAtINi22YrYp9mB2Kkg2KPYt9mB2KfZhA!5e0!3m2!1sen!2s!4v1725884889986!5m2!1sen!2s"
               className="map__contact"
               allowFullScreen=""
             />
@@ -140,6 +222,9 @@ const ContactPage = () => {
 
       <Footer />
       <Footer1 />
+
+      </div>
+
     </div>
   );
 };

@@ -5,11 +5,20 @@ import Footer1 from '../components/Footer1';
 import ExportedImage from 'next-image-export-optimizer';
 import Link from 'next/link';
 import TestimonialSection from '../components/TestimonialSection';
+import Topbar from '../components/Topbar';
 
 
 const Page = () => {
   return (
-    <div>
+    <div className='custom-cursor'>
+
+<div className="custom-cursor__cursor"></div>
+<div className="custom-cursor__cursor-two"></div>
+
+<div class="page-wrapper">
+
+<Topbar />
+
       <Header />
 
       <section className="page-header">
@@ -311,6 +320,8 @@ const Page = () => {
 
       <Footer />
       <Footer1 />
+
+</div>
     </div>
   );
 };

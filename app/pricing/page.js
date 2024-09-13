@@ -6,7 +6,13 @@ import Link from 'next/link'
 
 const page = () => {
   return (
-    <div>
+    <div className='custom-cursor'>
+
+    <div className="custom-cursor__cursor"></div>
+    <div className="custom-cursor__cursor-two"></div>
+    
+        <div className="page-wrapper">
+
       <Header />
 
 
@@ -267,6 +273,8 @@ const page = () => {
 
       <Footer />
       <Footer1 />
+
+      </div>
     </div>
   )
 }

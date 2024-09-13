@@ -6,6 +6,7 @@ import ExportedImage from "next-image-export-optimizer";
 const Header = () => {
   return (
     <div>
+
       <header className="main-header sticky-header sticky-header--normal">
         <div className="container-fluid">
           <div className="main-header__inner">
@@ -32,7 +33,7 @@ const Header = () => {
                 </li>
 
                 <li className="dropdown">
-                  <Link href="/pricing">الأسعار</Link>
+                  <Link href="/register">الأسعار</Link>
                 </li>
 
                 <li className="dropdown">
@@ -67,9 +68,11 @@ const Header = () => {
                   </span>
                 </span>
               </a>
+
               <Link href="/contact" className="kidearn-btn main-header__btn">
                 <span>Book a Visit</span>
               </Link>
+              
             </div>
           </div>
         </div>

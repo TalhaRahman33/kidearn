@@ -487,19 +487,21 @@
 
   function thmOwlInit() {
     // owl slider
-    let kidearnowlCarousel = $(".kidearn-owl__carousel");
-    if (kidearnowlCarousel.length) {
-      kidearnowlCarousel.each(function () {
-        let elm = $(this);
-        let options = elm.data("owl-options");
-        let thmOwlCarousel = elm.owlCarousel(
-          "object" === typeof options ? options : JSON.parse(options)
-        );
-        elm.find("button").each(function () {
-          $(this).attr("aria-label", "carousel button");
-        });
-      });
-    }
+    // let kidearnowlCarousel = $(".kidearn-owl__carousel");
+
+    // if (kidearnowlCarousel.length) {
+    //   kidearnowlCarousel.each(function () {
+    //     let elm = $(this);
+    //     let options = elm.data("owl-options");
+    //     let thmOwlCarousel = elm.owlCarousel(
+    //       "object" === typeof options ? options : JSON.parse(options)
+    //     );
+    //     elm.find("button").each(function () {
+    //       $(this).attr("aria-label", "carousel button");
+    //     });
+    //   });
+    // }
+    
   }
 
   function thmTinyInit() {
