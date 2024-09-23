@@ -1,0 +1,170 @@
+.Header-NavContainer li:hover {
+    color: #F25334;
+}
+
+.home-li {
+    color: #F25334;
+}
+
+.Header-NavContainer li {
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        display: none;
+    }
+}
+
+.headerContainer {
+    padding: 0px 60px;
+}
+
+@media (max-width: 1024px) {
+    .headerContainer {
+        padding: 0px 15px;
+    }
+}
+
+
+
+
+.hamburgerContainer {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .hamburgerContainer {
+        display: flex;
+    }
+}
+
+.hamburgerIcon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 1024px) {
+    .hamburgerIcon {
+        display: flex;
+    }
+}
+
+
+.hamburgerIcon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.headerNavContainer {
+    list-style-type: none;
+    padding: 0;
+}
+
+.headerNavContainer li {
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.headerContactInfo {
+    display: flex;
+}
+
+@media (max-width: 425px) {
+    .headerContactInfo {
+        display: none;
+    }
+}
+
+.headerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 425px) {
+    .headerButton {
+        display: none;
+    }
+}
+
+.CallIcon {
+    display: flex;
+
+}
+
+@media (max-width: 425px) {
+    .CallIcon {
+        display: none;
+    }
+}
+
+.hamburger-container {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .hamburger-container {
+        display: flex;
+    }
+}
+
+/* Default link styles */
+.nav-link {
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Active link styles */
+.nav-link.active {
+    color: #F25334;
+}
+
+.ToggleButton {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .ToggleButton {
+        display: flex;
+    }
+}
+
+.togglemenuUL li {
+    padding: 5px;
+    border-bottom: thin solid rgba(255, 255, 255, 0.2);
+    width: 340px;
+
+}

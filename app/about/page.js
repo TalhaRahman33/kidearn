@@ -6,6 +6,8 @@ import ExportedImage from 'next-image-export-optimizer';
 import Link from 'next/link';
 import TestimonialSection from '../components/TestimonialSection';
 import Topbar from '../components/Topbar';
+import TeamTwoSection from '../components/TeamTwoSection';
+import ClientCarousel from '../components/about/ClientCarousel';
 
 
 const Page = () => {
@@ -316,6 +318,11 @@ const Page = () => {
 
 
     <TestimonialSection />
+
+    <TeamTwoSection />       
+
+
+    <ClientCarousel />
  
 
       <Footer />

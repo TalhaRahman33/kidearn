@@ -13,10 +13,16 @@
 # Google Map
 # Client Carousel
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'YourFont';
+  src: url('/fonts/Janna-LT-Regular.ttf') format('opentype'); /* Adjusted to 'opentype' for OTF font */
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
-  --kidearn-font: "DM Sans", sans-serif;
-  --kidearn-heading-font: "Fredoka", serif;
-  --kidearn-special-font: "Schoolbell", cursive;
+  /* --kidearn-font: "DM Sans", sans-serif; */
+  /* --kidearn-heading-font: "Fredoka", serif; */
+  /* --kidearn-special-font: "Schoolbell", cursive; */
   --kidearn-text: #7E8185;
   --kidearn-text-rgb: 126, 129, 133;
   --kidearn-text-dark: #5F7999;
@@ -47,6 +53,7 @@
   --kidearn-letter-space: 0px;
   --kidearn-letter-space-xl: 0.2em;
 }
+
 
 /*--------------------------------------------------------------
 # Utility
@@ -255,7 +262,7 @@
 # Common
 --------------------------------------------------------------*/
 body {
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   color: var(--kidearn-text, #7E8185);
   font-size: 16px;
   line-height: 2.125;
@@ -289,7 +296,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   color: var(--kidearn-black, #0B2038);
 }
 @media (max-width: 575px) {
@@ -391,7 +398,7 @@ h6 {
   color: #fff;
   font-size: 14px;
   font-weight: 700;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   padding: 9.25px 30px;
   transition: 800ms;
   letter-spacing: 0;
@@ -510,7 +517,7 @@ h6 {
   margin: 0;
   font-size: 35px;
   color: var(--kidearn-black, #0B2038);
-  font-family: var(--kidearn-special-font, "Schoolbell", cursive);
+  font-family: "YourFont";
 }
 @media (min-width: 768px) {
   .block-title h3 {
@@ -546,7 +553,7 @@ h6 {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  font-family: "azino-icon";
+  font-family: "YourFont";
 }
 
 .preloader {
@@ -759,7 +766,7 @@ h6 {
 }
 .sec-title__tagline {
   margin: 0;
-  font-family: var(--kidearn-special-font, "Schoolbell", cursive);
+  font-family: "YourFont";
   color: var(--kidearn-base, #F25334);
   font-size: 20px;
   line-height: 1.2em;
@@ -2012,7 +2019,7 @@ h6 {
   color: var(--kidearn-black, #0B2038);
   font-weight: bold;
   line-height: 1.5em;
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   padding: 23px 30px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -2099,7 +2106,7 @@ h6 {
   font-weight: 500;
   margin-bottom: 16px;
   color: var(--kidearn-black, #0B2038);
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
 }
 .team-certificates-one__progress__bar {
   width: 100%;
@@ -2133,7 +2140,7 @@ h6 {
   color: var(--accent-color);
   font-size: 16px;
   margin: 0;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
 }
 .team-certificates-one__degree__year::before {
   content: "";
@@ -4146,7 +4153,7 @@ h6 {
 }
 .main-header__call__number {
   color: var(--kidearn-black, #0B2038);
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   font-weight: 400;
   background: linear-gradient(to left, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
   transition: all 500ms ease;
@@ -4472,7 +4479,7 @@ h6 {
   font-weight: 400;
   position: relative;
   transition: all 500ms ease;
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
 }
 .main-menu .main-menu__list > li.current > a,
 .main-menu .main-menu__list > li:hover > a {
@@ -4522,7 +4529,7 @@ h6 {
   font-size: 16px;
   line-height: 26px;
   color: var(--kidearn-text, #7E8185);
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   font-weight: 400;
   display: flex;
   padding: 5px 20px;
@@ -4684,7 +4691,7 @@ body.megamenu-popup-active .mobile-nav__content {
   font-size: 18px;
   color: var(--kidearn-black, #0B2038);
   font-weight: 700;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
 }
 @media (min-width: 992px) {
   .demo-one__title {
@@ -4926,7 +4933,7 @@ body.megamenu-popup-active .mobile-nav__content {
   font-weight: 400;
   line-height: 1;
   color: var(--kidearn-white, #fff);
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   margin: 0 0 2px;
 }
 .funfact-one__count .count-box {
@@ -5040,7 +5047,7 @@ body.megamenu-popup-active .mobile-nav__content {
   font-weight: 400;
   line-height: 1;
   color: var(--kidearn-white, #fff);
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   margin: 0;
 }
 .funfact-two__count .count-box {
@@ -5149,7 +5156,7 @@ body.megamenu-popup-active .mobile-nav__content {
   font-weight: 400;
   line-height: 1;
   color: var(--kidearn-black, #0B2038);
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   margin: 0 0 2px;
 }
 .funfact-three__count .count-box {
@@ -6025,7 +6032,7 @@ body.megamenu-popup-active .mobile-nav__content {
   line-height: 23px;
   font-weight: 400;
   text-align: center;
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   background-color: var(--kidearn-base, #F25334);
   -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 105"><path d="M124.889 53.6927C112.631 26.103 86.0077 4.68518 55.6135 0.545465C33.4972 -2.46523 13.0867 7.00174 4.12313 28.5868C-11.7805 66.923 20.8713 103.118 58.4815 102.24C67.7042 102.023 75.7648 99.9989 83.6246 95.1567C90.8155 90.7326 100.047 82.5034 108.927 82.1187C115.549 81.826 117.129 85.0876 120.733 90.1556C122.773 93.0325 127.28 100.676 129.864 105C134.095 87.4125 131.837 69.3483 124.889 53.6927Z"/></svg>');
   mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 105"><path d="M124.889 53.6927C112.631 26.103 86.0077 4.68518 55.6135 0.545465C33.4972 -2.46523 13.0867 7.00174 4.12313 28.5868C-11.7805 66.923 20.8713 103.118 58.4815 102.24C67.7042 102.023 75.7648 99.9989 83.6246 95.1567C90.8155 90.7326 100.047 82.5034 108.927 82.1187C115.549 81.826 117.129 85.0876 120.733 90.1556C122.773 93.0325 127.28 100.676 129.864 105C134.095 87.4125 131.837 69.3483 124.889 53.6927Z"/></svg>');
@@ -6496,7 +6503,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .sidebar__categories li a::before {
   content: "\f101";
-  font-family: "Font Awesome 5 Free";
+  font-family: "YourFont";
   font-weight: 900;
   transition: all 500ms ease;
   font-size: 16px;
@@ -6565,7 +6572,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .sidebar__comments__title {
   margin: 0;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
@@ -6828,7 +6835,7 @@ body.megamenu-popup-active .mobile-nav__content {
   background-color: var(--kidearn-gray, #FAF5F2);
   padding-right: 30px;
   padding-left: 30px;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   font-size: 16px;
   color: var(--kidearn-text, #7E8185);
   border: 1px solid var(--kidearn-border-color, #FCE9DD);
@@ -6883,7 +6890,7 @@ body.megamenu-popup-active .mobile-nav__content {
   line-height: 30px;
   border: none;
   outline: none;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   padding: 0;
   text-align: center;
   background-color: transparent;
@@ -6901,7 +6908,7 @@ body.megamenu-popup-active .mobile-nav__content {
   position: relative;
   display: block;
   background-color: var(--kidearn-gray, #FAF5F2);
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   float: left;
   text-align: center;
   border: none;
@@ -6948,7 +6955,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .product__categories ul li a::before {
   content: "\f101";
-  font-family: "Font Awesome 5 Free";
+  font-family: "YourFont";
   font-weight: 900;
   transition: all 500ms ease;
   font-size: 16px;
@@ -6985,7 +6992,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .product__showing-text {
   margin: 0;
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   font-weight: 700;
   font-size: 20px;
 }
@@ -7002,7 +7009,7 @@ body.megamenu-popup-active .mobile-nav__content {
   position: relative;
   display: block;
   width: 270px !important;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
 }
 @media (max-width: 360px) {
   .product__showing-sort .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
@@ -7041,7 +7048,7 @@ body.megamenu-popup-active .mobile-nav__content {
   top: 0;
   bottom: 0;
   left: 30px;
-  font-family: "Font Awesome 5 Free";
+  font-family: "YourFont";
   content: "\f107";
   font-weight: 900;
   font-size: 16px;
@@ -7273,7 +7280,7 @@ body.megamenu-popup-active .mobile-nav__content {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   margin-bottom: 17px;
 }
 .product-details__title {
@@ -7286,7 +7293,7 @@ body.megamenu-popup-active .mobile-nav__content {
   color: var(--kidearn-base, #F25334);
   font-weight: 600;
   margin: 0 28px 0 0;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
 }
 .product-details__review {
   position: relative;
@@ -7355,7 +7362,7 @@ body.megamenu-popup-active .mobile-nav__content {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   color: var(--kidearn-black, #0B2038);
   padding: 0 46px;
   outline: none;
@@ -7532,7 +7539,7 @@ body.megamenu-popup-active .mobile-nav__content {
   display: inline-block;
   text-transform: inherit;
   color: var(--kidearn-base, #F25334);
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   font-weight: 500;
   letter-spacing: 0;
   margin: 0 7px 0 0;
@@ -7632,7 +7639,7 @@ body.megamenu-popup-active .mobile-nav__content {
   line-height: 30px;
   font-weight: 700;
   padding: 0 0 24px;
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   border: none;
   background-color: transparent;
   border-bottom: 1px solid var(--kidearn-border-color, #FCE9DD) !important;
@@ -7713,7 +7720,7 @@ body.megamenu-popup-active .mobile-nav__content {
   outline: none;
   font-size: 16px;
   color: var(--kidearn-text, #7E8185);
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   display: block;
   font-weight: 500;
   margin-left: 20px;
@@ -7745,7 +7752,7 @@ body.megamenu-popup-active .mobile-nav__content {
   display: block;
   font-size: 20px;
   color: var(--kidearn-black, #0B2038);
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   font-weight: 400;
   margin: 0 0 0px;
 }
@@ -7761,14 +7768,14 @@ body.megamenu-popup-active .mobile-nav__content {
   margin-top: 15px;
 }
 .cart-page__cart-total li:last-child span:not(.cart-page__cart-total-amount) {
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
 }
 .cart-page__cart-total-amount {
   font-size: 18px;
   color: var(--kidearn-text, #7E8185);
   font-weight: 500;
   text-transform: inherit;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   display: inline-block;
   min-width: 172px;
 }
@@ -7873,7 +7880,7 @@ body.megamenu-popup-active .mobile-nav__content {
   line-height: 24px;
   display: inline-block;
   color: var(--kidearn-white, #fff);
-  font-family: "Font Awesome 5 Free";
+  font-family: "YourFont";
   content: "\f00c";
   font-size: 10px;
   font-weight: 900;
@@ -7920,7 +7927,7 @@ body.megamenu-popup-active .mobile-nav__content {
   outline: none;
   font-size: 16px;
   color: var(--kidearn-text, #7E8185);
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   display: block;
   font-weight: 500;
   border-radius: 4px;
@@ -7929,7 +7936,7 @@ body.megamenu-popup-active .mobile-nav__content {
   position: relative;
   display: block;
   width: 100% !important;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
 }
 .checkout-page__input-box .bootstrap-select > .dropdown-toggle::after {
   display: none;
@@ -7959,7 +7966,7 @@ body.megamenu-popup-active .mobile-nav__content {
   top: 0;
   bottom: 0;
   left: 30px;
-  font-family: "Font Awesome 5 Free";
+  font-family: "YourFont";
   content: "\f107";
   font-weight: 900;
   font-size: 12px;
@@ -7993,7 +8000,7 @@ body.megamenu-popup-active .mobile-nav__content {
   height: 176px;
   width: 100%;
   background-color: var(--kidearn-gray, #FAF5F2);
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   padding: 20px 30px 30px;
   border: none;
   outline: none;
@@ -8028,7 +8035,7 @@ body.megamenu-popup-active .mobile-nav__content {
   line-height: 24px;
   display: inline-block;
   color: var(--kidearn-white, #fff);
-  font-family: "Font Awesome 5 Free";
+  font-family: "YourFont";
   content: "\f00c";
   font-size: 10px;
   font-weight: 900;
@@ -8076,7 +8083,7 @@ body.megamenu-popup-active .mobile-nav__content {
   font-size: 20px;
   color: var(--kidearn-black, #0B2038);
   font-weight: 700;
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   margin: 0;
   padding: 15.5px 0;
   border: none;
@@ -8111,7 +8118,7 @@ body.megamenu-popup-active .mobile-nav__content {
   padding-bottom: 0;
 }
 .checkout-page__order-table tbody tr:last-child td {
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   font-size: 20px;
   color: var(--kidearn-black, #0B2038);
   font-weight: 700;
@@ -8156,7 +8163,7 @@ body.megamenu-popup-active .mobile-nav__content {
   background-color: var(--kidearn-white, #fff);
   border-radius: 50%;
   margin-left: 10px;
-  font-family: "Font Awesome 5 Free";
+  font-family: "YourFont";
   font-weight: 900;
   font-size: 12px;
   display: flex;
@@ -8304,7 +8311,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .login-page__checked-box label span:before {
   content: "\f00c";
-  font-family: "Font Awesome 5 Free";
+  font-family: "YourFont";
   font-weight: 900;
   background-color: var(--kidearn-base, #F25334);
   width: 100%;
@@ -8666,7 +8673,7 @@ body.megamenu-popup-active .mobile-nav__content {
   background: linear-gradient(to left, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
   transition: all 500ms ease;
   font-size: 20px;
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   display: inline-flex;
   line-height: 1;
 }
@@ -8849,7 +8856,7 @@ body.megamenu-popup-active .mobile-nav__content {
   opacity: 0.2;
 }
 .pricing-one__card__tagline {
-  font-family: var(--kidearn-special-font, "Schoolbell", cursive);
+  font-family: "YourFont";
   color: var(--accent-color);
   position: relative;
   transition: all 400ms ease;
@@ -8899,6 +8906,7 @@ body.megamenu-popup-active .mobile-nav__content {
 .pricing-one__card:hover .pricing-one__card__price {
   color: var(--kidearn-white, #fff);
 }
+
 .pricing-one__card__list {
   margin: 0;
   margin-bottom: 18px;
@@ -9248,7 +9256,7 @@ body.megamenu-popup-active .mobile-nav__content {
   line-height: 30px;
   color: var(--kidearn-white, #fff);
   font-size: 14px;
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   font-weight: 700;
   height: 46px;
   align-items: center;
@@ -9694,7 +9702,7 @@ body.megamenu-popup-active .mobile-nav__content {
   text-align: center;
   display: block;
   color: var(--kidearn-text, #7E8185);
-  font-family: var(--kidearn-font, "DM Sans", sans-serif);
+  font-family: "YourFont";
   font-weight: 500;
   border-top: 2px solid var(--kidearn-border-color, #FCE9DD);
   font-size: 16px;
@@ -10711,7 +10719,7 @@ body.megamenu-popup-active .mobile-nav__content {
   font-size: 24px;
   font-weight: 400;
   line-height: 1;
-  font-family: var(--kidearn-special-font, "Schoolbell", cursive);
+  font-family: "YourFont";
   margin: 0 0 15px;
   transition: transform 1000ms ease, opacity 1000ms ease;
   transform: translateY(-200px);
@@ -11058,7 +11066,7 @@ body.megamenu-popup-active .mobile-nav__content {
   font-size: 24px;
   font-weight: 400;
   line-height: 1;
-  font-family: var(--kidearn-special-font, "Schoolbell", cursive);
+  font-family: "YourFont";
   margin: 0 0 15px;
   transition: transform 1000ms ease, opacity 1000ms ease;
   transform: translateY(-200px);
@@ -11410,7 +11418,7 @@ body.megamenu-popup-active .mobile-nav__content {
   color: var(--kidearn-base, #F25334);
   font-weight: 400;
   line-height: 1;
-  font-family: var(--kidearn-special-font, "Schoolbell", cursive);
+  font-family: "YourFont";
   margin: 0 0 -2px;
 }
 .feature-one__item__title {
@@ -11702,7 +11710,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .about-two__call__number {
   color: var(--kidearn-black, #0B2038);
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   font-weight: 400;
   background: linear-gradient(to left, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
   transition: all 500ms ease;
@@ -11831,7 +11839,7 @@ body.megamenu-popup-active .mobile-nav__content {
 .about-two__awards__number {
   font-size: 23px;
   color: var(--kidearn-secondary2, #75C137);
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   font-weight: 400;
   display: flex;
   line-height: 1;
@@ -12026,7 +12034,7 @@ body.megamenu-popup-active .mobile-nav__content {
   line-height: 28px;
   font-weight: 400;
   margin: 0 0 18px;
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   color: var(--kidearn-black, #0B2038);
 }
 .about-three__content__lists li span {
@@ -12130,7 +12138,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .about-three__call__number {
   color: var(--kidearn-black, #0B2038);
-  font-family: var(--kidearn-heading-font, "Fredoka", serif);
+  font-family: 'YourFont';
   font-weight: 400;
   background: linear-gradient(to left, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
   transition: all 500ms ease;

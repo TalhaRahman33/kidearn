@@ -4,6 +4,7 @@ import ExportedImage from 'next-image-export-optimizer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import StickyContactButtons from './StickyContactButtons';
 
 
 const Footer = () => {
@@ -13,6 +14,7 @@ const Footer = () => {
         <div className="main-footer__bg"></div>
 
         <ExportedImage 
+          unoptimized={true}
           src="/images/footer-s-1-1-rtl.png" 
           className="main-footer__shape-1" 
           alt="kidearn" 
@@ -20,6 +22,7 @@ const Footer = () => {
           height={567} 
         />
         <ExportedImage 
+          unoptimized={true}
           src="/images/footer-s-1-2-rtl.png" 
           className="main-footer__shape-2" 
           alt="kidearn" 
@@ -27,13 +30,16 @@ const Footer = () => {
           height={216} 
         />
         <ExportedImage 
+          unoptimized={true}
           src="/images/footer-s-1-3.png" 
           className="main-footer__shape-3" 
           alt="kidearn" 
           width={125} 
           height={111} 
+         
         />
         <ExportedImage 
+          unoptimized={true}
           src="/images/footer-s-1-4.png" 
           className="main-footer__shape-4" 
           alt="kidearn" 
@@ -48,7 +54,8 @@ const Footer = () => {
                 <div className="footer-widget footer-widget--about">
                   <Link href="/">
                     <ExportedImage 
-                      src="/images/logo12.webp" 
+                      unoptimized={true}
+                      src="/images/logo-dark.png" 
                       width={160} 
                       height={56} 
                       alt="Kidearn HTML Template" 
@@ -117,8 +124,9 @@ const Footer = () => {
                   <h2 className="footer-widget__title">Gallery</h2>
                   <ul className="list-unstyled footer-widget__gallery">
                     <li>
-                      <Link className="img-popup" href="/assets/images/resources/footer-gallery-1.png">
+                      <Link className="img-popup" href="/images/footer-gallery-1.png">
                         <ExportedImage 
+                          unoptimized={true}
                           src="/images/footer-gallery-1.png" 
                           alt="footer gallery" 
                           width={78} 
@@ -127,8 +135,9 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/assets/images/resources/footer-gallery-2.png">
+                      <Link className="img-popup" href="/images/footer-gallery-2.png">
                         <ExportedImage 
+                          unoptimized={true}
                           src="/images/footer-gallery-2.png" 
                           alt="footer gallery" 
                           width={77} 
@@ -137,8 +146,9 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/assets/images/resources/footer-gallery-3.png">
+                      <Link className="img-popup" href="/images/footer-gallery-3.png">
                         <ExportedImage 
+                          unoptimized={true}
                           src="/images/footer-gallery-3.png" 
                           alt="footer gallery" 
                           width={77} 
@@ -147,8 +157,9 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/assets/images/resources/footer-gallery-4.png">
+                      <Link className="img-popup" href="/images/footer-gallery-4.png">
                         <ExportedImage 
+                          unoptimized={true}
                           src="/images/footer-gallery-4.png" 
                           alt="footer gallery" 
                           width={78} 
@@ -157,8 +168,9 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/assets/images/resources/footer-gallery-5.png">
+                      <Link className="img-popup" href="/images/footer-gallery-5.png">
                         <ExportedImage 
+                          unoptimized={true}
                           src="/images/footer-gallery-5.png" 
                           alt="footer gallery" 
                           width={77} 
@@ -167,8 +179,9 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/assets/images/resources/footer-gallery-6.png">
+                      <Link className="img-popup" href="/images/footer-gallery-6.png">
                         <ExportedImage 
+                          unoptimized={true}
                           src="/images/footer-gallery-6.png" 
                           alt="footer gallery" 
                           width={77} 
@@ -183,23 +196,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <Link
-  href="https://wa.me/966533466600"
-  className="float-whatsapp-button"
-  target="_blank"
->
-  <FontAwesomeIcon icon={faWhatsapp} className="" />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</Link>
 
-<Link
-  href="tel:+966533466600"
-  className="float-phone-button"
-  target="_blank"
->
-  <i className="icon-call " />
-</Link>
 
+      <StickyContactButtons />
 
 
         <div className="main-footer__bottom">
@@ -217,3 +216,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

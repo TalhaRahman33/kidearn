@@ -1,17 +1,36 @@
-import React from "react";
+"use client";
+
+import { CallIcon } from "./CallIcon";
+import HamburgerMenu from "./HamburgerMenu";
+import React, { useState } from 'react';
+import OffcanvasNavbar from "./OffCanvasNavbar";
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
 
 
-const Header = () => {
-  return (
-    <div>
 
-      <header className="main-header sticky-header sticky-header--normal">
-        <div className="container-fluid">
-          <div className="main-header__inner">
-            <div className="main-header__logo">
-              <Link href="/">
+export default function Header() {
+    const currentPath = '/';
+
+    const [activeLink, setActiveLink] = useState('Home'); // Default active link
+
+    const handleLinkClick = (linkName) => {
+        setActiveLink(linkName); // Set the clicked link as active
+    };
+    return (
+        <div
+            className="headerContainer"
+            style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                height: '100px',
+                // padding: '0px 60px',
+            }}>
+
+            <div>
+            <Link href="/">
                 <ExportedImage
                 unoptimized={true}
                   src="/images/logo-dark.png" 
@@ -22,63 +41,107 @@ const Header = () => {
               </Link>
             </div>
 
-            <nav className="main-header__nav main-menu">
-              <ul className="main-menu__list">
-                <li className="dropdown megamenu">
-                  <Link href="/">الصفحة الرئيسية</Link>
-                </li>
-
-                <li>
-                  <Link href="/about">من نحن</Link>
-                </li>
-
-                <li className="dropdown">
-                  <Link href="/register">الأسعار</Link>
-                </li>
-
-                <li className="dropdown">
-                  <Link href="/event">الفعاليات</Link>
-                </li>
-
-                <li className="dropdown">
-                  <Link href="/jobForm">التوظيف</Link>
-                </li>
-
-                <li>
-                  <Link href="/contact">اتصل بنا</Link>
-                </li>
-              </ul>
-            </nav>
-
-            <div className="main-header__right">
-              <div className="mobile-nav__btn mobile-nav__toggler">
-                <span />
-                <span />
-                <span />
-              </div>
-
-              <a className="main-header__call" href="tel:3035550105">
-                <i className="icon-call main-header__call__icon" />
-                <span className="main-header__call__content">
-                  <span className="main-header__call__number">
-                    (303) 555-0105
-                  </span>
-                  <span className="main-header__call__text">
-                    Call to Questions
-                  </span>
-                </span>
-              </a>
-
-              <Link href="/contact" className="kidearn-btn main-header__btn">
-                <span>Book a Visit</span>
-              </Link>
-              
+            <div
+                className="navbar"
+                style={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}>
+                <ul
+                    className="Header-NavContainer"
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        gap: '30px',
+                        fontWeight: 'bold',
+                        marginBottom: '0px',
+                        fontSize: '16px',
+                        cursor: 'pointer',
+                    }}>
+                    <Link href="/" className={`header-Links ${currentPath === '/' ? 'active' : ''}`}>Home</Link>
+                    <Link href="/about" className={`header-Links ${currentPath === '/about' ? 'active' : ''}`}>About</Link>
+                    <Link href="/pricing" className={`header-Links ${currentPath === '/pricing' ? 'active' : ''}`}>Pricing</Link>
+                    <Link href="/event" className={`header-Links ${currentPath === '/event' ? 'active' : ''}`}>Events</Link>
+                    <Link href="/jobForm" className={`header-Links ${currentPath === '/jobForm' ? 'active' : ''}`}>Employement</Link>
+                    <Link href="/register" className={`header-Links ${currentPath === '/register' ? 'active' : ''}`}>Register</Link>
+                   
+                    <Link href="/contact" className={`header-Links ${currentPath === '/contact' ? 'active' : ''}`}>Contact</Link>
+                </ul>
             </div>
-          </div>
-        </div>
-      </header>
-    </div>
-  );
-};
 
-export default Header;
+
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    gap: '30px',
+                    alignItems: 'center',
+                }}>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    gap: '15px',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                }}>
+                    <div className="ToggleButton"><OffcanvasNavbar /></div>
+
+
+                    <span className="CallIcon"> <CallIcon /> </span>
+
+
+                    <div
+                        className="headerContactInfo"
+                        style={{
+                            // display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-around',
+                            alignItems: 'center',
+                            gap: '0px',
+                            margin: '0px',
+                            padding: '0px',
+                        }}>
+                        <h5
+                            class="main-header__call__number"
+                            style={{
+                                margin: '0',
+                                padding: '0',
+                                fontSize: '20px',
+                                fontWeight: 'bold',
+                                color: 'black',
+                            }}>(303) 555-0105</h5>
+                        <h6
+                            class="main-header__call__text"
+                            style={{
+                                margin: '0',
+                                padding: '0',
+                                color: '#7E8185',
+                                fontWeight: 'normal',
+                                fontSize: '16px',
+                            }}>Call to Questions</h6>
+                    </div>
+                </div>
+                <div className="headerButton">
+                    <button
+                        style={{
+                            width: '140px',
+                            height: '49px',
+                            backgroundColor: '#F25334',
+                            color: 'white',
+                            fontSize: '14px',
+                            fontWeight: 'bold',
+                            padding: '10px 10px',
+                            borderRadius: '12px',
+                            height: '49px',
+                            textAlign: 'center',
+                        }}>Book a Visit</button>
+                </div>
+            </div>
+
+        </div>
+    );
+} 

@@ -9,15 +9,20 @@ import Topbar from "./components/Topbar";
 import ExportedImage from "next-image-export-optimizer";
 import Testimonials from "./components/Testimonials";
 import PricingSection from "./components/PricingSection";
+import BlogThree from "./components/BlogThree";
+
 
 export default function Home() {
   return (
     <ParallaxProvider>
+
       <div className="custom-cursor">
+      <div className="custom-cursor__cursor"></div>
+      <div className="custom-cursor__cursor-two"></div>
         <div className="page-wrapper">
           
           <Topbar />
-          <Header />
+        <Header />
 
           <Banner />
 
@@ -573,6 +578,8 @@ export default function Home() {
 
 <PricingSection />
 
+
+              <BlogThree />
 
           <Footer />
           <Footer1 />

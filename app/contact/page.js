@@ -19,7 +19,7 @@ const ContactPage = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://backend.selsla.net/api/contact",
+        "https://testing.childoasis.com.sa/api/contact",
         {
           method: "POST",
           headers: {

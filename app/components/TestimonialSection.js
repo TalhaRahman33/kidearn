@@ -14,7 +14,7 @@ const myLoader = ({ src }) => {
 const TestimonialSection = () => {
   // Slider settings
   const settings = {
-    dots: true,
+ 
     infinite: true,
     speed: 700,
     slidesToShow: 1,

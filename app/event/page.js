@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Footer1 from "../components/Footer1";
 import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
+import { Gallery } from "../components/Gallery";
 
 const page = () => {
   return (
@@ -329,6 +330,8 @@ const page = () => {
           </div>
         </div>
       </section>
+
+      <Gallery />
 
       <Footer />
       <Footer1 />
