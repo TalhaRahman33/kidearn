@@ -1,43 +1,40 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import React, { useState } from "react";
- 
-const RegisterForm = () => {
+import React, { useState, Suspense } from "react";
+
+const RegisterFormContent = () => {
   const searchParams = useSearchParams();
   const pkgName = searchParams.get("packageName");
   const amount = searchParams.get("amount");
   const price = searchParams.get("price");
- 
+
   // State for form fields
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false); // Loading state
- 
+
   // Function to handle TAP API integration
   const handlePayment = async () => {
     setLoading(true); // Start loading indicator
     try {
-      const response = await fetch(
-        "https://testing.childoasis.com.sa/api/register",
-        {
-          method: "POST",
-          headers: {
-            accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            phone: phone,
-            amount: amount,
-            pkgName: pkgName,
-          }),
-        }
-      );
- 
+      const response = await fetch("https://testing.childoasis.com.sa/api/register", {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: phone,
+          amount: amount,
+          pkgName: pkgName,
+        }),
+      });
+
       const data = await response.json();
- 
+
       // Handle the response from the TAP API
       if (data.success && data.url) {
         // Redirect the user to the payment page
@@ -51,16 +48,16 @@ const RegisterForm = () => {
       setLoading(false); // Stop loading indicator
     }
   };
- 
+
   // Submit handler to process the form
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data:", { name, email, phone, pkgName, amount });
- 
+
     // Call the payment handler function
     handlePayment();
   };
- 
+
   return (
     <div>
       <section className="flex justify-center items-center min-h-screen">
@@ -69,12 +66,12 @@ const RegisterForm = () => {
           style={{ boxShadow: "0px 4px 10px #FAF5F2" }}
         >
           <h1 className="text-2xl font-semibold text-center mb-6">تسجيل</h1>
- 
+
           <div
             className="w-10/12 mx-auto mb-6"
             style={{ borderBottom: "2px solid #FAF5F2" }}
           ></div>
- 
+
           {/* Box with the provided information */}
           <div
             className="w-full md:w-10/12 mx-auto p-4 mb-6 border-1"
@@ -83,12 +80,12 @@ const RegisterForm = () => {
             <p className="text-gray-700 mb-2">
               <strong>اسم الباقة:</strong> {pkgName}
             </p>
- 
+
             <p className="text-gray-700">
               <strong>السعر:</strong> {price}
             </p>
           </div>
- 
+
           <form className="w-full md:w-10/12 mx-auto" onSubmit={handleSubmit}>
             <div className="mb-4">
               <label className="block mb-2 text-gray-700">الاسم:</label>
@@ -101,7 +98,7 @@ const RegisterForm = () => {
                 required
               />
             </div>
- 
+
             <div className="mb-4">
               <label className="block mb-2 text-gray-700">البريد الإلكتروني:</label>
               <input
@@ -113,7 +110,7 @@ const RegisterForm = () => {
                 required
               />
             </div>
- 
+
             <div className="mb-4">
               <label className="block mb-2 text-gray-700">الهاتف:</label>
               <input
@@ -130,7 +127,7 @@ const RegisterForm = () => {
                 }}
               />
             </div>
- 
+
             <div className="text-center mt-6">
               <button
                 type="submit"
@@ -146,8 +143,17 @@ const RegisterForm = () => {
     </div>
   );
 };
- 
+
+const RegisterForm = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <RegisterFormContent />
+    </Suspense>
+  );
+};
+
 export default RegisterForm;
+
 
 
 // import React from "react";

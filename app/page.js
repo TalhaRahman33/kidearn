@@ -577,7 +577,7 @@ export default function Home() {
 
 
 <PricingSection />
-{/* <PricingSection /> */}
+
 
 
               <BlogThree />
