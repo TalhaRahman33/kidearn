@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'YourFont';
+    src: url('/fonts/Janna-LT-Regular.ttf') format('opentype'); /* Adjusted to 'opentype' for OTF font */
+    font-weight: normal;
+    font-style: normal;
+  }
 .Header-NavContainer li:hover {
-    color: #F25334;
+    color: #0b2038 !important;
 }
 
 .home-li {
-    color: #F25334;
+    color: #0b2038 !important;
+    font-family: 'YourFont' !important;
 }
 
 .Header-NavContainer li {
@@ -149,7 +156,7 @@
 
 /* Active link styles */
 .nav-link.active {
-    color: #F25334;
+    color: #0b2038;
 }
 
 .ToggleButton {

@@ -5,7 +5,7 @@ import Footer1 from "../components/Footer1";
 import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import { Gallery } from "../components/Gallery";
-
+import Topbar from '../components/Topbar';
 const page = () => {
   return (
 
@@ -15,20 +15,22 @@ const page = () => {
     <div className="custom-cursor__cursor-two"></div>
     
         <div className="page-wrapper">
-
+<Topbar/>
       <Header />
 
       <section className="page-header">
         <div className="page-header__bg"></div>
         {/* /.page-header__bg */}
         <div className="container">
-          <h2 className="page-header__title">Events</h2>
+          <h2 className="page-header__title">
+          الفعاليات</h2>
           <ul className="kidearn-breadcrumb list-unstyled">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">الصفحة الرئيسية</Link>
             </li>
             <li>
-              <span>Events</span>
+              <span>
+              الفعاليات</span>
             </li>
           </ul>
           {/* /.kidearn-breadcrumb list-unstyled */}
@@ -66,7 +68,7 @@ const page = () => {
                   <div className="col-md-7 d-flex align-items-center">
                     <div className="event-card-two__content">
                       <div className="event-card-two__cats">
-                        <a href="events-grid.html">Kindergarten</a>
+                        <a href="#">Kindergarten</a>
                       </div>
                       <ul className="event-card-two__lists">
                         <li>
@@ -78,7 +80,7 @@ const page = () => {
                         </li>
                       </ul>
                       <h3 className="event-card-two__title">
-                        <a href="events-details.html">
+                        <a href="#">
                           Let’s spend summer together with your teachers
                         </a>
                       </h3>
@@ -114,7 +116,7 @@ const page = () => {
                   <div className="col-md-7 d-flex align-items-center">
                     <div className="event-card-two__content">
                       <div className="event-card-two__cats">
-                        <a href="events-grid.html">Kindergarten</a>
+                        <a href="#">Kindergarten</a>
                       </div>
                       <ul className="event-card-two__lists">
                         <li>
@@ -126,7 +128,7 @@ const page = () => {
                         </li>
                       </ul>
                       <h3 className="event-card-two__title">
-                        <a href="events-details.html">
+                        <a href="#">
                           The complete web developer guideline 2023
                         </a>
                       </h3>
@@ -162,7 +164,7 @@ const page = () => {
                   <div className="col-md-7 d-flex align-items-center">
                     <div className="event-card-two__content">
                       <div className="event-card-two__cats">
-                        <a href="events-grid.html">Kindergarten</a>
+                        <a href="#">Kindergarten</a>
                       </div>
                       <ul className="event-card-two__lists">
                         <li>
@@ -174,7 +176,7 @@ const page = () => {
                         </li>
                       </ul>
                       <h3 className="event-card-two__title">
-                        <a href="events-details.html">
+                        <a href="#">
                           Gathering & welcome speech marketing strategy
                         </a>
                       </h3>
@@ -210,7 +212,7 @@ const page = () => {
                   <div className="col-md-7 d-flex align-items-center">
                     <div className="event-card-two__content">
                       <div className="event-card-two__cats">
-                        <a href="events-grid.html">Kindergarten</a>
+                        <a href="#">Kindergarten</a>
                       </div>
                       <ul className="event-card-two__lists">
                         <li>
@@ -222,7 +224,7 @@ const page = () => {
                         </li>
                       </ul>
                       <h3 className="event-card-two__title">
-                        <a href="events-details.html">
+                        <a href="#">
                           How a business can handle a business strategy
                         </a>
                       </h3>
@@ -258,7 +260,7 @@ const page = () => {
                   <div className="col-md-7 d-flex align-items-center">
                     <div className="event-card-two__content">
                       <div className="event-card-two__cats">
-                        <a href="events-grid.html">Kindergarten</a>
+                        <a href="#">Kindergarten</a>
                       </div>
                       <ul className="event-card-two__lists">
                         <li>
@@ -270,7 +272,7 @@ const page = () => {
                         </li>
                       </ul>
                       <h3 className="event-card-two__title">
-                        <a href="events-details.html">
+                        <a href="#">
                           Let’s spend summer together with your teachers
                         </a>
                       </h3>
@@ -306,7 +308,7 @@ const page = () => {
                   <div className="col-md-7 d-flex align-items-center">
                     <div className="event-card-two__content">
                       <div className="event-card-two__cats">
-                        <a href="events-grid.html">Kindergarten</a>
+                        <a href="#">Kindergarten</a>
                       </div>
                       <ul className="event-card-two__lists">
                         <li>
@@ -318,7 +320,7 @@ const page = () => {
                         </li>
                       </ul>
                       <h3 className="event-card-two__title">
-                        <a href="events-details.html">
+                        <a href="#">
                           How a business can handle a business strategy
                         </a>
                       </h3>

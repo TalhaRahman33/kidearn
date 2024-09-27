@@ -75,16 +75,17 @@ const Banner = () => {
                         </div>
                         <div className="banner-one__content__bg"></div>
                         <h2 className="banner-one__content__title">
-                          Embrace<br /> confidence<br /> for a lifetime
+                        مركز بيت أمي<br />  لضيافة الأطفال
+                          {/* Embrace<br /> confidence<br /> for a lifetime */}
                         </h2>
                         <Link href="/contact" className="kidearn-btn">
-                          <span>Book a Visit</span>
+                          <span>اتصل بنا</span>
                         </Link>
                         <div
                           className="banner-one__shape1 kidearn-splax"
-                          style={{
-                            backgroundImage: 'url(/images/banner-1-shape-1.png)',
-                          }}
+                          // style={{
+                          //   backgroundImage: 'url(/images/banner-1-shape-1.png)',
+                          // }}
                         ></div>
                       </div>
                     </div>

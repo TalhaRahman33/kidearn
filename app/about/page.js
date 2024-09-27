@@ -26,13 +26,13 @@ const Page = () => {
       <section className="page-header">
         <div className="page-header__bg" />
         <div className="container">
-          <h2 className="page-header__title">About us</h2>
+          <h2 className="page-header__title"> من نحن</h2>
           <ul className="kidearn-breadcrumb list-unstyled">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">الصفحة الرئيسية</Link>
             </li>
             <li>
-              <span>About</span>
+              <span>من نحن</span>
             </li>
           </ul>
         </div>
@@ -90,15 +90,13 @@ const Page = () => {
             </div>
             <div className="col-xl-6 wow fadeInRight" data-wow-delay="200ms">
               <div className="about-four__content">
-                <div className="sec-title text-left">
-                  <h6 className="sec-title__tagline">About Us</h6>
-                  <h3 className="sec-title__title">
-                    Welcome to best kidearn for your child
+                <div className="sec-title text-right">
+                  <h6 className="sec-title__tagline"> من نحن</h6>
+                  <h3 className="sec-title__title">بيت أمي
                   </h3>
                 </div>
                 <p className="about-four__content__text">
-                  Lorem Ipsum is simply dummy text of the printing and<br />{' '}
-                  typesetting industry. Lorem Ipsum has been the industry's
+                لأن الأم هي الحضن الرحيم والأمان والاطمئنان وهي الاحرص على أطفالها ولا يفوقها حرص الا امها، وقالوا قديما لا أعز من الولد إلا ولد الولد. 
                 </p>
                 <div
                   className="about-four__info"
@@ -107,10 +105,9 @@ const Page = () => {
                   <div className="about-four__info__icon">
                     <span className="icon-trophy1"></span>
                   </div>
-                  <h3 className="about-four__info__title">Award Wining Time</h3>
+                  {/* <h3 className="about-four__info__title">وقت الفوز بالجوائز</h3> */}
                   <p className="about-four__info__text">
-                    Lorem Ipsum is simply dummy text of the printing and<br />{' '}
-                    typesetting industry. Lorem Ipsum
+                  ​ ولأننا ندرك أن الاحتياجات برغم تغيرها إلى أن المبدأ ذاته مستمر و لأننا ندرك أهمية العناية بالطفل في أوقات إنشغال أمه فقد حرصنا على استثمار ذلك الوقت في "بيت أمي" والذي هو كبيت الأم من الحرص على العناية بالطفل من حيث الصحة واستثمار الوقت باللعب والتعليم. ​
                   </p>
                 </div>
                 <div
@@ -120,17 +117,16 @@ const Page = () => {
                   <div className="about-four__info__icon">
                     <span className="icon-interest-rate"></span>
                   </div>
-                  <h3 className="about-four__info__title">
-                    Higest Success Rates
-                  </h3>
+                  {/* <h3 className="about-four__info__title">
+                  أعلى معدلات النجاح
+                  </h3> */}
                   <p className="about-four__info__text">
-                    Lorem Ipsum is simply dummy text of the printing and<br />{' '}
-                    typesetting industry. Lorem Ipsum
+                  ​ حيث سيجد الطفل الكوادر السعوديه من الامهات المتخصصات في رعاية الاطفال وحضانتهم واخصائيات رياض الاطفال لتقديم البرامج التعليميه لكل الاعمار.
                   </p>
                 </div>
-                <Link href="/about" className="kidearn-btn">
-                  <span>Learn More</span>
-                </Link>
+                {/* <Link href="#" className="kidearn-btn">
+                <span>المزيد</span>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -171,11 +167,11 @@ const Page = () => {
               >
                 <div className="cta-one__content">
                   <h3 className="cta-one__title">
-                    How to enroll your child to a class?
+                  تابعنا على صفحتنا في الانستقرام واطلع على ماهو جديد
                   </h3>
-                  <Link href="/about" className="kidearn-btn">
-                    <span>Visit Now</span>
-                  </Link>
+                  <Link href="https://www.instagram.com/baytummi" className="kidearn-btn ">
+                      <span>تابعنا الآن</span>
+                    </Link>
                 </div>
               </div>
               <div className="col-lg-6">
@@ -190,7 +186,7 @@ const Page = () => {
                     height={492}
                     unoptimized={true}
                   />
-                  <div className="cta-one__one__text">All in<br /> One</div>
+                  <div className="cta-one__one__text">الكل في <br /> واحد</div>
                 </div>
                 <div className="cta-one__thumb">
                   <div className="cta-one__thumb__two">
@@ -267,10 +263,10 @@ const Page = () => {
                 </div>
                 <div className="funfact-one__count">
                   <span className="count-box">
-                    <span className="count-text" data-stop="30.5" data-speed="1500">30.5</span>k
+                    <span className="count-text" >نعمل طوال العام</span>
                   </span>
                 </div>
-                <p className="funfact-one__text">Students</p>
+                {/* <p className="funfact-one__text">Students</p> */}
               </div>
             </div>
             <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
@@ -280,10 +276,10 @@ const Page = () => {
                 </div>
                 <div className="funfact-one__count">
                   <span className="count-box">
-                    <span className="count-text" data-stop="99.99" data-speed="1500">99.99</span>%
+                    <span className="count-text" >ساعات مرنة</span>
                   </span>
                 </div>
-                <p className="funfact-one__text">Success Rate</p>
+                {/* <p className="funfact-one__text">Success Rate</p> */}
               </div>
             </div>
             <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
@@ -293,10 +289,10 @@ const Page = () => {
                 </div>
                 <div className="funfact-one__count">
                   <span className="count-box">
-                    <span className="count-text" data-stop="50.2" data-speed="1500">50.2</span>k
+                    <span className="count-text" data-stop="50.2" data-speed="1500">حضانة وتعليم</span>
                   </span>
                 </div>
-                <p className="funfact-one__text">Instructors</p>
+                {/* <p className="funfact-one__text">Instructors</p> */}
               </div>
             </div>
             <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
@@ -306,10 +302,10 @@ const Page = () => {
                 </div>
                 <div className="funfact-one__count">
                   <span className="count-box">
-                    <span className="count-text" data-stop="4.8" data-speed="1500">4.8</span>k
+                    <span className="count-text" data-stop="4.8" data-speed="1500">أنشطة وفعاليات</span>
                   </span>
                 </div>
-                <p className="funfact-one__text">Total Courses</p>
+                {/* <p className="funfact-one__text">Total Courses</p> */}
               </div>
             </div>
           </div>
@@ -319,7 +315,7 @@ const Page = () => {
 
     <TestimonialSection />
 
-    <TeamTwoSection />       
+    {/* <TeamTwoSection />        */}
 
 
     <ClientCarousel />

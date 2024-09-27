@@ -14,9 +14,9 @@ const PricingSection = () => {
     <section className="pricing-one">
       <div className="container">
         <div className="sec-title text-center">
-          <h6 className="sec-title__tagline">Our Pricings</h6>
+          <h6 className="sec-title__tagline">الباقات</h6>
           <h3 className="sec-title__title">
-            Select a plan according to <br /> your requirements
+            اختر خطة تناسب احتياجاتك
           </h3>
         </div>
         <div className="tabs-box">

@@ -19,6 +19,44 @@ li{
   font-family: "YourFont";
 }
 
+
+/* .header-Links{
+  color: #0B2038 !important;
+  font-family: "YourFont";
+} */
+.headerButton{
+  font-family: "YourFont";
+}
+
+
+/* General styling for the header links */
+.header-Links {
+  text-decoration: none; /* Remove underline */
+  color: #286c7e !important;
+  /* color: #0B2038 !important; */
+  font-family: "YourFont";
+  padding: 10px; /* Padding for the links */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Active link styling */
+.header-Links.active {
+  color: #F25334  !important; /* Active link color */
+  font-weight: bold; /* Make the active link bold */
+  border-bottom: 2px solid #F25334 ; /* Optional: underline effect */
+}
+
+/* Inactive link styling */
+/* .header-Links:not(.active) {
+  color: #666; 
+} */
+
+/* Add hover effect for links */
+.header-Links:hover {
+  color: #F25334; /* Change color on hover */
+}
+
+
 .custom-btn {
   padding: 12px 32px;
   /* padding-left: 35px;
@@ -46,6 +84,55 @@ color: #F25334;
   color: black;
 }
 
+.insta-btn{
+  margin-right: 200px !important;
+}
+
+@media (max-width: 576px) {
+  .insta-btn {
+    margin-right: 50px !important; /* Decrease the margin for small screens */
+    padding: 8px 16px; /* Adjust button size */
+    font-size: 14px; /* Reduce font size */
+  }
+}
+
+
+/* job from */
+.select-optn {
+  font-family: 'YourFont'!important; 
+
+}
+
+
+
+
+
+/* footer */
+.main-footer__bottom {
+  display: flex; /* Use Flexbox for layout */
+  align-items: center !important; /* Vertically center items */
+  justify-content: center !important; /* Center items horizontally */
+}
+
+.main-footer__copyright {
+  display: flex ; /* Use Flexbox for the copyright text */
+  align-items: center !important; /* Vertically center items */
+  justify-content: center !important;
+}
+
+.dynamic-year {
+  margin: 0 5px; /* Add margin around the dynamic year */
+}
+
+.main-footer__copyright a {
+  display: flex; /* Ensure the link and image are inline */
+  align-items: center; /* Vertically center the link content */
+  margin-left: 5px; /* Optional: add space between text and image */
+}
+
+.main-footer__copyright img {
+  margin-left: 5px; /* Optional: add space between text and image */
+}
 
 
 /* **************************************Whatsapp button ************************************* */

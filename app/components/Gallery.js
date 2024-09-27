@@ -7,7 +7,7 @@ export const Gallery = () => {
     <div className="container">
       <div className="row">
       <h3 className="sec-title__title text-center mt-0">
-            Gallery
+      معرض
           </h3>
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">

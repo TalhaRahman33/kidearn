@@ -4928,9 +4928,9 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .funfact-one__count {
   display: block;
-  font-size: 60px;
+  font-size: 30px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
   color: var(--kidearn-white, #fff);
   font-family: 'YourFont';
@@ -14344,4 +14344,22 @@ body.boxed-wrapper .page-wrapper {
   font-weight: 400;
   max-width: 116px;
   margin: 0 auto;
+}
+
+::placeholder {
+  font-family: 'YourFont';
+}
+
+.input-font{
+  font-family: 'YourFont';
+}
+
+
+.form-select option{
+  font-family: 'YourFont' !important; 
+
+}
+.form-select {
+  font-family: 'YourFont' !important; 
+
 }

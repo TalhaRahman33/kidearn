@@ -78,10 +78,9 @@ const Testimonials = () => {
             />
           </div>
           <div className="sec-title text-center">
-            <h6 className="sec-title__tagline">Testimonial</h6>
+            <h6 className="sec-title__tagline">التعليقات</h6>
             <h3 className="sec-title__title">
-              Parents' words are the key
-              <br /> to happy kids
+            ماذا يقول عنا أولياء الأمور
             </h3>
           </div>
           {isClient && (

@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Footer1 from "../components/Footer1";
 import Link from "next/link";
 import Modal from "react-bootstrap/Modal";
+import Topbar from "../components/Topbar";
 
 const JobApplicationPage = () => {
   const [firstName, setFirstName] = useState("");
@@ -68,7 +69,7 @@ const JobApplicationPage = () => {
     <div className="custom-cursor__cursor-two"></div>
     
         <div className="page-wrapper">
-
+        <Topbar />
       <Header />
 
       
@@ -78,7 +79,7 @@ const JobApplicationPage = () => {
             <h2 className="page-header__title">نموذج التقديم على وظيفة</h2>
             <ul className="kidearn-breadcrumb list-unstyled">
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/">الصفحة الرئيسية</Link>
               </li>
               <li>
                 <span>نموذج التقديم على وظيفة</span>
@@ -101,7 +102,7 @@ const JobApplicationPage = () => {
             >
               <div className="flex flex-col space-y-4">
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2">الاسم الأول</label>
+                  <label className="text-gray-700 mb-2 input-font">الاسم الأول</label>
                   <input
                     type="text"
                     placeholder="الاسم الأول"
@@ -113,7 +114,7 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2">اسم الأب</label>
+                  <label className="text-gray-700 mb-2 input-font ">اسم الأب</label>
                   <input
                     type="text"
                     placeholder="اسم الأب"
@@ -125,7 +126,7 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2">العائلة</label>
+                  <label className="text-gray-700 mb-2 input-font">العائلة</label>
                   <input
                     type="text"
                     placeholder="العائلة"
@@ -137,7 +138,7 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2">البريد الالكتروني</label>
+                  <label className="text-gray-700 mb-2 input-font">البريد الالكتروني</label>
                   <input
                     type="email"
                     placeholder="البريد الالكتروني"
@@ -149,9 +150,9 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2">الوظيفة المرغوبة</label>
+                  <label className="text-gray-700 mb-2 input-font">الوظيفة المرغوبة</label>
                   <select
-                    className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
+                    className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367] select-optn"
                     value={job}
                     onChange={(e) => setJob(e.target.value)}
                     required
@@ -166,7 +167,7 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2">اكتب رسالة</label>
+                  <label className="text-gray-700 mb-2 input-font">اكتب رسالة</label>
                   <textarea
                     placeholder="اكتب رسالتك"
                     className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
@@ -178,7 +179,7 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2">السيرة الذاتية</label>
+                  <label className="text-gray-700 mb-2 input-font">السيرة الذاتية</label>
                   <input
                     type="file"
                     className="block w-full mb-4 p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700"
