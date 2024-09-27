@@ -1,13 +1,56 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Footer1 from "../components/Footer1";
 import Link from "next/link";
 import Modal from "react-bootstrap/Modal";
 import Topbar from "../components/Topbar";
+import { generateMetadata } from "../components/Meta";
 
 const JobApplicationPage = () => {
+
+  const [metadata, setMetadata] = useState({
+    title:
+      "مركز وقت الطفل لضيافة الأطفال | Child Time Center for Children's Hospitality",
+
+    description:
+      "تمكين الأطفال ليصبحوا مواطنين منتجين في كافة نواحي الحياة. | Empowering children to become productive citizens in all aspects of life.",
+  });
+
+  useEffect(() => {
+    const fetchMetadata = async () => {
+      try {
+        const fetchedMetadata = await generateMetadata();
+        setMetadata(fetchedMetadata[3]);
+      } catch (error) {
+        console.error("Error fetching metadata:", error);
+      }
+    };
+
+    fetchMetadata();
+
+    return () => {
+      // Cleanup function if needed
+    };
+  }, []);
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.title = metadata.title;
+
+      const descriptionMeta = document.querySelector('meta[name="description"]');
+      if (descriptionMeta) {
+        descriptionMeta.setAttribute("content", metadata.description);
+      }
+
+      const keywordsMeta = document.querySelector('meta[name="keywords"]');
+      if (keywordsMeta && metadata.keywords) {
+        keywordsMeta.setAttribute("content", metadata.keywords);
+      }
+    }
+  }, [metadata]);
+
   const [firstName, setFirstName] = useState("");
   const [fatherName, setFatherName] = useState("");
   const [familyName, setFamilyName] = useState("");
@@ -65,14 +108,14 @@ const JobApplicationPage = () => {
 
     <div className='custom-cursor'>
 
-    <div className="custom-cursor__cursor"></div>
-    <div className="custom-cursor__cursor-two"></div>
-    
-        <div className="page-wrapper">
-        <Topbar />
-      <Header />
+      <div className="custom-cursor__cursor"></div>
+      <div className="custom-cursor__cursor-two"></div>
 
-      
+      <div className="page-wrapper">
+        <Topbar />
+        <Header />
+
+
         <section className="page-header">
           <div className="page-header__bg" />
           <div className="container">
@@ -201,44 +244,44 @@ const JobApplicationPage = () => {
             </form>
           </div>
         </section>
-     
 
-      <Footer />
-      <Footer1 />
 
-      <Modal show={showSuccess} onHide={handleCloseSuccess} className="main-model">
-        <Modal.Header className="modelhead">
-          <Modal.Title className="model-title">
-            <i className="bx bx-check-circle" style={{ color: "green", fontSize: "50px" }}></i>
-            <h4>شكرا لك!</h4>
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body className="model-body">
-          <p>تم تقديم طلبك بنجاح. سنتصل بك قريباً.</p>
-        </Modal.Body>
-        <Modal.Footer>
-          <button onClick={handleCloseSuccess} className="btn btn-secondary">
-            إغلاق
-          </button>
-        </Modal.Footer>
-      </Modal>
+        <Footer />
+        <Footer1 />
 
-      <Modal show={showError} onHide={handleCloseError} className="main-model">
-        <Modal.Header className="modelhead">
-          <Modal.Title className="model-title">
-            <i className="bx bx-error-circle" style={{ color: "red", fontSize: "50px" }}></i>
-            <h4>حدث خطأ</h4>
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body className="model-body">
-          <p>{errorMessage}</p>
-        </Modal.Body>
-        <Modal.Footer>
-          <button onClick={handleCloseError} className="btn btn-secondary">
-            إغلاق
-          </button>
-        </Modal.Footer>
-      </Modal>
+        <Modal show={showSuccess} onHide={handleCloseSuccess} className="main-model">
+          <Modal.Header className="modelhead">
+            <Modal.Title className="model-title">
+              <i className="bx bx-check-circle" style={{ color: "green", fontSize: "50px" }}></i>
+              <h4>شكرا لك!</h4>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="model-body">
+            <p>تم تقديم طلبك بنجاح. سنتصل بك قريباً.</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <button onClick={handleCloseSuccess} className="btn btn-secondary">
+              إغلاق
+            </button>
+          </Modal.Footer>
+        </Modal>
+
+        <Modal show={showError} onHide={handleCloseError} className="main-model">
+          <Modal.Header className="modelhead">
+            <Modal.Title className="model-title">
+              <i className="bx bx-error-circle" style={{ color: "red", fontSize: "50px" }}></i>
+              <h4>حدث خطأ</h4>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="model-body">
+            <p>{errorMessage}</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <button onClick={handleCloseError} className="btn btn-secondary">
+              إغلاق
+            </button>
+          </Modal.Footer>
+        </Modal>
 
       </div>
     </div>

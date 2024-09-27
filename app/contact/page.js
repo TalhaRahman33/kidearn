@@ -1,13 +1,58 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Footer1 from "../components/Footer1";
 import Link from "next/link";
-
+import { generateMetadata } from "../components/Meta";
 import Topbar from "../components/Topbar";
 
 const ContactPage = () => {
+
+
+  const [metadata, setMetadata] = useState({
+    title:
+      "مركز وقت الطفل لضيافة الأطفال | Child Time Center for Children's Hospitality",
+
+    description:
+      "تمكين الأطفال ليصبحوا مواطنين منتجين في كافة نواحي الحياة. | Empowering children to become productive citizens in all aspects of life.",
+  });
+
+  useEffect(() => {
+    const fetchMetadata = async () => {
+      try {
+        const fetchedMetadata = await generateMetadata();
+        setMetadata(fetchedMetadata[4]);
+      } catch (error) {
+        console.error("Error fetching metadata:", error);
+      }
+    };
+
+    fetchMetadata();
+
+    return () => {
+      // Cleanup function if needed
+    };
+  }, []);
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.title = metadata.title;
+
+      const descriptionMeta = document.querySelector('meta[name="description"]');
+      if (descriptionMeta) {
+        descriptionMeta.setAttribute("content", metadata.description);
+      }
+
+      const keywordsMeta = document.querySelector('meta[name="keywords"]');
+      if (keywordsMeta && metadata.keywords) {
+        keywordsMeta.setAttribute("content", metadata.keywords);
+      }
+    }
+  }, [metadata]);
+
+
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
