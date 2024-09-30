@@ -12,6 +12,7 @@ import { generateMetadata } from "../components/Meta";
 
 
 const Page = () => {
+  
   const [metadata, setMetadata] = useState({
     title:
       "مركز وقت الطفل لضيافة الأطفال | Child Time Center for Children's Hospitality",

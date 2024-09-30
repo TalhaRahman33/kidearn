@@ -152,11 +152,11 @@ const Footer = () => {
                     <li>
                       <Link
                         className="img-popup"
-                        href="/images/footer-gallery-1.png"
+                        href="/images/footer1.webp"
                       >
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer-gallery-1.png"
+                          src="/images/footer1.webp"
                           alt="footer gallery"
                           width={78}
                           height={77}
@@ -166,11 +166,11 @@ const Footer = () => {
                     <li>
                       <Link
                         className="img-popup"
-                        href="/images/footer-gallery-2.png"
+                        href="/images/footer2.webp"
                       >
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer-gallery-2.png"
+                          src="/images/footer2.webp"
                           alt="footer gallery"
                           width={77}
                           height={77}
@@ -180,11 +180,11 @@ const Footer = () => {
                     <li>
                       <Link
                         className="img-popup"
-                        href="/images/footer-gallery-3.png"
+                        href="/images/footer3.webp"
                       >
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer-gallery-3.png"
+                          src="/images/footer3.webp"
                           alt="footer gallery"
                           width={77}
                           height={77}
@@ -194,11 +194,11 @@ const Footer = () => {
                     <li>
                       <Link
                         className="img-popup"
-                        href="/images/footer-gallery-4.png"
+                        href="/images/footer4.webp"
                       >
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer-gallery-4.png"
+                          src="/images/footer4.webp"
                           alt="footer gallery"
                           width={78}
                           height={77}
@@ -208,11 +208,11 @@ const Footer = () => {
                     <li>
                       <Link
                         className="img-popup"
-                        href="/images/footer-gallery-5.png"
+                        href="/images/footer5.webp"
                       >
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer-gallery-5.png"
+                          src="/images/footer5.webp"
                           alt="footer gallery"
                           width={77}
                           height={77}
@@ -222,11 +222,11 @@ const Footer = () => {
                     <li>
                       <Link
                         className="img-popup"
-                        href="/images/footer-gallery-6.png"
+                        href="/images/footer6.webp"
                       >
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer-gallery-6.png"
+                          src="/images/footer6.webp"
                           alt="footer gallery"
                           width={77}
                           height={77}
