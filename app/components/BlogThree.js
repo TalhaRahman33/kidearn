@@ -23,7 +23,7 @@ const BlogThree = () => {
       category: "اقرأ المزيد",
       date: "٢٧ يونيو ٢٠٢٤",
       title: "خطوات التسجيل في قرة",
-      image: "/images/blog-3-2.jpg",
+      image: "/images/blog-3-2.png",
       link: "/newdetail2",
       author: {
         name: "Darlene Robertson",
@@ -35,8 +35,8 @@ const BlogThree = () => {
     {
       id: 3,
       category: "اقرأ المزيد",
-      date: "28 Mar, 2023",
-      title: "Choose the best child care center for you!",
+      date: "٢ أكتوبر ٢٠٢٤",
+      title: "تطور اللغة",
       image: "/images/blog-3-3.jpg",
       link: "/newdetail3",
       author: {

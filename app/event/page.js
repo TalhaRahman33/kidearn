@@ -63,7 +63,7 @@ const page = () => {
         <Header />
 
         <section className="page-header">
-          <div className="page-header__bg"></div>
+          <div className="page-header__bg_event"></div>
           {/* /.page-header__bg */}
           <div className="container">
             <h2 className="page-header__title">

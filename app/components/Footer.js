@@ -50,7 +50,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-6 col-xl-3">
                 <div className="footer-widget footer-widget--about">
-                  <Link href="/">
+                  {/* <Link href="/">
                     <ExportedImage
                       unoptimized={true}
                       src="/images/logo-dark.png"
@@ -59,7 +59,7 @@ const Footer = () => {
                       alt="Kidearn HTML Template"
                       className="footer-widget__logo"
                     />
-                  </Link>
+                  </Link> */}
                   <ul className="list-unstyled footer-widget__info">
                     <li>
                       <i className="icon-location2 footer-widget__info__icon"></i>
