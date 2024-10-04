@@ -27,7 +27,7 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-2.webp" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-2.jpg" alt="" />
             <div className="gallery-one__card__hover">
               <a
                 href="/images/gallery1-2.webp"
@@ -59,7 +59,7 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}   src="/images/gallery1-4.webp" alt="" width={370} height={367}/>
+            <ExportedImage unoptimized={true}   src="/images/gallery1-4.jpg" alt="" width={370} height={367}/>
             <div className="gallery-one__card__hover">
               <a
                 href="/images/gallery1-4.webp"
@@ -75,7 +75,7 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-5.webp" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-5.jpg" alt="" />
             <div className="gallery-one__card__hover">
               <a
                 href="/images/gallery1-5.webp"
@@ -91,7 +91,7 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-6.webp" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-6.jpg" alt="" />
             <div className="gallery-one__card__hover">
               <a
                 href="/images/gallery1-6.webp"
@@ -123,7 +123,7 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-8.webp" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-8.jpg" alt="" />
             <div className="gallery-one__card__hover">
               <a
                 href="/images/gallery1-8.webp"
@@ -139,7 +139,7 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-9.webp" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-9.jpg" alt="" />
             <div className="gallery-one__card__hover">
               <a
                 href="/images/gallery1-9.webp"

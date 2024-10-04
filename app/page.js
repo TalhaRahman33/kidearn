@@ -287,7 +287,7 @@ export default function Home() {
                     كيف تصل لبيت أمي؟
                     </h3>
                     <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" className="kidearn-btn">
-                      <span>زر الآن</span>
+                      <span> اضغط هنا</span>
 
                     </Link>
                   </div>

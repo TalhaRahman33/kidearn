@@ -114,7 +114,7 @@ const ContactPage = () => {
         <Header />
 
         <section className="page-header">
-          <div className="page-header__bg" />
+          <div className="page-header__bg_contact" />
           <div className="container">
             <h2 className="page-header__title">اتصال</h2>
 
@@ -222,7 +222,9 @@ const ContactPage = () => {
                     <i className="icon-telephone contact-info-one__icon"></i>
                     <p className="contact-info-one__text">هل لديك أي سؤال؟</p>
                     <h3 className="contact-info-one__title">
-                      <Link href="tel:+٩٦٦٥٨٣٨٢٥١١٦">+٩٦٦٥٨٣٨٢٥١١٦</Link>
+                      <Link href="tel:+٠
+ ٩٦٦٥٨٣٨٢٥١١٦٠
+ ">٠٥٨٣٨٢٥١١٦</Link>
                     </h3>
                   </div>
                 </div>
@@ -249,7 +251,8 @@ const ContactPage = () => {
                     <i className="icon-location-fill contact-info-one__icon"></i>
                     <p className="contact-info-one__text">زر في أي وقت </p>
                     <h5 className="contact-info-one__title">
-                      <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" target="_blank">شارع أبي بكر الصديق، النرجس، الرياض ١٣٣٢٣،  المملكة العربية السعودية</Link>
+                      <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" target="_blank">شارع أبي بكر الصديق، النرجس </Link>
+                      {/* <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" target="_blank">شارع أبي بكر الصديق، النرجس، الرياض ١٣٣٢٣،  المملكة العربية السعودية</Link> */}
                       {/* <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" target="_blank">Abi Bakr As Siddiq Rd, An Narjis,Riyadh 13323, Saudi Arabia</Link> */}
                     </h5>
                   </div>

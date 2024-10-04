@@ -117,7 +117,7 @@ const JobApplicationPage = () => {
 
 
         <section className="page-header">
-          <div className="page-header__bg" />
+          <div className="page-header__bg_job" />
           <div className="container">
             <h2 className="page-header__title">نموذج التقديم على وظيفة</h2>
             <ul className="kidearn-breadcrumb list-unstyled">

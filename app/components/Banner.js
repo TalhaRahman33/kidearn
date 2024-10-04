@@ -33,9 +33,9 @@ const Banner = () => {
   };
 
   const bannerImages = [
-    { src: '/images/hero-banner-1-rtl.jpg', alt: 'Hero Banner 1' },
-    { src: '/images/hero-banner-1-2-rtl.jpg', alt: 'Hero Banner 2' },
-    { src: '/images/hero-banner-1-3-rtl.jpg', alt: 'Hero Banner 3' },
+    { src: '/images/hero-banner-1-rtl.png', alt: 'Hero Banner 1' },
+    { src: '/images/home2.jpg', alt: 'Hero Banner 2' },
+    { src: '/images/hero-banner-1-rtl.png', alt: 'Hero Banner 3' },
   ];
 
   return (
