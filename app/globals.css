@@ -135,3 +135,13 @@ li {
     font-size: 12px; /* Even smaller text for extra small screens */
   }
 }
+
+
+@media (max-width: 768px) {
+  .banner-one__bg {
+    background-image: none !important;
+    background-color: #7f9549 !important; /* Set your desired background color */
+  }
+}
+
+
