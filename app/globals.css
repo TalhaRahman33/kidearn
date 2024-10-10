@@ -2,35 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @font-face {
-  font-family: 'YourFont';
-  src: url('/fonts/Janna-LT-Regular.ttf') format('opentype'); /* Adjusted to 'opentype' for OTF font */
+  font-family: "YourFont";
+  src: url("/fonts/Janna-LT-Regular.ttf") format("opentype"); /* Adjusted to 'opentype' for OTF font */
   /* font-weight: normal;
   font-style: normal; */
 }
 
-p{
-  font-family: "YourFont";
-}
- 
-li{
+p {
   font-family: "YourFont";
 }
 
-.testimonial-one__item{
-  font-family: 'YourFont' !important;
+li {
+  font-family: "YourFont";
+}
+
+.testimonial-one__item {
+  font-family: "YourFont" !important;
 }
 
 /* .header-Links{
   color: #0B2038 !important;
   font-family: "YourFont";
 } */
-.headerButton{
+.headerButton {
   font-family: "YourFont";
 }
-
 
 /* General styling for the header links */
 .header-Links {
@@ -44,24 +41,22 @@ li{
 
 /* Active link styling */
 .header-Links.active {
-  color: #F25334  !important; /* Active link color */
+  color: #f25334 !important; /* Active link color */
   font-weight: bold; /* Make the active link bold */
-  border-bottom: 2px solid #F25334 ; /* Optional: underline effect */
+  border-bottom: 2px solid #f25334; /* Optional: underline effect */
 }
-
 
 /* Add hover effect for links */
 .header-Links:hover {
-  color: #F25334; /* Change color on hover */
+  color: #f25334; /* Change color on hover */
 }
-
 
 .custom-btn {
   padding: 12px 32px;
   /* padding-left: 35px;
   padding-right: 35px; */
   margin-bottom: 10px;
- 
+
   background-color: #126c94;
   color: #ffffff;
   font-size: 18px;
@@ -70,20 +65,21 @@ li{
   border-radius: 8px;
   text-align: center;
   text-decoration: none;
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
   cursor: pointer;
 }
 .custom-btn:hover {
-background-color: #fff;
-color: #F25334;
+  background-color: #fff;
+  color: #f25334;
   cursor: pointer;
 }
- 
-.white{
+
+.white {
   color: black;
 }
 
-.insta-btn{
+.insta-btn {
   margin-right: 200px !important;
 }
 
@@ -95,16 +91,10 @@ color: #F25334;
   }
 }
 
-
 /* job from */
 .select-optn {
-  font-family: 'YourFont'!important; 
-
+  font-family: "YourFont" !important;
 }
-
-
-
-
 
 /* footer */
 .main-footer__bottom {
@@ -114,7 +104,7 @@ color: #F25334;
 }
 
 .main-footer__copyright {
-  display: flex ; /* Use Flexbox for the copyright text */
+  display: flex; /* Use Flexbox for the copyright text */
   align-items: center !important; /* Vertically center items */
   justify-content: center !important;
 }
@@ -133,44 +123,15 @@ color: #F25334;
   margin-left: 5px; /* Optional: add space between text and image */
 }
 
+@media (max-width: 768px) {
+  .main-footer__copyright {
+    font-size: 12px; /* Smaller text on tablets and small screens */
+  }
+}
 
-/* **************************************Whatsapp button ************************************* */
-
-/* .float-whatsapp-button{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:35px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
-} */
-
-/* ***********************************Phone Button ********************************** */
-/* .float-phone-button {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 105px; 
-  right: 40px;
-  background-color: #1cc1e7; 
-  color: #FFF;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
-} */
-
-
-
-
-/* ***************************************************************** */
-
-
-
+@media (max-width: 576px) {
+  .main-footer__copyright {
+    flex-direction: column; /* Stack the text vertically on small screens */
+    font-size: 12px; /* Even smaller text for extra small screens */
+  }
+}

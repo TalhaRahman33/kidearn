@@ -9545,7 +9545,7 @@ body.megamenu-popup-active .mobile-nav__content {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
-  background-image: url(../images/contact.png);
+  background-image: url(../images/job.png);
 }
 .page-header__bg_event {
   position: absolute;
@@ -9556,7 +9556,7 @@ body.megamenu-popup-active .mobile-nav__content {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
-  background-image: url(../images/home.jpg);
+  background-image: url(../images/event.png);
 }
 .page-header__bg_contact {
   position: absolute;
@@ -9568,6 +9568,17 @@ body.megamenu-popup-active .mobile-nav__content {
   background-position: bottom center;
   background-size: cover;
   background-image: url(../images/contact.png);
+}
+.page-header__bg_pricing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-image: url(../images/pricing.png);
 }
 .page-header__bg {
   position: absolute;
@@ -9589,7 +9600,29 @@ body.megamenu-popup-active .mobile-nav__content {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
-  background-image: url(../images/hero-banner-1-rtl.png);
+  background-image: url(../images/about.png);
+}
+.page-header__bg-news {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-image: url(../images/news.png);
+}
+.page-header__bg_register {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-image: url(../images/register.png);
 }
 .page-header__bg::before {
   content: "";

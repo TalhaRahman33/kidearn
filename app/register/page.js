@@ -6,7 +6,7 @@ import Footer1 from '../components/Footer1';
 import Link from 'next/link';
 import RegisterForm from './RegisterForm';
 import { generateMetadata } from "../components/Meta";
-
+import Topbar from '../components/Topbar';
 
 const Registerpage = () => {
   const [metadata, setMetadata] = useState({
@@ -56,18 +56,29 @@ const Registerpage = () => {
       <div className="custom-cursor__cursor-two"></div>
 
       <div className="page-wrapper">
+        <Topbar/>
         <Header />
 
-        <section className="page-header">
-          <div className="page-header__bg" />
+        <section className="page-header" style={{position:"relative"}}>
+          <div className="page-header__bg_register" />
+          <div style={{
+        position: 'absolute',
+        top: '0',
+        right: '0',
+        bottom: '0',
+        left: '0',
+        background: 'rgba(0, 0, 0, 0.5)',
+        transition: 'opacity 0.5s ease',
+        zIndex: 0,
+      }} />
           <div className="container">
-            <h2 className="page-header__title">registration</h2>
+            <h2 className="page-header__title">تسجيل</h2>
             <ul className="kidearn-breadcrumb list-unstyled">
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/">الصفحة الرئيسية</Link>
               </li>
               <li>
-                <span>registration</span>
+                <span>تسجيل</span>
               </li>
             </ul>
           </div>

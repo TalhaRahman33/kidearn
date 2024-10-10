@@ -37,7 +37,7 @@ const BlogThree = () => {
       category: "اقرأ المزيد",
       date: "٢ أكتوبر ٢٠٢٤",
       title: "تطور اللغة",
-      image: "/images/blog-3-3.jpg",
+      image: "/images/blog2.png",
       link: "/newdetail3",
       author: {
         name: "Cody Fisher",

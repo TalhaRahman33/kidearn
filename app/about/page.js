@@ -67,8 +67,19 @@ const Page = () => {
 
         <Header />
 
-        <section className="page-header">
-          <div className="page-header__bg" />
+        <section className="page-header"  style={{ position: "relative" }}>
+    
+          <div className="page-header__bg_about" />
+          <div style={{
+        position: 'absolute',
+        top: '0',
+        right: '0',
+        bottom: '0',
+        left: '0',
+        background: 'rgba(0, 0, 0, 0.5)',
+        transition: 'opacity 0.5s ease',
+        zIndex: 0,
+      }} />
           <div className="container">
             <h2 className="page-header__title"> من نحن</h2>
             <ul className="kidearn-breadcrumb list-unstyled">
@@ -101,7 +112,7 @@ const Page = () => {
                     data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 3, "speed": 700, "scale": 1}'
                   >
                     <ExportedImage
-                      src="/images/about-4-1.jpg"
+                      src="/images/about-4-1.png"
                       alt="kidearn"
                       width={553}
                       height={553}
@@ -114,7 +125,7 @@ const Page = () => {
                     data-wow-delay="500ms"
                   >
                     <ExportedImage
-                      src="/images/about-4-2.jpg"
+                      src="/images/about-4-2.png"
                       alt="kidearn"
                       width={264}
                       height={264}

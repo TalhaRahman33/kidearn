@@ -76,7 +76,7 @@ const TestimonialSection = () => {
                     height={100}
                     unoptimized={true}
                   /> */}
-                  <h5 className="testimonial-one__item__author__name">   Munerah</h5>
+                  <h5 className="testimonial-one__item__author__name">   منيرة</h5>
                   {/* <p className="testimonial-one__item__author__designation">  Munerah</p> */}
                 </div>
               </div>
@@ -98,7 +98,7 @@ const TestimonialSection = () => {
                     height={100}
                     unoptimized={true}
                   /> */}
-                  <h5 className="testimonial-one__item__author__name">  Um Tmim </h5>
+                  <h5 className="testimonial-one__item__author__name">  أم تميم </h5>
                   {/* <p className="testimonial-one__item__author__designation">  Um Tmim </p> */}
                 </div>
               </div>
@@ -118,7 +118,7 @@ const TestimonialSection = () => {
                     height={100}
                     unoptimized={true}
                   /> */}
-                  <h5 className="testimonial-one__item__author__name"> Wafa Mohammed</h5>
+                  <h5 className="testimonial-one__item__author__name">  وفاء محمد </h5>
                   {/* <p className="testimonial-one__item__author__designation"> Wafa Mohammed</p> */}
                 </div>
               </div>
@@ -142,7 +142,7 @@ const TestimonialSection = () => {
                     height={100}
                     unoptimized={true}
                   /> */}
-                  <h5 className="testimonial-one__item__author__name"> Abrar Safar </h5>
+                  <h5 className="testimonial-one__item__author__name">  أبرار سفر </h5>
                   {/* <p className="testimonial-one__item__author__designation"> Abrar Safar</p> */}
                 </div>
               </div>
@@ -167,7 +167,7 @@ const TestimonialSection = () => {
                     height={100}
                     unoptimized={true}
                   /> */}
-                  <h5 className="testimonial-one__item__author__name">  Um Reema</h5>
+                  <h5 className="testimonial-one__item__author__name">  أم ريمة </h5>
                   {/* <p className="testimonial-one__item__author__designation">  Um Reema</p> */}
                 </div>
               </div>
@@ -190,7 +190,7 @@ const TestimonialSection = () => {
                     height={100}
                     unoptimized={true}
                   /> */}
-                  <h5 className="testimonial-one__item__author__name">Hanan </h5>
+                  <h5 className="testimonial-one__item__author__name">حنان </h5>
                   {/* <p className="testimonial-one__item__author__designation">Hanan </p> */}
                 </div>
               </div>

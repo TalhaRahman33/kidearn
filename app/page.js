@@ -58,7 +58,7 @@ export default function Home() {
                         className="service-one__item__image kidearn-tilt"
                         data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 7, "speed": 700, "scale": 1}'
                       >
-                        <img src="images/service-1-1.jpg" alt="kidearn" />
+                        <ExportedImage unoptimized={true} src="images/service-1-1.jpg" alt="kidearn" />
                       </div>
                       <div className="service-one__item__ball"></div>
                     </div>
@@ -80,7 +80,7 @@ export default function Home() {
                         className="service-one__item__image kidearn-tilt"
                         data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 7, "speed": 700, "scale": 1}'
                       >
-                        <img src="images/service-1-2.jpg" alt="kidearn" />
+                        <ExportedImage unoptimized={true} src="images/service-1-2.jpg" alt="kidearn" />
                       </div>
                       <div className="service-one__item__ball"></div>
                     </div>
@@ -102,7 +102,7 @@ export default function Home() {
                         className="service-one__item__image kidearn-tilt"
                         data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 7, "speed": 700, "scale": 1}'
                       >
-                        <img src="images/service-1-3.jpg" alt="kidearn" />
+                        <ExportedImage unoptimized={true} src="images/service-1-3.jpg" alt="kidearn" />
                       </div>
                       <div className="service-one__item__ball"></div>
                     </div>
@@ -124,7 +124,7 @@ export default function Home() {
                         className="service-one__item__image kidearn-tilt"
                         data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 7, "speed": 700, "scale": 1}'
                       >
-                        <img src="images/service-1-4.jpg" alt="kidearn" />
+                        <ExportedImage unoptimized={true} src="images/service-1-4.jpg" alt="kidearn" />
                       </div>
                       <div className="service-one__item__ball"></div>
                     </div>
@@ -167,19 +167,19 @@ export default function Home() {
                       className="about-one__image__one kidearn-tilt"
                       data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 5, "speed": 700, "scale": 1}'
                     >
-                      <img src="images/about-1-1.jpg" alt="kidearn" />
+                      <ExportedImage unoptimized={true} width={479} height={482} src="/images/about-1-1.png" alt="kidearn" />
                     </div>
                     <div
                       className="about-one__image__border wow fadeInUp"
                       data-wow-delay="200ms"
                     >
-                      <img src="images/about-1-border.jpg" alt="kidearn" />
+                      <ExportedImage unoptimized={true} width={489} height={526} src="/images/about-1-border.jpg" alt="kidearn" />
                     </div>
                     <div
                       className="about-one__image__leaf kidearn-splax"
                       data-para-options='{"orientation": "left", "scale": 1.5, "overflow": true}'
                     >
-                      <img src="images/about-1-leaf-rtl.png" alt="kidearn" />
+                      <ExportedImage unoptimized={true} width={255} height={239} src="/images/about-1-leaf-rtl.png" alt="kidearn" />
                     </div>
                     <div
                       className="about-one__image__ball wow fadeInUp"
@@ -296,14 +296,15 @@ export default function Home() {
                   <div className="video-one__btn-shape">
                     <div className="video-one__btn">
                       <ExportedImage
-                        src="/images/video-bg-1.jpg"
+                        src="/images/video-bg-1.png"
                         alt="kidearn"
                         unoptimized={true}
                         width={555}
                         height={597}
                       />
                       <Link
-                        href="https://www.youtube.com/watch?v=0MuL8fd3pb8"
+                        href="https://www.instagram.com/baytummi"
+                        // href="https://www.youtube.com/watch?v=0MuL8fd3pb8"
                         className="video-popup"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -366,7 +367,7 @@ export default function Home() {
                     <div className="program-one__item__bg"></div>
                     <div className="program-one__item__image">
                       <ExportedImage
-                        src="/images/program-1-1.jpg"
+                        src="/images/program-1-1.png"
                         alt="Toddler"
                         width={217}
                         height={136}
@@ -419,7 +420,7 @@ export default function Home() {
                     <div className="program-one__item__bg"></div>
                     <div className="program-one__item__image">
                       <ExportedImage
-                        src="/images/program-1-2.jpg"
+                        src="/images/program-1-2.png"
                         alt="Preschool"
                         width={217}
                         height={136}
@@ -470,7 +471,7 @@ export default function Home() {
                     <div className="program-one__item__bg"></div>
                     <div className="program-one__item__image">
                       <ExportedImage
-                        src="/images/program-1-3.jpg"
+                        src="/images/program-1-3.png"
                         alt="Kindergarten"
                         width={217}
                         height={136}

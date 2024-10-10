@@ -4,8 +4,17 @@ import Link from 'next/link';
 const NewDetail1 = () => {
   return (
     <>
-    <section className="page-header">
-      <div className="page-header__bg" />
+    <section className="page-header" style={{ position: "relative" }}>
+      <div className="page-header__bg-news" />    <div style={{
+        position: 'absolute',
+        top: '0',
+        right: '0',
+        bottom: '0',
+        left: '0',
+        background: 'rgba(0, 0, 0, 0.5)',
+        transition: 'opacity 0.5s ease',
+        zIndex: 0,
+      }} />
       {/* /.page-header__bg */}
       <div className="container">
         <h2 className="page-header__title">تفاصيل الموضوع</h2>
@@ -32,7 +41,7 @@ const NewDetail1 = () => {
               <div className="blog-card blog-card-two @@extraClassName">
                 <div className="blog-card__image">
                   <ExportedImage   unoptimized={true}
-                    width={200} height={500} src="/images/blog-l-1-1.jpg"
+                    width={200} height={500} src="/images/blog-l-1-1.png"
                     alt="The Complete Web Developer Guideline 2023"
                   />
                 </div>

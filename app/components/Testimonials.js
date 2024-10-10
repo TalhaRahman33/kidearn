@@ -109,7 +109,7 @@ const Testimonials = () => {
                       height={46}
                     /> */}
                     <h5 className="testimonial-one__item__author__name">
-                      Munerah
+                    منيرة
                     </h5>
                     {/* <p className="testimonial-one__item__author__designation">
                       Munerah
@@ -135,8 +135,7 @@ const Testimonials = () => {
                       height={46}
                     /> */}
                     <h5 className="testimonial-one__item__author__name">
-                    Um Tmim 
-                    </h5>
+                    أم تميم                    </h5>
                     {/* <p className="testimonial-one__item__author__designation">
                    Um Tmim
                     </p> */}
@@ -160,7 +159,7 @@ const Testimonials = () => {
                       height={46}
                     /> */}
                     <h5 className="testimonial-one__item__author__name">
-                      Wafa Mohammed
+                    وفاء محمد
                     </h5>
                     {/* <p className="testimonial-one__item__author__designation">
                     Wafa Mohammed
@@ -189,7 +188,7 @@ const Testimonials = () => {
                       height={46}
                     /> */}
                     <h5 className="testimonial-one__item__author__name">
-                      Abrar Safar
+                    أبرار سفر
                     </h5>
                     {/* <p className="testimonial-one__item__author__designation">
                   Abrar Safar
@@ -218,7 +217,7 @@ const Testimonials = () => {
                       height={46}
                     /> */}
                     <h5 className="testimonial-one__item__author__name">
-                      Um Reema
+                    أم ريمة
                     </h5>
                     {/* <p className="testimonial-one__item__author__designation">
                 Um Reema
@@ -245,7 +244,7 @@ const Testimonials = () => {
                       height={46}
                     /> */}
                     <h5 className="testimonial-one__item__author__name">
-                      Hanan
+                    حنان
                     </h5>
                     {/* <p className="testimonial-one__item__author__designation">
               Hanan

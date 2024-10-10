@@ -64,7 +64,8 @@ const Footer = () => {
                     <li>
                       <i className="icon-location2 footer-widget__info__icon"></i>
                       <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7">
-                      شارع أبي بكر الصديق، النرجس، الرياض ١٣٣٢٣، المملكة العربية السعودية
+                        شارع أبي بكر الصديق، النرجس، الرياض ١٣٣٢٣، المملكة
+                        العربية السعودية
                       </Link>
                     </li>
                     <li>
@@ -74,7 +75,7 @@ const Footer = () => {
                     <li>
                       <i className="icon-email1 footer-widget__info__icon"></i>
                       <Link href="mailto:info@baytummi.com">
-                      info@baytummi.com
+                        info@baytummi.com
                       </Link>
                     </li>
                   </ul>
@@ -150,13 +151,10 @@ const Footer = () => {
                   <h2 className="footer-widget__title">معرض الصور</h2>
                   <ul className="list-unstyled footer-widget__gallery">
                     <li>
-                      <Link
-                        className="img-popup"
-                        href="/images/footer1.webp"
-                      >
+                      <Link className="img-popup" href="/images/footer1.jpg">
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer1.webp"
+                          src="/images/footer1.jpg"
                           alt="footer gallery"
                           width={78}
                           height={77}
@@ -164,13 +162,10 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="img-popup"
-                        href="/images/footer2.webp"
-                      >
+                      <Link className="img-popup" href="/images/footer2.jpg">
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer2.webp"
+                          src="/images/footer2.jpg"
                           alt="footer gallery"
                           width={77}
                           height={77}
@@ -178,13 +173,10 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="img-popup"
-                        href="/images/footer3.webp"
-                      >
+                      <Link className="img-popup" href="/images/footer3.jpg">
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer3.webp"
+                          src="/images/footer3.jpg"
                           alt="footer gallery"
                           width={77}
                           height={77}
@@ -192,13 +184,10 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="img-popup"
-                        href="/images/footer4.webp"
-                      >
+                      <Link className="img-popup" href="/images/footer4.jpg">
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer4.webp"
+                          src="/images/footer4.jpg"
                           alt="footer gallery"
                           width={78}
                           height={77}
@@ -206,13 +195,10 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="img-popup"
-                        href="/images/footer5.webp"
-                      >
+                      <Link className="img-popup" href="/images/footer5.jpg">
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer5.webp"
+                          src="/images/footer5.jpg"
                           alt="footer gallery"
                           width={77}
                           height={77}
@@ -220,13 +206,10 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="img-popup"
-                        href="/images/footer6.webp"
-                      >
+                      <Link className="img-popup" href="/images/footer6.jpg">
                         <ExportedImage
                           unoptimized={true}
-                          src="/images/footer6.webp"
+                          src="/images/footer6.jpg"
                           alt="footer gallery"
                           width={77}
                           height={77}
@@ -246,20 +229,18 @@ const Footer = () => {
           <div className="container">
             <div className="main-footer__bottom__inner">
               <p className="main-footer__copyright">
-                
-                 
-                 <Link href="https://www.selsla.net/" target="_blank">
-                 Selsla Technology
-                <ExportedImage unoptimized={true}
-                  src="/images/heartt.webp"
-                  alt="Heart"
-                  width={25}
-                  height={20}
-                  className="px-1"
-                />{" "}
-               Developed By
-              </Link>
-              © Copyright  <span className="dynamic-year"></span>
+                <Link href="https://www.selsla.net/" target="_blank">
+                  Developed By Selsla Technology
+                  <ExportedImage
+                    unoptimized={true}
+                    src="/images/heartt.webp"
+                    alt="Heart"
+                    width={25}
+                    height={20}
+                    className="px-1"
+                  />
+                </Link>
+                © Copyright <span className="dynamic-year"></span>
               </p>
             </div>
           </div>

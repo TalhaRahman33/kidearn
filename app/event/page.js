@@ -62,8 +62,18 @@ const page = () => {
         <Topbar />
         <Header />
 
-        <section className="page-header">
-          <div className="page-header__bg_event"></div>
+        <section className="page-header" style={{position:"relative"}}>
+          <div className="page-header__bg_event"/>
+          <div style={{
+        position: 'absolute',
+        top: '0',
+        right: '0',
+        bottom: '0',
+        left: '0',
+        background: 'rgba(0, 0, 0, 0.5)',
+        transition: 'opacity 0.5s ease',
+        zIndex: 0,
+      }} />
           {/* /.page-header__bg */}
           <div className="container">
             <h2 className="page-header__title">
@@ -97,7 +107,7 @@ const page = () => {
                     <div className="col-md-5">
                       <div className="event-card-two__image">
                         <ExportedImage
-                          src="/images/event-1-3.jpg"
+                          src="/images/event-1-3.png"
                           alt="Let’s spend summer together with your teachers"
                           unoptimized={true}
                           width={250}
@@ -145,7 +155,7 @@ const page = () => {
                     <div className="col-md-5">
                       <div className="event-card-two__image">
                         <ExportedImage
-                          src="/images/event-1-4.jpg"
+                          src="/images/event-1-4.png"
                           alt="The complete web developer guideline 2023"
                           unoptimized={true}
                           width={250}
@@ -193,7 +203,7 @@ const page = () => {
                     <div className="col-md-5">
                       <div className="event-card-two__image">
                         <ExportedImage
-                          src="/images/event-1-5.jpg"
+                          src="/images/event-1-5.png"
                           alt="Gathering & welcome speech marketing strategy"
                           unoptimized={true}
                           width={250}
@@ -241,7 +251,7 @@ const page = () => {
                     <div className="col-md-5">
                       <div className="event-card-two__image">
                         <ExportedImage
-                          src="/images/event-1-6.jpg"
+                          src="/images/event-1-6.png"
                           alt="How a business can handle a business strategy"
                           unoptimized={true}
                           width={250}
@@ -289,7 +299,7 @@ const page = () => {
                     <div className="col-md-5">
                       <div className="event-card-two__image">
                         <ExportedImage
-                          src="/images/event-1-7.jpg"
+                          src="/images/event-1-7.png"
                           alt="Let’s spend summer together with your teachers"
                           unoptimized={true}
                           width={250}
@@ -337,7 +347,7 @@ const page = () => {
                     <div className="col-md-5">
                       <div className="event-card-two__image">
                         <ExportedImage
-                          src="/images/event-1-8.jpg"
+                          src="/images/event-1-8.png"
                           alt="How a business can handle a business strategy"
                           unoptimized={true}
                           width={250}
