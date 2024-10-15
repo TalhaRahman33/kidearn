@@ -8,7 +8,7 @@ const BlogThree = () => {
       category: "اقرأ المزيد",
       date: "١٥ يناير ٢٠٢٤",
       title: "مبادرة فصيح",
-      image: "/images/blog-3-1.jpg",
+      image: "/images/blog-3-1.png",
       link: "/newdetail1",
       author: {
         name: "Wade Warren",
@@ -22,7 +22,7 @@ const BlogThree = () => {
       category: "اقرأ المزيد",
       date: "٢٧ يونيو ٢٠٢٤",
       title: "خطوات التسجيل في قرة",
-      image: "/images/blog-3-2.png",
+      image: "/images/blog-3-22.png",
       link: "/newdetail2",
       author: {
         name: "Darlene Robertson",

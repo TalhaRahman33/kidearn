@@ -33,7 +33,7 @@ const Banner = () => {
   };
 
   const bannerImages = [
-    { src: '/images/hero-banner-1-rtl.png', alt: 'Hero Banner 1' },
+    { src: '/images/hero-banner-1-rtl1.png', alt: 'Hero Banner 1' },
     { src: '/images/home5.png', alt: 'Hero Banner 2' },
     { src: '/images/home4.png', alt: 'Hero Banner 3' },
     // { src: '/images/home2.jpg', alt: 'Hero Banner 3' },
@@ -60,20 +60,20 @@ const Banner = () => {
                         <div className="banner-one__shape2"></div>
                         <div className="banner-one__shape3"></div>
                         <div className="banner-one__shape4">
-                          <ExportedImage
+                          {/* <ExportedImage
                             unoptimized={true}
                             src="/images/banner-1-shape-2.png"
                             alt="kidearn"
                             width={651}
                             height={666}
-                          />
+                          /> */}
                         </div>
                         <div className="banner-one__shape5">
                           <div className="banner-one__shape5-inner"></div>
                         </div>
-                        <div className="banner-one__shape6">
+                        {/* <div className="banner-one__shape6">
                           <div className="banner-one__shape6-inner"></div>
-                        </div>
+                        </div> */}
                         <div className="banner-one__content__bg"></div>
                         <h2 className="banner-one__content__title">
                              <br /> مركز بيت أمي <br />  لضيافة الأطفال

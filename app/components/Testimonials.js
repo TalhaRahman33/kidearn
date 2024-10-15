@@ -29,8 +29,8 @@ const Testimonials = () => {
     autoplayTimeout: 5000,
     smartSpeed: 1000,
     navText: [
-      '<span className="icon-left-arrow">Prev</span>',
-      '<span className="icon-right-arrow">Next</span>',
+      '<span className="icon-left-arrow">السابق</span>',
+      '<span className="icon-right-arrow">التالي</span>',
     ],
   };
 

@@ -24,7 +24,7 @@ export default function Home() {
 
           <Banner />
 
-          {/* <section className="service-one">
+          <section className="service-one">
             <div
               className="service-one__bg kidearn-splax"
               data-para-options='{"orientation": "up", "scale": 1.5, "overflow": true}'
@@ -58,13 +58,12 @@ export default function Home() {
                         className="service-one__item__image kidearn-tilt"
                         data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 7, "speed": 700, "scale": 1}'
                       >
-                        <ExportedImage unoptimized={true} src="images/service-1-1.jpg" alt="kidearn" />
+                        <ExportedImage unoptimized={true} src="images/service-1-1.jpg" alt="kidearn" width={242} height={272}/>
                       </div>
                       <div className="service-one__item__ball"></div>
                     </div>
                     <h4 className="service-one__item__title">
-                      Home-like environment
-                    </h4>
+                    نعمل طوال العام                    </h4>
                   </div>
                 </div>
                 <div
@@ -80,12 +79,12 @@ export default function Home() {
                         className="service-one__item__image kidearn-tilt"
                         data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 7, "speed": 700, "scale": 1}'
                       >
-                        <ExportedImage unoptimized={true} src="images/service-1-2.jpg" alt="kidearn" />
+                        <ExportedImage unoptimized={true} src="images/service-1-3.png" alt="kidearn" width={250} height={234}/>
                       </div>
                       <div className="service-one__item__ball"></div>
                     </div>
                     <h4 className="service-one__item__title">
-                      Safety and security
+                    ساعات مرنة
                     </h4>
                   </div>
                 </div>
@@ -102,12 +101,12 @@ export default function Home() {
                         className="service-one__item__image kidearn-tilt"
                         data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 7, "speed": 700, "scale": 1}'
                       >
-                        <ExportedImage unoptimized={true} src="images/service-1-3.jpg" alt="kidearn" />
+                        <ExportedImage unoptimized={true} src="images/service-1-2.png" alt="kidearn" width={242} height={272}/>
                       </div>
                       <div className="service-one__item__ball"></div>
                     </div>
                     <h4 className="service-one__item__title">
-                      Quality educators
+                    حضانة وتعليم
                     </h4>
                   </div>
                 </div>
@@ -124,16 +123,19 @@ export default function Home() {
                         className="service-one__item__image kidearn-tilt"
                         data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 7, "speed": 700, "scale": 1}'
                       >
-                        <ExportedImage unoptimized={true} src="images/service-1-4.jpg" alt="kidearn" />
+                        <ExportedImage unoptimized={true} src="images/service-1-4.png" alt="kidearn" width={250} height={234}/>
                       </div>
                       <div className="service-one__item__ball"></div>
                     </div>
-                    <h4 className="service-one__item__title">Play to learn</h4>
+                    <h4 className="service-one__item__title">
+                    أنشطة وفعاليات
+
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
-          </section> */}
+          </section>
 
           <section className="about-one my-5">
             <div className="container">
@@ -167,7 +169,7 @@ export default function Home() {
                       className="about-one__image__one kidearn-tilt"
                       data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 5, "speed": 700, "scale": 1}'
                     >
-                      <ExportedImage unoptimized={true} width={479} height={482} src="/images/about-1-1.png" alt="kidearn" />
+                      <ExportedImage unoptimized={true} width={479} height={482} src="/images/about-1-11.png" alt="kidearn" />
                     </div>
                     <div
                       className="about-one__image__border wow fadeInUp"

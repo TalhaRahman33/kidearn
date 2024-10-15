@@ -29,8 +29,8 @@ const TestimonialSection = () => {
           loader={myLoader}
           src="/images/testimonial-shape-2.png"
           alt="kidearn"
-          width={400}
-          height={400}
+          width={114}
+          height={102}
           unoptimized={true}
         />
       </div>
@@ -39,8 +39,8 @@ const TestimonialSection = () => {
           loader={myLoader}
           src="/images/testimonial-shape-3.png"
           alt="kidearn"
-          width={400}
-          height={400}
+          width={226}
+          height={198}
           unoptimized={true}
         />
       </div>
@@ -54,7 +54,9 @@ const TestimonialSection = () => {
           <div className="sec-title text-center">
             <h6 className="sec-title__tagline">التعليقات</h6>
             <h3 className="sec-title__title">
-            ماذا يقول عنا أولياء الأمور
+              ماذا يقول عنا
+              {/* <br /> */}
+              أولياء الأمور{" "}
             </h3>
           </div>
           <Slider {...settings}>
