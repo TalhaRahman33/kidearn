@@ -12390,7 +12390,7 @@ body.megamenu-popup-active .mobile-nav__content {
   min-height: 80px;
   padding: 0 100px 29px 0;
   margin-bottom: 35px;
-  border-bottom: 1px solid #D2D2D2;
+  /* border-bottom: 1px solid #D2D2D2; */
 }
 .about-four__info:last-of-type {
   border: none;

@@ -247,7 +247,9 @@ const Page = () => {
                       unoptimized={true}
                     />
                     <div className="cta-one__one__text">
-                      الكل في <br /> واحد
+                      <br /> 
+                      <br /> 
+                      {/* الكل في <br /> واحد */}
                     </div>
                   </div>
                   <div className="cta-one__thumb">
