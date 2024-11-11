@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Footer1 from "../components/Footer1";
+
 import Link from "next/link";
 import Modal from "react-bootstrap/Modal";
 import Topbar from "../components/Topbar";
