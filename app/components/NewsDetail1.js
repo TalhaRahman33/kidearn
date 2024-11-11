@@ -70,21 +70,7 @@ const NewDetail1 = () => {
                      
                     </p>
                     <Link target="_blank" href="https://apps.apple.com/us/app/ynmo-tifli/id6443390362">اأرغب بالاستفادة من المبادرة</Link>
-                   
-                  {/* <h3 className="blog-card__title">
-                    The complete web developer guideline 2023
-                  </h3>
                  
-                  <p className="blog-card-two__text">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteradution in some
-                    form by injected humour, or randomised words which don't look
-                    even slightly believable. If you are going There are many
-                    variations of passages of Lorem Ipsum available, but the
-                    majority have suffered alteradution in some form by injected
-                    humour, or randomised words which don't look even slightly
-                    believable. If you are going{" "}
-                  </p> */}
                   
                 </div>
                 {/* /.blog-card__content */}

@@ -11,8 +11,8 @@ const PricingSection = () => {
     <section className="pricing-one">
       <div className="container">
         <div className="sec-title text-center">
-          <h6 className="sec-title__tagline">الباقات</h6>
-          <h3 className="sec-title__title">اختر خطة تناسب احتياجاتك</h3>
+          <h6 className="sec-title__tagline">الـــباقـــات</h6>
+          <h3 className="sec-title__title"> اخـــتر خـــطة تـــناســـب احـــتياجـــات طـــفلك  </h3>
         </div>
         <div className="tabs-box">
           <div className="tabs-content">
@@ -43,37 +43,35 @@ const PricingSection = () => {
                     className="pricing-one__card"
                     style={{ "--accent-color": "#F25334" }}
                   >
-                    <h4 className="pricing-one__card__tagline">Open Play</h4>
-                    <h4 className="pricing-one__card__month">8 - 1 Year</h4>
+                    <h4 className="pricing-one__card__tagline">ساعة واحدة</h4>
+                    <h4 className="pricing-one__card__month">من ٧:٠٠ ص إلى ٥:٠٠ م</h4>
+
                     <div className="pricing-one__card__icon">
                       <i className="icon-crawling-baby-silhouette"></i>
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> Open Play
+                        <i className="fa fa-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Parent
-                        Supervision
+                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Unlimited
-                        Playtime
+                        <i className="fa fa-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Adult Entry is
-                        Free
+                        <i className="fa fa-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
-                    <h3 className="pricing">$400</h3>
+                    <h3 className="pricing">٧٠ ر.س</h3>
                     <h3 className="pricing-one__card__price">
                       <Link
                         href={{
                           pathname: "/register",
                           query: {
-                            packageName: "Open Play",
-                            price: " $400",
-                            amount: 400,
+                            packageName: "ساعة واحدة",
+                            price: "٧٠ ر.س",
+                            amount: 70,
                           },
                         }}
                       >
@@ -91,39 +89,35 @@ const PricingSection = () => {
                     className="pricing-one__card"
                     style={{ "--accent-color": "#2390FF" }}
                   >
-                    <h4 className="pricing-one__card__tagline">
-                      Toddler Program
-                    </h4>
-                    <h4 className="pricing-one__card__month">9 - 3 Years</h4>
+                    <h4 className="pricing-one__card__tagline">يوم واحد</h4>
+                    <h4 className="pricing-one__card__month">من ٧:٠٠ ص إلى ٥:٠٠ م</h4>
+
                     <div className="pricing-one__card__icon">
                       <i className="icon-fun"></i>
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> Open Play
+                        <i className="fa fa-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Parent
-                        Supervision
+                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Unlimited
-                        Playtime
+                        <i className="fa fa-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Adult Entry is
-                        Free
+                        <i className="fa fa-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
-                    <h3 className="pricing">$300</h3>
+                    <h3 className="pricing">٢٠٠ ر.س</h3>
                     <h3 className="pricing-one__card__price">
                       <Link
                         href={{
                           pathname: "/register",
                           query: {
-                            packageName: "Toddler Program",
-                            price: " $300",
-                            amount: 300,
+                            packageName: "يوم واحد",
+                            price: " ٢٠٠ ر.س",
+                            amount: 200,
                           },
                         }}
                       >
@@ -140,39 +134,36 @@ const PricingSection = () => {
                     className="pricing-one__card"
                     style={{ "--accent-color": "#75C137" }}
                   >
-                    <h4 className="pricing-one__card__tagline">
-                      Kindergarten Program
-                    </h4>
-                    <h4 className="pricing-one__card__month">3 - 7 Years</h4>
+                    <h4 className="pricing-one__card__tagline">خطة أسبوعية</h4>
+                   
+                    <h4 className="pricing-one__card__month">من ٧:٠٠ ص إلى ٥:٠٠ م</h4>
+
                     <div className="pricing-one__card__icon">
                       <i className="icon-playtime"></i>
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> Open Play
+                        <i className="fa fa-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Parent
-                        Supervision
+                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Unlimited
-                        Playtime
+                        <i className="fa fa-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Adult Entry is
-                        Free
+                        <i className="fa fa-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
-                    <h3 className="pricing">$500</h3>
+                    <h3 className="pricing">٨٥٠ ر.س</h3>
                     <h3 className="pricing-one__card__price">
                       <Link
                         href={{
                           pathname: "/register",
                           query: {
-                            packageName: "Kindergarten Program",
-                            price: " $500",
-                            amount: 500,
+                            packageName: "خطة أسبوعية",
+                            price: "٨٥٠ ر.س",
+                            amount: 850,
                           },
                         }}
                       >
@@ -183,44 +174,42 @@ const PricingSection = () => {
                     </h3>
                   </div>
                 </SwiperSlide>
-
 
                 <SwiperSlide>
                   <div
                     className="pricing-one__card"
                     style={{ "--accent-color": "#F25334" }}
                   >
-                    <h4 className="pricing-one__card__tagline">Open Play</h4>
-                    <h4 className="pricing-one__card__month">8 - 1 Year</h4>
+                    <h4 className="pricing-one__card__tagline">شهر واحد</h4>
+                   
+                    <h4 className="pricing-one__card__month">من ٧:٠٠ ص إلى ٥:٠٠ م</h4>
+
                     <div className="pricing-one__card__icon">
                       <i className="icon-crawling-baby-silhouette"></i>
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> Open Play
+                        <i className="fa fa-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Parent
-                        Supervision
+                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Unlimited
-                        Playtime
+                        <i className="fa fa-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Adult Entry is
-                        Free
+                        <i className="fa fa-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
-                    <h3 className="pricing">$400</h3>
+                    <h3 className="pricing"> ٣٢٥٠ ر.س</h3>
                     <h3 className="pricing-one__card__price">
                       <Link
                         href={{
                           pathname: "/register",
                           query: {
-                            packageName: "Open Play",
-                            price: " $400",
-                            amount: 400,
+                            packageName: "شهر واحد",
+                            price: " ٣٢٥٠ ر.س",
+                            amount: 3250,
                           },
                         }}
                       >
@@ -238,39 +227,36 @@ const PricingSection = () => {
                     className="pricing-one__card"
                     style={{ "--accent-color": "#2390FF" }}
                   >
-                    <h4 className="pricing-one__card__tagline">
-                      Toddler Program
-                    </h4>
-                    <h4 className="pricing-one__card__month">9 - 3 Years</h4>
+                    <h4 className="pricing-one__card__tagline">أربعة أشهر</h4>
+                  
+                    <h4 className="pricing-one__card__month">من ٧:٠٠ ص إلى ٥:٠٠ م</h4>
+
                     <div className="pricing-one__card__icon">
                       <i className="icon-fun"></i>
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> Open Play
+                        <i className="fa fa-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Parent
-                        Supervision
+                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Unlimited
-                        Playtime
+                        <i className="fa fa-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Adult Entry is
-                        Free
+                        <i className="fa fa-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
-                    <h3 className="pricing">$300</h3>
+                    <h3 className="pricing">١٢٤٢٧ ر.س</h3>
                     <h3 className="pricing-one__card__price">
                       <Link
                         href={{
                           pathname: "/register",
                           query: {
-                            packageName: "Toddler Program",
-                            price: " $300",
-                            amount: 300,
+                            packageName: "أربعة أشهر",
+                            price: "١٢٤٢٧ ر.س",
+                            amount: 12427,
                           },
                         }}
                       >
@@ -287,39 +273,80 @@ const PricingSection = () => {
                     className="pricing-one__card"
                     style={{ "--accent-color": "#75C137" }}
                   >
-                    <h4 className="pricing-one__card__tagline">
-                      Kindergarten Program
-                    </h4>
-                    <h4 className="pricing-one__card__month">3 - 7 Years</h4>
+                    <h4 className="pricing-one__card__tagline">ستة أشهر</h4>
+                    <h4 className="pricing-one__card__month">من ٧:٠٠ ص إلى ٥:٠٠ م</h4>
+
                     <div className="pricing-one__card__icon">
                       <i className="icon-playtime"></i>
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> Open Play
+                        <i className="fa fa-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Parent
-                        Supervision
+                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Unlimited
-                        Playtime
+                        <i className="fa fa-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> Adult Entry is
-                        Free
+                        <i className="fa fa-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
-                    <h3 className="pricing">$500</h3>
+                    <h3 className="pricing">١٨٤٢٧ ر.س</h3>
                     <h3 className="pricing-one__card__price">
                       <Link
                         href={{
                           pathname: "/register",
                           query: {
-                            packageName: "Kindergarten Program",
-                            price: " $500",
-                            amount: 500,
+                            packageName: "ستة أشهر",
+                            price: "١٨٤٢٧ ر.س",
+                            amount: 18427,
+                          },
+                        }}
+                      >
+                        <button className="custom-btn">
+                          <span>اشترك</span>
+                        </button>
+                      </Link>
+                    </h3>
+                  </div>
+                </SwiperSlide>
+               
+
+                <SwiperSlide>
+                  <div
+                    className="pricing-one__card"
+                    style={{ "--accent-color": "#F25334" }}
+                  >
+                    <h4 className="pricing-one__card__tagline"> رعاية بعد المدرسة</h4>
+                    <h4 className="pricing-one__card__month">من ١:٠٠ م إلى ٥:٠٠ م</h4>
+                    <div className="pricing-one__card__icon">
+                      <i className="icon-crawling-baby-silhouette"></i>
+                    </div>
+                    <ul className="list-unstyled pricing-one__card__list">
+                      <li>
+                        <i className="fa fa-check-circle"></i> رعاية شاملة
+                      </li>
+                      <li>
+                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
+                      </li>
+                      <li>
+                        <i className="fa fa-check-circle"></i>برامج تعليمية
+                      </li>
+                      <li>
+                        <i className="fa fa-check-circle"></i> تنمية مهارات
+                      </li>
+                    </ul>
+                    <h3 className="pricing">١٥٠٠ ر.س</h3>
+                    <h3 className="pricing-one__card__price">
+                      <Link
+                        href={{
+                          pathname: "/register",
+                          query: {
+                            packageName: "رعاية بعد المدرسة",
+                            price: "١٥٠٠ ر.س",
+                            amount:1500,
                           },
                         }}
                       >
@@ -331,7 +358,51 @@ const PricingSection = () => {
                   </div>
                 </SwiperSlide>
 
-          
+                {/* Additional Cards */}
+                <SwiperSlide>
+                  <div
+                    className="pricing-one__card"
+                    style={{ "--accent-color": "#2390FF" }}
+                  >
+                    <h4 className="pricing-one__card__tagline">دوام جزئي مسائي</h4>
+                    <h4 className="pricing-one__card__month">من ٥:٠٠ م إلى ٩:٠٠</h4>
+                    <div className="pricing-one__card__icon">
+                      <i className="icon-fun"></i>
+                    </div>
+                    <ul className="list-unstyled pricing-one__card__list">
+                      <li>
+                        <i className="fa fa-check-circle"></i> رعاية شاملة
+                      </li>
+                      <li>
+                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
+                      </li>
+                      <li>
+                        <i className="fa fa-check-circle"></i>برامج تعليمية
+                      </li>
+                      <li>
+                        <i className="fa fa-check-circle"></i> تنمية مهارات
+                      </li>
+                    </ul>
+                    <h3 className="pricing">٥٠٠ ر.س</h3>
+                    <h3 className="pricing-one__card__price">
+                      <Link
+                        href={{
+                          pathname: "/register",
+                          query: {
+                            packageName: "دوام جزئي مسائي",
+                            price: "٥٠٠ ر.س",
+                            amount:500,
+                          },
+                        }}
+                      >
+                        <button className="custom-btn">
+                          <span>اشترك</span>
+                        </button>
+                      </Link>
+                    </h3>
+                  </div>
+                </SwiperSlide>
+
 
               </Swiper>
             </div>

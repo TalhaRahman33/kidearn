@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Footer1 from '../components/Footer1'
+// import Footer1 from '../components/Footer1'
 import Link from 'next/link'
 import PricingSection from '../components/PricingSection'
 import Topbar from '../components/Topbar';
@@ -71,7 +71,7 @@ const page = () => {
         right: '0',
         bottom: '0',
         left: '0',
-        background: 'rgba(0, 0, 0, 0.5)',
+        background: 'rgba(0, 0, 0, 0.3)',
         transition: 'opacity 0.5s ease',
         zIndex: 0,
       }} />
@@ -95,7 +95,7 @@ const page = () => {
 
 
         <Footer />
-        <Footer1 />
+        {/* <Footer1 /> */}
 
       </div>
     </div>

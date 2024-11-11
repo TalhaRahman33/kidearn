@@ -16,7 +16,7 @@ const TestimonialSection = () => {
   const settings = {
  
     infinite: true,
-    speed: 700,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
@@ -52,11 +52,10 @@ const TestimonialSection = () => {
             style={{ backgroundImage: 'url(/images/testimonial-shape-4.png)' }}
           ></div>
           <div className="sec-title text-center">
-            <h6 className="sec-title__tagline">التعليقات</h6>
+            <h6 className="sec-title__tagline">الـــتعليقـــات</h6>
             <h3 className="sec-title__title">
-              ماذا يقول عنا
-              {/* <br /> */}
-              أولياء الأمور{" "}
+            مـــاذا يـــقول عـــنا أولـــياء  الأمـــور ؟
+
             </h3>
           </div>
           <Slider {...settings}>

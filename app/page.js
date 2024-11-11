@@ -2,7 +2,7 @@
 
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import Footer1 from "./components/Footer1";
+// import Footer1 from "./components/Footer1";
 import Header from "./components/Header";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Topbar from "./components/Topbar";
@@ -144,7 +144,7 @@ export default function Home() {
                   <div className="about-one__content">
                     <div className="sec-title text-right">
                       <h6 className="sec-title__tagline"> من نحن</h6>
-                      <h3 className="sec-title__title">بيت أمي</h3>
+                      <h3 className="sec-title__title" style={{fontSize:"48px"}}> بـــيت أمـــي</h3>
                     </div>
                     <p className="about-one__content__text">
                       لأن الأم هي الحضن الرحيم والأمان والاطمئنان وهي الاحرص على
@@ -169,7 +169,7 @@ export default function Home() {
                       className="about-one__image__one kidearn-tilt"
                       data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 5, "speed": 700, "scale": 1}'
                     >
-                      <ExportedImage unoptimized={true} width={479} height={482} src="/images/about-1-11.png" alt="kidearn" />
+                      <ExportedImage unoptimized={true} width={479} height={482} src="/images/about-1-11.jpg" alt="kidearn" />
                     </div>
                     <div
                       className="about-one__image__border wow fadeInUp"
@@ -286,9 +286,8 @@ export default function Home() {
                 <div className="col-lg-5 d-flex align-items-center">
                   <div className="video-one__content">
                     <h3 className="video-one__content__title">
-                    كيف تصل لبيت أمي؟
-                    </h3>
-                    <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" className="kidearn-btn">
+                    كـــيف تـــصل إلــينا ؟                    </h3>
+                    <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" className="kidearn-btn" target="_target">
                       <span> اضغط هنا</span>
 
                     </Link>
@@ -298,7 +297,7 @@ export default function Home() {
                   <div className="video-one__btn-shape">
                     <div className="video-one__btn">
                       <ExportedImage
-                        src="/images/video-bg-1.png"
+                        src="/images/video-bg-1.jpg"
                         alt="kidearn"
                         unoptimized={true}
                         width={555}
@@ -320,7 +319,9 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="program-one">
+          <section className="program-one" style={{
+            zIndex: 1000
+          }}>
             <div
               className="program-one__bg kidearn-splax"
               data-para-options='{ "orientation": "up", "scale": 2.5, "overflow": true }'
@@ -335,12 +336,16 @@ export default function Home() {
             </div>
             <div className="container">
               <div className="sec-title text-center">
-                <h6 className="sec-title__tagline">البرامج المتوفرة</h6>
+                <h6 className="sec-title__tagline">الـــبرامـــج الـــمتوفـــرة </h6>
                 <h3 className="sec-title__title">
+                بـــيت  أمـــي لـــدعم الأســـرة وتـــنمية الـــطفل
+                 
+                </h3>
+                {/* <h3 className="sec-title__title">
                 برامج بيت أمي لدعم <br /> الأسرة وتنمية الطفل
                  
                  
-                </h3>
+                </h3> */}
               </div>
               <div className="row">
                 <div className="col-lg-4 col-md-6">
@@ -378,17 +383,18 @@ export default function Home() {
                     </div>
                     <div className="program-one__item__content">
                       <h3 className="program-one__item__title">
-                        <Link href="#">برنامج ما بعد المدرسة</Link>
+                        <Link href="/program1">برنامج ما بعد المدرسة</Link>
                       </h3>
                       {/* <div className="program-one__item__age">
                         (1.5-3 years)
                       </div> */}
                       <p className="program-one__item__text">
                       برنامج متخصص لإستقبال الأطفال بعد انتهاء اليوم الدراسي مباشرة
+                      يوفر بيئة داعمة وآمنة
                       </p>
                       <Link
                         className="program-one__item__rm"
-                        href="#"
+                        href="/program1"
                       >
                         <span className="icon-right-arrow"></span>
                       </Link>
@@ -431,7 +437,7 @@ export default function Home() {
                     </div>
                     <div className="program-one__item__content">
                       <h3 className="program-one__item__title">
-                        <Link href="#">ضيافة الرضع </Link>
+                        <Link href="/program2">ضيافة الرضع </Link>
                       </h3>
                       {/* <div className="program-one__item__age">(2-3 years)</div> */}
                       <p className="program-one__item__text">
@@ -439,7 +445,7 @@ export default function Home() {
                       </p>
                       <Link
                         className="program-one__item__rm"
-                        href="#"
+                        href="/program2"
                       >
                         <span className="icon-right-arrow"></span>
                       </Link>
@@ -482,7 +488,7 @@ export default function Home() {
                     </div>
                     <div className="program-one__item__content">
                       <h3 className="program-one__item__title">
-                        <Link href="#">التعلم باللعب</Link>
+                        <Link href="/program3">التعلم باللعب</Link>
                       </h3>
                       {/* <div className="program-one__item__age">(4-5 years)</div> */}
                       <p className="program-one__item__text">
@@ -490,7 +496,7 @@ export default function Home() {
                       </p>
                       <Link
                         className="program-one__item__rm"
-                        href="#"
+                        href="/program3"
                       >
                         <span className="icon-right-arrow"></span>
                       </Link>
@@ -623,7 +629,7 @@ export default function Home() {
           <BlogThree />
 
           <Footer />
-          <Footer1 />
+          {/* <Footer1 /> */}
         </div>
       </div>
     </ParallaxProvider>

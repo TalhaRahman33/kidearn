@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Footer1 from '../components/Footer1';
+// import Footer1 from '../components/Footer1';
 import Link from 'next/link';
 import RegisterForm from './RegisterForm';
 import { generateMetadata } from "../components/Meta";
@@ -89,7 +89,7 @@ const Registerpage = () => {
 
 
         <Footer />
-        <Footer1 />
+        {/* <Footer1 /> */}
 
       </div>
     </div>

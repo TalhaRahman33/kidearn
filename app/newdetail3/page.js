@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Footer1 from '../components/Footer1';
+// import Footer1 from '../components/Footer1';
 import Topbar from '../components/Topbar';
 import NewsDetail3 from '../components/NewsDetail3';
 const page = () => {
@@ -23,7 +23,7 @@ const page = () => {
 
 
       <Footer />
-      <Footer1 />
+      {/* <Footer1 /> */}
 
 </div>
 </div>

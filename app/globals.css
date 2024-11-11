@@ -4,7 +4,9 @@
 
 @font-face {
   font-family: "YourFont";
-  src: url("/fonts/Janna-LT-Regular.ttf") format("opentype"); /* Adjusted to 'opentype' for OTF font */
+  src: url("/fonts/FS-Albert-Arabic-Web.ttf") format("opentype"); 
+  /* src: url("/fonts/Janna-LT-Regular.ttf") format("opentype");  */
+
   /* font-weight: normal;
   font-style: normal; */
 }
@@ -107,6 +109,7 @@ li {
   display: flex; /* Use Flexbox for the copyright text */
   align-items: center !important; /* Vertically center items */
   justify-content: center !important;
+  
 }
 
 .dynamic-year {
@@ -136,5 +139,31 @@ li {
   }
 }
 
+.foot{
+  color: #fff !important;
+}
 
 
+/* @media (max-width: 768px) {
+  .banner-one__bg {
+    background-image: none !important;
+    background-color: #b7d056 !important; 
+  }
+} */
+
+.title{
+  text-align: center !important;
+  margin-right: 35px !important;
+  font-size: 45px !important;
+}
+/* .title{
+  text-align: center !important;
+  font-size: 45px !important;
+} */
+
+
+
+.partner{
+  font-weight: bold;
+  font-size: 30px !important;
+}

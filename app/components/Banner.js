@@ -1,28 +1,28 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
+import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 
 // Dynamically import the OwlCarousel component
-const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 
 const Banner = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       setIsClient(true);
     }
   }, []);
 
   const options = {
     loop: true,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeInUp',
+    animateOut: "fadeOut",
+    animateIn: "fadeInUp",
     items: 1,
     autoplay: true,
     autoplayTimeout: 7000,
@@ -33,9 +33,10 @@ const Banner = () => {
   };
 
   const bannerImages = [
-    { src: '/images/hero-banner-1-rtl1.png', alt: 'Hero Banner 1' },
-    { src: '/images/home5.png', alt: 'Hero Banner 2' },
-    { src: '/images/home4.png', alt: 'Hero Banner 3' },
+    { src: "/images/bb2.png", alt: "Hero Banner 1" },
+    // { src: "/images/homebaner.webp", alt: "Hero Banner 1" },
+    // { src: '/images/event.png', alt: 'Hero Banner 2' },
+    { src: "/images/b1.png", alt: "Hero Banner 3" },
     // { src: '/images/home2.jpg', alt: 'Hero Banner 3' },
   ];
 
@@ -76,16 +77,22 @@ const Banner = () => {
                         </div> */}
                         <div className="banner-one__content__bg"></div>
                         <h2 className="banner-one__content__title">
+                          <span className="title">مــــــركــــز </span> <br />{" "}
+                          بـــيت أمـــي <br />
+                          <span> لضيافة الأطفال</span>
+                        </h2>
+                        {/* <h2 className="banner-one__content__title">
                              <br /> مركز بيت أمي <br />  لضيافة الأطفال
 
-                        </h2>
+                        </h2> */}
                         <Link href="/contact" className="kidearn-btn">
-                          <span> اتصل بنا  </span>
+                          <span> اتصل بنا </span>
                         </Link>
                         <div
                           className="banner-one__shape1 kidearn-splax"
                           style={{
-                            backgroundImage: 'url(/images/banner-1-shape-1.png)',
+                            backgroundImage:
+                              "url(/images/banner-1-shape-1.png)",
                           }}
                         ></div>
                       </div>
@@ -102,11 +109,6 @@ const Banner = () => {
 };
 
 export default Banner;
-
-
-
-
-
 
 // "use client";
 
@@ -186,14 +188,14 @@ export default Banner;
 //                         <div className="banner-one__content__bg"></div>
 //                         <h2 className="banner-one__content__title">
 //                         مركز بيت أمي  <br />  لضيافة الأطفال
-                       
+
 //                         </h2>
 //                         <Link href="/contact" className="kidearn-btn">
 //                           <span>اتصل بنا</span>
 //                         </Link>
 //                         <div
 //                           className="banner-one__shape1 kidearn-splax"
-                       
+
 //                         ></div>
 //                       </div>
 //                     </div>

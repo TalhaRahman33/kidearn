@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Footer1 from "../components/Footer1";
+// import Footer1 from "../components/Footer1";
 import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import TestimonialSection from "../components/TestimonialSection";
@@ -73,7 +73,7 @@ const Page = () => {
               right: "0",
               bottom: "0",
               left: "0",
-              background: "rgba(0, 0, 0, 0.5)",
+              background: "rgba(0, 0, 0, 0.3)",
               transition: "opacity 0.5s ease",
               zIndex: 0,
             }}
@@ -110,7 +110,7 @@ const Page = () => {
                     data-tilt-options='{"glare": false, "maxglare": 0, "maxtilt": 3, "speed": 700, "scale": 1}'
                   >
                     <ExportedImage
-                      src="/images/about-4-1.png"
+                      src="/images/about-4-1.jpg"
                       alt="kidearn"
                       width={553}
                       height={553}
@@ -145,7 +145,7 @@ const Page = () => {
                 <div className="about-four__content">
                   <div className="sec-title text-right">
                     <h6 className="sec-title__tagline"> من نحن</h6>
-                    <h3 className="sec-title__title">بيت أمي</h3>
+                    <h3 className="sec-title__title"> بـــيت أمـــي</h3>
                   </div>
                   <p className="about-four__content__text">
                     لأن الأم هي الحضن الرحيم والأمان والاطمئنان وهي الاحرص على
@@ -166,23 +166,24 @@ const Page = () => {
                       أمه فقد حرصنا على استثمار ذلك الوقت في "بيت أمي" والذي هو
                       كبيت الأم من الحرص على العناية بالطفل من حيث الصحة
                       واستثمار الوقت باللعب والتعليم.
+                      حيث سيجد الطفل الكوادر السعوديه من الامهات المتخصصات في رعاية الاطفال وحضانتهم واخصائيات رياض الاطفال لتقديم البرامج التعليميه لكل الاعمار.
                     </p>
                   </div>
                   <div
                     className="about-four__info"
                     style={{ "--accent-color": "#2390FF" }}
                   >
-                    <div className="about-four__info__icon">
+                    {/* <div className="about-four__info__icon">
                       <span className="icon-interest-rate"></span>
-                    </div>
+                    </div> */}
                     {/* <h3 className="about-four__info__title">
                   أعلى معدلات النجاح
                   </h3> */}
-                    <p className="about-four__info__text">
+                    {/* <p className="about-four__info__text">
                       حيث سيجد الطفل الكوادر السعوديه من الامهات المتخصصات في
                       رعاية الاطفال وحضانتهم واخصائيات رياض الاطفال لتقديم
                       البرامج التعليميه لكل الاعمار.
-                    </p>
+                    </p> */}
                   </div>
                   {/* <Link href="#" className="kidearn-btn">
                 <span>المزيد</span>
@@ -343,7 +344,7 @@ const Page = () => {
                   </div>
                   <div className="funfact-one__count">
                     <span className="count-box">
-                      <span className="count-text">نعمل طوال العام</span>
+                      <span className="count-text">نـــعمل طـــوال الـــعام  </span>
                     </span>
                   </div>
                   {/* <p className="funfact-one__text">Students</p> */}
@@ -359,7 +360,7 @@ const Page = () => {
                   </div>
                   <div className="funfact-one__count">
                     <span className="count-box">
-                      <span className="count-text">ساعات مرنة</span>
+                      <span className="count-text"> ســـاعـــات مـــرنة</span>
                     </span>
                   </div>
                   {/* <p className="funfact-one__text">Success Rate</p> */}
@@ -375,7 +376,8 @@ const Page = () => {
                   </div>
                   <div className="funfact-one__count">
                     <span className="count-box">
-                      <span className="count-text">حضانة وتعليم</span>
+                      <span className="count-text">  حـــضانـــة و تـــعلـــيم
+                      </span>
                     </span>
                   </div>
                   {/* <p className="funfact-one__text">Instructors</p> */}
@@ -391,7 +393,7 @@ const Page = () => {
                   </div>
                   <div className="funfact-one__count">
                     <span className="count-box">
-                      <span className="count-text">أنشطة وفعاليات</span>
+                      <span className="count-text">  أنـــشطـــة وفـــعالـــيات</span>
                     </span>
                   </div>
                   {/* <p className="funfact-one__text">Total Courses</p> */}
@@ -408,7 +410,7 @@ const Page = () => {
         <ClientCarousel />
 
         <Footer />
-        <Footer1 />
+        {/* <Footer1 /> */}
       </div>
     </div>
   );

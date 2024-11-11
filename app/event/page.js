@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Footer1 from "../components/Footer1";
+// import Footer1 from "../components/Footer1";
 import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import { Gallery } from "../components/Gallery";
@@ -70,7 +70,7 @@ const page = () => {
         right: '0',
         bottom: '0',
         left: '0',
-        background: 'rgba(0, 0, 0, 0.5)',
+        background: 'rgba(0, 0, 0, 0.3)',
         transition: 'opacity 0.5s ease',
         zIndex: 0,
       }} />
@@ -92,7 +92,7 @@ const page = () => {
           {/* /.container */}
         </section>
 
-        <section className="event-page">
+        {/* <section className="event-page">
           <div className="container">
             <div className="row gutter-y-30">
               <div
@@ -385,12 +385,12 @@ const page = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <Gallery />
 
         <Footer />
-        <Footer1 />
+        {/* <Footer1 /> */}
 
       </div>
     </div>

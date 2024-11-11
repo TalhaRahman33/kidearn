@@ -103,15 +103,15 @@ const OffcanvasNavbar = () => {
                             <li>
                                 <CallIcon2 className="footer-widget__info__icon" />
                                 {/* <i className="icon-call footer-widget__info__icon"></i> */}
-                                <Link href="tel:+٩٦٦٥٨٣٨٢٥١١٦">٩٦٦٥٨٣٨٢٥١١٦</Link>
+                                <Link href="tel:+٩٦٦٥٨٣٨٢٥١١٦">٠٥٨٣٨٢٥١١٦</Link>
                             </li>
                             <li>
                                 <EmailIcon className="footer-widget__info__icon" />
                                 {/* <i className="icon-email1 footer-widget__info__icon"></i> */}
-                                <Link href="mailto:kidearn@envato.com">info@baytummi.com</Link>
+                                <Link href="mailto:info@baytummi.com">info@baytummi.com</Link>
                             </li>
                         </ul>
-                        <div className="footer-widget__social">
+                        {/* <div className="footer-widget__social">
                             <Link href="https://www.snapchat.com/add/baytummi">
                                 <i className="fab fa-snapchat" aria-hidden="true"></i>
                                 <span className="sr-only">Snapchat</span>
@@ -128,7 +128,44 @@ const OffcanvasNavbar = () => {
                                 <i className="fab fa-instagram" aria-hidden="true"></i>
                                 <span className="sr-only">Instagram</span>
                             </Link>
-                        </div>
+                        </div> */}
+                         <div className="footer-widget__social">
+                    {/* <Link
+                      href="https
+:
+//x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g"
+                      aria-label="Twitter"
+                    >
+                      <i className="fab fa-twitter" aria-hidden="true"></i>
+                      <span className="sr-only">Twitter</span>
+                    </Link> */}
+                    <Link href="https://x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g" aria-label="X">
+    <i className="fas fa-times" aria-hidden="true"></i>
+    <span className="sr-only">X</span>
+</Link>
+                    <Link
+                      href="https://www.snapchat.com/add/baytummi"
+                      aria-label="Facebook"
+                    >
+                      <i className="fab fa-snapchat" aria-hidden="true"></i>
+                      <span className="sr-only">Snapchat</span>
+                    </Link>
+                    <Link
+                      href="https://www.tiktok.com/@baytummi"
+                      aria-label="TikTok"
+                      target="_blank"
+                    >
+                      <i className="fab fa-tiktok" aria-hidden="true"></i>
+                      <span className="sr-only">TikTok</span>
+                    </Link>
+                    <Link
+                      href="https://www.instagram.com/baytummi"
+                      aria-label="Instagram"
+                    >
+                      <i className="fab fa-instagram" aria-hidden="true"></i>
+                      <span className="sr-only">Instagram</span>
+                    </Link>
+                  </div>
                     </div>
                 </div>
             </div >

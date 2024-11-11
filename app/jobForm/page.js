@@ -144,7 +144,7 @@ const JobApplicationPage = () => {
         <section className="py-8">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-6">
-              <h1 className="text-2xl font-semibold mb-6">نموذج التقديم على وظيفة</h1>
+              <h1 className="text-2xl font-semibold mb-6">نـــموذج الـــتقديم عـلــى وظـــيفة   </h1>
               <div className="w-10/12 mx-auto mb-6 border-b-2 border-[#FAF5F2]"></div>
             </div>
 
@@ -257,7 +257,7 @@ const JobApplicationPage = () => {
 
 
         <Footer />
-        <Footer1 />
+        {/* <Footer1 /> */}
 
         <Modal show={showSuccess} onHide={handleCloseSuccess} className="main-model">
           <Modal.Header className="modelhead">

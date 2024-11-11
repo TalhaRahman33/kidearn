@@ -2,14 +2,12 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Footer1 from "../components/Footer1";
+// import Footer1 from "../components/Footer1";
 import Link from "next/link";
 import { generateMetadata } from "../components/Meta";
 import Topbar from "../components/Topbar";
 
 const ContactPage = () => {
-
-
   const [metadata, setMetadata] = useState({
     title:
       "مركز وقت الطفل لضيافة الأطفال | Child Time Center for Children's Hospitality",
@@ -36,10 +34,12 @@ const ContactPage = () => {
   }, []);
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
+    if (typeof document !== "undefined") {
       document.title = metadata.title;
 
-      const descriptionMeta = document.querySelector('meta[name="description"]');
+      const descriptionMeta = document.querySelector(
+        'meta[name="description"]'
+      );
       if (descriptionMeta) {
         descriptionMeta.setAttribute("content", metadata.description);
       }
@@ -50,8 +50,6 @@ const ContactPage = () => {
       }
     }
   }, [metadata]);
-
-
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -113,18 +111,20 @@ const ContactPage = () => {
         <Topbar />
         <Header />
 
-        <section className="page-header" style={{position:"relative"}}>
+        <section className="page-header" style={{ position: "relative" }}>
           <div className="page-header__bg_contact" />
-          <div style={{
-        position: 'absolute',
-        top: '0',
-        right: '0',
-        bottom: '0',
-        left: '0',
-        background: 'rgba(0, 0, 0, 0.5)',
-        transition: 'opacity 0.5s ease',
-        zIndex: 0,
-      }} />
+          <div
+            style={{
+              position: "absolute",
+              top: "0",
+              right: "0",
+              bottom: "0",
+              left: "0",
+              background: "rgba(0, 0, 0, 0.3)",
+              transition: "opacity 0.5s ease",
+              zIndex: 0,
+            }}
+          />
           <div className="container">
             <h2 className="page-header__title">اتصال</h2>
 
@@ -142,8 +142,10 @@ const ContactPage = () => {
         <section className="contact-one">
           <div className="container">
             <div className="sec-title text-center">
-              <h6 className="sec-title__tagline">اتصال</h6>
-              <h3 className="sec-title__title">سجل بياناتك لنتواصل معك</h3>
+              <h6 className="sec-title__tagline">اتـــصال</h6>
+              <h3 className="sec-title__title">
+                ســـجل بـــياناتك لـــنتصل بـــك{" "}
+              </h3>
             </div>
 
             {showSuccess && (
@@ -232,9 +234,13 @@ const ContactPage = () => {
                     <i className="icon-telephone contact-info-one__icon"></i>
                     <p className="contact-info-one__text">هل لديك أي سؤال؟</p>
                     <h3 className="contact-info-one__title">
-                      <Link href="tel:+٠
+                      <Link
+                        href="tel:+٠
  ٩٦٦٥٨٣٨٢٥١١٦٠
- ">٠٥٨٣٨٢٥١١٦</Link>
+ "
+                      >
+                        ٠٥٨٣٨٢٥١١٦
+                      </Link>
                     </h3>
                   </div>
                 </div>
@@ -249,7 +255,9 @@ const ContactPage = () => {
                       أرسل بريدًا إلكترونيًا
                     </p>
                     <h3 className="contact-info-one__title">
-                      <Link href="mailto:info@baytummi.com">info@baytummi.com</Link>
+                      <Link href="mailto:info@baytummi.com">
+                        info@baytummi.com
+                      </Link>
                     </h3>
                   </div>
                 </div>
@@ -261,7 +269,12 @@ const ContactPage = () => {
                     <i className="icon-location-fill contact-info-one__icon"></i>
                     <p className="contact-info-one__text">زر في أي وقت </p>
                     <h5 className="contact-info-one__title">
-                      <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" target="_blank">شارع أبي بكر الصديق، النرجس </Link>
+                      <Link
+                        href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7"
+                        target="_blank"
+                      >
+                        شارع أبي بكر الصديق، النرجس{" "}
+                      </Link>
                       {/* <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" target="_blank">شارع أبي بكر الصديق، النرجس، الرياض ١٣٣٢٣،  المملكة العربية السعودية</Link> */}
                       {/* <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" target="_blank">Abi Bakr As Siddiq Rd, An Narjis,Riyadh 13323, Saudi Arabia</Link> */}
                     </h5>
@@ -296,7 +309,7 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.499336554684!2d46.669
         </section>
 
         <Footer />
-        <Footer1 />
+        {/* <Footer1 /> */}
       </div>
     </div>
   );

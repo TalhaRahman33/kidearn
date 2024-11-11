@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+// import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import StickyContactButtons from "./StickyContactButtons";
+import ScrollTopButton from "./ScrollTopButton";
 
 const Footer = () => {
   return (
@@ -64,13 +65,11 @@ const Footer = () => {
                     <li>
                       <i className="icon-location2 footer-widget__info__icon"></i>
                       <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7">
-                        شارع أبي بكر الصديق، النرجس، الرياض ١٣٣٢٣، المملكة
-                        العربية السعودية
-                      </Link>
+                      الرياض ، حي النرجس                      </Link>
                     </li>
                     <li>
                       <i className="icon-call footer-widget__info__icon"></i>
-                      <Link href="tel:+٩٦٦٥٨٣٨٢٥١١٦">٩٦٦٥٨٣٨٢٥١١٦</Link>
+                      <Link href="tel:+٩٦٦٥٨٣٨٢٥١١٦">٠٥٨٣٨٢٥١١٦</Link>
                     </li>
                     <li>
                       <i className="icon-email1 footer-widget__info__icon"></i>
@@ -80,10 +79,19 @@ const Footer = () => {
                     </li>
                   </ul>
                   <div className="footer-widget__social">
-                    <Link href="#" aria-label="Twitter">
+                    {/* <Link
+                      href="https
+:
+//x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g"
+                      aria-label="Twitter"
+                    >
                       <i className="fab fa-twitter" aria-hidden="true"></i>
                       <span className="sr-only">Twitter</span>
-                    </Link>
+                    </Link> */}
+                    <Link href="https://x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g" aria-label="X">
+    <i className="fas fa-times" aria-hidden="true"></i>
+    <span className="sr-only">X</span>
+</Link>
                     <Link
                       href="https://www.snapchat.com/add/baytummi"
                       aria-label="Facebook"
@@ -91,9 +99,13 @@ const Footer = () => {
                       <i className="fab fa-snapchat" aria-hidden="true"></i>
                       <span className="sr-only">Snapchat</span>
                     </Link>
-                    <Link href="info@baytummi.com" aria-label="Pinterest">
-                      <i className="fab fa-pinterest-p" aria-hidden="true"></i>
-                      <span className="sr-only">Pinterest</span>
+                    <Link
+                      href="https://www.tiktok.com/@baytummi"
+                      aria-label="TikTok"
+                      target="_blank"
+                    >
+                      <i className="fab fa-tiktok" aria-hidden="true"></i>
+                      <span className="sr-only">TikTok</span>
                     </Link>
                     <Link
                       href="https://www.instagram.com/baytummi"
@@ -107,7 +119,7 @@ const Footer = () => {
               </div>
               <div className="col-md-6 col-xl-3">
                 <div className="footer-widget footer-widget--links">
-                  <h2 className="footer-widget__title">الأنشطة</h2>
+                  <h2 className="footer-widget__title">الأنـــشطة</h2>
                   <ul className="list-unstyled footer-widget__links">
                     <li>
                       <Link href="#">اللعب التربوي والتعلم</Link>
@@ -129,7 +141,7 @@ const Footer = () => {
               </div>
               <div className="col-md-6 col-xl-2">
                 <div className="footer-widget footer-widget--links-two">
-                  <h2 className="footer-widget__title">استكشاف</h2>
+                  <h2 className="footer-widget__title">اســـتكشف</h2>
                   <ul className="list-unstyled footer-widget__links">
                     <li>
                       <Link href="/about">من نحن</Link>
@@ -148,7 +160,7 @@ const Footer = () => {
               </div>
               <div className="col-md-6 col-xl-4">
                 <div className="footer-widget footer-widget--gallery">
-                  <h2 className="footer-widget__title">معرض الصور</h2>
+                  <h2 className="footer-widget__title"> مـــعرض الـــصور</h2>
                   <ul className="list-unstyled footer-widget__gallery">
                     <li>
                       <Link className="img-popup" href="/images/footer1.jpg">
@@ -229,11 +241,11 @@ const Footer = () => {
           <div className="container">
             <div className="main-footer__bottom__inner">
               <p className="main-footer__copyright">
-                <Link href="https://www.selsla.net/" target="_blank">
+                <Link href="https://www.selsla.net/" target="_blank" className="foot">
                   Developed By Selsla Technology
                   <ExportedImage
                     unoptimized={true}
-                    src="/images/heartt.webp"
+                    src="/images/heart.png"
                     alt="Heart"
                     width={25}
                     height={20}
@@ -246,6 +258,8 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+      
+<ScrollTopButton />
     </div>
   );
 };
