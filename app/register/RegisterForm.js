@@ -18,7 +18,7 @@ const RegisterFormContent = () => {
   const handlePayment = async () => {
     setLoading(true); // Start loading indicator
     try {
-      const response = await fetch("https://testing.childoasis.com.sa/api/register", {
+      const response = await fetch("https://backend.baytummi.sa/api/register", {
         method: "POST",
         headers: {
           accept: "application/json",

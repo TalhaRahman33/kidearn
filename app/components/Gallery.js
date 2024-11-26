@@ -1,5 +1,6 @@
 import React from 'react'
 import ExportedImage from "next-image-export-optimizer";
+import Link from 'next/link';
 export const Gallery = () => {
   return (
     <section className="gallery-one gallery-one--page">
@@ -11,14 +12,15 @@ export const Gallery = () => {
           </h3>
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-1.webp" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-1.webp" alt="" target="_blank"/>
             <div className="gallery-one__card__hover">
-              <a
+              <Link
                 href="/images/gallery1-1.webp"
                 className="img-popup"
+                target="_blank"
               >
                 <span className="gallery-one__card__icon" />
-              </a>
+              </Link>
             </div>
             {/* /.gallery-one__card__hover */}
           </div>
@@ -27,14 +29,15 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-2.jpg" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-2.jpg" alt="" target="_blank"/>
             <div className="gallery-one__card__hover">
-              <a
-                href="/images/gallery1-2.webp"
+              <Link
+                href="/images/gallery1-2.jpg"
                 className="img-popup"
+                target="_blank"
               >
                 <span className="gallery-one__card__icon" />
-              </a>
+              </Link>
             </div>
             {/* /.gallery-one__card__hover */}
           </div>
@@ -43,14 +46,15 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-3.webp" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-3.webp" alt="" target="_blank"/>
             <div className="gallery-one__card__hover">
-              <a
+              <Link
                 href="/images/gallery1-3.webp"
                 className="img-popup"
+                target="_blank"
               >
                 <span className="gallery-one__card__icon" />
-              </a>
+              </Link>
             </div>
             {/* /.gallery-one__card__hover */}
           </div>
@@ -59,14 +63,15 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}   src="/images/gallery1-4.jpg" alt="" width={370} height={367}/>
+            <ExportedImage unoptimized={true}   src="/images/gallery1-4.jpg" alt="" width={370} height={367} target="_blank"/>
             <div className="gallery-one__card__hover">
-              <a
-                href="/images/gallery1-4.webp"
+              <Link
+                href="/images/gallery1-4.jpg"
                 className="img-popup"
+                target="_blank"
               >
                 <span className="gallery-one__card__icon" />
-              </a>
+              </Link>
             </div>
             {/* /.gallery-one__card__hover */}
           </div>
@@ -75,14 +80,15 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-5.jpg" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-5.jpg" alt="" target="_blank"/>
             <div className="gallery-one__card__hover">
-              <a
-                href="/images/gallery1-5.webp"
+              <Link
+                href="/images/gallery1-5.jpg"
                 className="img-popup"
+                target="_blank"
               >
                 <span className="gallery-one__card__icon" />
-              </a>
+              </Link>
             </div>
             {/* /.gallery-one__card__hover */}
           </div>
@@ -91,14 +97,15 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-6.jpg" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-6.jpg" alt="" target="_blank"/>
             <div className="gallery-one__card__hover">
-              <a
-                href="/images/gallery1-6.webp"
+              <Link
+                href="/images/gallery1-6.jpg"
                 className="img-popup"
+                target="_blank"
               >
                 <span className="gallery-one__card__icon" />
-              </a>
+              </Link>
             </div>
             {/* /.gallery-one__card__hover */}
           </div>
@@ -107,14 +114,15 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-7.webp" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-7.webp" alt="" target="_blank"/>
             <div className="gallery-one__card__hover">
-              <a
+              <Link
                 href="/images/gallery1-7.webp"
                 className="img-popup"
+                target="_blank"
               >
                 <span className="gallery-one__card__icon" />
-              </a>
+              </Link>
             </div>
             {/* /.gallery-one__card__hover */}
           </div>
@@ -123,14 +131,15 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-8.jpg" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-8.jpg" alt="" target="_blank"/>
             <div className="gallery-one__card__hover">
-              <a
-                href="/images/gallery1-8.webp"
+              <Link
+                href="/images/gallery1-8.jpg"
                 className="img-popup"
+                target="_blank"
               >
                 <span className="gallery-one__card__icon" />
-              </a>
+              </Link>
             </div>
             {/* /.gallery-one__card__hover */}
           </div>
@@ -139,14 +148,15 @@ export const Gallery = () => {
         {/* /.col-md-6 col-lg-4 */}
         <div className="col-md-6 col-lg-4">
           <div className="gallery-one__card">
-            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-9.jpg" alt="" />
+            <ExportedImage unoptimized={true}  width={370} height={367} src="/images/gallery1-9.jpg" alt="" target="_blank"/>
             <div className="gallery-one__card__hover">
-              <a
-                href="/images/gallery1-9.webp"
+              <Link
+                href="/images/gallery1-9.jpg"
                 className="img-popup"
+                target="_blank"
               >
                 <span className="gallery-one__card__icon" />
-              </a>
+              </Link>
             </div>
             {/* /.gallery-one__card__hover */}
           </div>

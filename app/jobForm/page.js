@@ -78,7 +78,7 @@ const JobApplicationPage = () => {
     formData.append("cv", cv);
 
     try {
-      const response = await fetch("https://testing.childoasis.com.sa/api/apply", {
+      const response = await fetch("https://backend.baytummi.sa/api/apply", {
         method: "POST",
         body: formData,
       });

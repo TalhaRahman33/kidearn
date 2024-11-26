@@ -47,7 +47,7 @@ const Topbar = () => {
             </li>
             <li className="topbar-one__info__item">
               <i className="fas fa-envelope topbar-one__info__icon"></i>
-              <Link href="mailto:kidearn@envato.com"> info@baytummi.com</Link>
+              <Link href="mailto:info@baytummi.sa"> info@baytummi.sa</Link>
             </li>
           </ul>
         </div>

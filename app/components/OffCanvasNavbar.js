@@ -108,7 +108,7 @@ const OffcanvasNavbar = () => {
                             <li>
                                 <EmailIcon className="footer-widget__info__icon" />
                                 {/* <i className="icon-email1 footer-widget__info__icon"></i> */}
-                                <Link href="mailto:info@baytummi.com">info@baytummi.com</Link>
+                                <Link href="mailto:info@baytummi.sa">info@baytummi.sa</Link>
                             </li>
                         </ul>
                         {/* <div className="footer-widget__social">

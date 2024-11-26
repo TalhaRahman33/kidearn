@@ -1,5 +1,6 @@
 import React from "react";
 import ExportedImage from "next-image-export-optimizer";
+import Link from "next/link";
 const NewDetail1 = () => {
   return (
     <>
@@ -19,7 +20,7 @@ const NewDetail1 = () => {
           <h2 className="page-header__title">تفاصيل الموضوع</h2>
           <ul className="kidearn-breadcrumb list-unstyled">
             <li>
-              <a href="/">الصفحة الرئيسية</a>
+              <Link href="/">الصفحة الرئيسية</Link>
             </li>
             <li>
               <span>تفاصيل الموضوع</span>
@@ -169,7 +170,7 @@ export default NewDetail1;
 //           <h2 className="page-header__title">تفاصيل الموضوع</h2>
 //           <ul className="kidearn-breadcrumb list-unstyled">
 //             <li>
-//               <a href="/">الصفحة الرئيسية</a>
+//               <Link href="/">الصفحة الرئيسية</Link>
 //             </li>
 //             <li>
 //               <span>تفاصيل الموضوع</span>
@@ -199,9 +200,9 @@ export default NewDetail1;
 //                   {/* /.blog-card__image */}
 //                   <div className="blog-card__content">
 //                     <div className="blog-card__content__top">
-//                       {/* <a href="#" className="blog-card__category">
+//                       {/* <Link href="#" className="blog-card__category">
 //                       Kindergarten
-//                     </a> */}
+//                     </Link> */}
 //                       <div className="blog-card__date">
 //                         <i className="icon-clock" />٢ أكتوبر ٢٠٢٤
 //                       </div>

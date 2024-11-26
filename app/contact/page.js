@@ -64,7 +64,7 @@ const ContactPage = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://testing.childoasis.com.sa/api/contact",
+        "https://backend.baytummi.sa/api/contact",
         {
           method: "POST",
           headers: {
@@ -255,8 +255,8 @@ const ContactPage = () => {
                       أرسل بريدًا إلكترونيًا
                     </p>
                     <h3 className="contact-info-one__title">
-                      <Link href="mailto:info@baytummi.com">
-                        info@baytummi.com
+                      <Link href="mailto:info@baytummi.sa">
+                        info@baytummi.sa
                       </Link>
                     </h3>
                   </div>

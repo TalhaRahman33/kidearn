@@ -73,8 +73,9 @@ const Footer = () => {
                     </li>
                     <li>
                       <i className="icon-email1 footer-widget__info__icon"></i>
-                      <Link href="mailto:info@baytummi.com">
-                        info@baytummi.com
+                      <Link href="mailto:info@baytummi.sa">
+                        info@baytummi.sa
+                       
                       </Link>
                     </li>
                   </ul>
@@ -163,7 +164,7 @@ const Footer = () => {
                   <h2 className="footer-widget__title"> مـــعرض الـــصور</h2>
                   <ul className="list-unstyled footer-widget__gallery">
                     <li>
-                      <Link className="img-popup" href="/images/footer1.jpg">
+                      <Link className="img-popup" href="/images/footer1.jpg" target="_blank">
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer1.jpg"
@@ -174,7 +175,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/images/footer2.jpg">
+                      <Link className="img-popup" href="/images/footer2.jpg" target="_blank">
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer2.jpg"
@@ -185,7 +186,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/images/footer3.jpg">
+                      <Link className="img-popup" href="/images/footer3.jpg" target="_blank">
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer3.jpg"
@@ -196,7 +197,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/images/footer4.jpg">
+                      <Link className="img-popup" href="/images/footer4.jpg" target="_blank">
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer4.jpg"
@@ -207,7 +208,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/images/footer5.jpg">
+                      <Link className="img-popup" href="/images/footer5.jpg" target="_blank">
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer5.jpg"
@@ -218,7 +219,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/images/footer6.jpg">
+                      <Link className="img-popup" href="/images/footer6.jpg" target="_blank">
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer6.jpg"

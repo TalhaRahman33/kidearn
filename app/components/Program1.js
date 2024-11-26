@@ -20,7 +20,7 @@ const Program1 = () => {
         <h2 className="page-header__title"> صفحة تفاصيل البرنامج</h2>
         <ul className="kidearn-breadcrumb list-unstyled">
           <li>
-            <a href="/">الصفحة الرئيسية</a>
+            <Link href="/">الصفحة الرئيسية</Link>
           </li>
           <li>
             <span> صفحة تفاصيل البرنامج</span>
@@ -49,9 +49,9 @@ const Program1 = () => {
       {/* /.blog-card__image */}
       <div className="blog-card__content">
         <div className="blog-card__content__top">
-          {/* <a href="#" className="blog-card__category">
+          {/* <Link href="#" className="blog-card__category">
             After School Care
-          </a> */}
+          </Link> */}
           {/* /.blog-card__date */}
         </div>
         <h3 className="blog-card__title"> برنامج استقبال الأطفال بعد انتهاء اليوم الدراسي يهدف إلى توفير بيئة آمنة وداعمة. يتضمن:  </h3>
