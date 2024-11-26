@@ -1,17 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Swal from "sweetalert2"; // Import SweetAlert
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import Footer1 from "../components/Footer1";
 import Link from "next/link";
 import { generateMetadata } from "../components/Meta";
 import Topbar from "../components/Topbar";
 
 const ContactPage = () => {
   const [metadata, setMetadata] = useState({
-    title:
-      "مركز وقت الطفل لضيافة الأطفال | Child Time Center for Children's Hospitality",
-
+    title: "مركز وقت الطفل لضيافة الأطفال | Child Time Center for Children's Hospitality",
     description:
       "تمكين الأطفال ليصبحوا مواطنين منتجين في كافة نواحي الحياة. | Empowering children to become productive citizens in all aspects of life.",
   });
@@ -27,19 +25,13 @@ const ContactPage = () => {
     };
 
     fetchMetadata();
-
-    return () => {
-      // Cleanup function if needed
-    };
   }, []);
 
   useEffect(() => {
     if (typeof document !== "undefined") {
       document.title = metadata.title;
 
-      const descriptionMeta = document.querySelector(
-        'meta[name="description"]'
-      );
+      const descriptionMeta = document.querySelector('meta[name="description"]');
       if (descriptionMeta) {
         descriptionMeta.setAttribute("content", metadata.description);
       }
@@ -56,49 +48,55 @@ const ContactPage = () => {
   const [phone, setPhone] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [showError, setShowError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(
-        "https://backend.baytummi.sa/api/contactleads",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            phone,
-            subject,
-            message,
-          }),
-        }
-      );
+      const response = await fetch("https://backend.baytummi.sa/api/contactleads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          subject,
+          message,
+        }),
+      });
 
       const data = await response.json();
 
       if (data.success) {
-        setShowSuccess(true);
+        Swal.fire({
+          title: "نجاح!",
+          text: "تم إرسال رسالتك بنجاح!",
+          icon: "success",
+          confirmButtonText: "حسنًا",
+        });
+
+        // Clear form fields
         setName("");
         setEmail("");
         setPhone("");
         setSubject("");
         setMessage("");
-        setShowError(false); // Hide error message if any
       } else {
-        setErrorMessage(data.message || "Message sending failed");
-        setShowError(true);
-        setShowSuccess(false); // Hide success message if any
+        Swal.fire({
+          title: "خطأ!",
+          text: data.message || "فشل إرسال الرسالة. حاول مرة أخرى.",
+          icon: "error",
+          confirmButtonText: "موافق",
+        });
       }
     } catch (error) {
-      setErrorMessage(error.message);
-      setShowError(true);
-      setShowSuccess(false); // Hide success message if any
+      Swal.fire({
+        title: "خطأ!",
+        text: "حدث خطأ أثناء إرسال الرسالة. حاول مرة أخرى.",
+        icon: "error",
+        confirmButtonText: "موافق",
+      });
     }
   };
 
@@ -127,7 +125,6 @@ const ContactPage = () => {
           />
           <div className="container">
             <h2 className="page-header__title">اتصال</h2>
-
             <ul className="kidearn-breadcrumb list-unstyled">
               <li>
                 <Link href="/">الصفحة الرئيسية</Link>
@@ -147,17 +144,6 @@ const ContactPage = () => {
                 ســـجل بـــياناتك لـــنتصل بـــك{" "}
               </h3>
             </div>
-
-            {showSuccess && (
-              <div className="alert alert-success text-center">
-                Your message has been sent successfully!
-              </div>
-            )}
-            {showError && (
-              <div className="alert alert-danger text-center">
-                {errorMessage}
-              </div>
-            )}
 
             <form
               className="contact-one__form form-one"
@@ -225,91 +211,7 @@ const ContactPage = () => {
           </div>
         </section>
 
-        <section className="contact-info-one mb-4">
-          <div className="container">
-            <div className="contact-info-one__inner">
-              <div className="row">
-                <div className="col-md-12 col-lg-4">
-                  <div className="contact-info-one__item">
-                    <i className="icon-telephone contact-info-one__icon"></i>
-                    <p className="contact-info-one__text">هل لديك أي سؤال؟</p>
-                    <h3 className="contact-info-one__title">
-                      <Link
-                        href="tel:+٠
- ٩٦٦٥٨٣٨٢٥١١٦٠
- "
-                      >
-                        ٠٥٨٣٨٢٥١١٦
-                      </Link>
-                    </h3>
-                  </div>
-                </div>
-                <div className="col-md-12 col-lg-4">
-                  <div
-                    className="contact-info-one__item"
-                    style={{ "--accent-color": "#2390FF" }}
-                  >
-                    <i className="icon-email contact-info-one__icon"></i>
-                    <p className="contact-info-one__text">
-                      {" "}
-                      أرسل بريدًا إلكترونيًا
-                    </p>
-                    <h3 className="contact-info-one__title">
-                      <Link href="mailto:info@baytummi.sa">
-                        info@baytummi.sa
-                      </Link>
-                    </h3>
-                  </div>
-                </div>
-                <div className="col-md-12 col-lg-4">
-                  <div
-                    className="contact-info-one__item"
-                    style={{ "--accent-color": "#75C137" }}
-                  >
-                    <i className="icon-location-fill contact-info-one__icon"></i>
-                    <p className="contact-info-one__text">زر في أي وقت </p>
-                    <h5 className="contact-info-one__title">
-                      <Link
-                        href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7"
-                        target="_blank"
-                      >
-                        شارع أبي بكر الصديق، النرجس{" "}
-                      </Link>
-                      {/* <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" target="_blank">شارع أبي بكر الصديق، النرجس، الرياض ١٣٣٢٣،  المملكة العربية السعودية</Link> */}
-                      {/* <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7" target="_blank">Abi Bakr As Siddiq Rd, An Narjis,Riyadh 13323, Saudi Arabia</Link> */}
-                    </h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="contact-map mt-5">
-          <div className="container-fluid">
-            <div className="google-map google-map__contact">
-              {/* <iframe
-              title="template google map"
-              src="
-https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.499336554684!2d46.6695923!3d24.8125918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee3888003ec6b%3A0xd9b571bed949b0e0!2z2YXYsdmD2LIg2KjZitiqINij2YXZiiAtINi22YrYp9mB2Kkg2KPYt9mB2KfZhA!5e0!3m2!1sen!2s!4v1725884889986!5m2!1sen!2s"
-              className="map__contact"
-              allowFullScreen=""
-            /> */}
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.499336554684!2d46.6695923!3d24.8125918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee3888003ec6b%3A0xd9b571bed949b0e0!2z2YXYsdmD2LIg2KjZitiqINij2YXZiiAtINi22YrYp9mB2Kkg2KPYt9mB2KfZhA!5e0!3m2!1sen!2s!4v1727246272386!5m2!1sen!2s"
-                width="600"
-                height="450"
-                style={{ border: 0 }}
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </section>
-
         <Footer />
-        {/* <Footer1 /> */}
       </div>
     </div>
   );

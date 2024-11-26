@@ -1,20 +1,17 @@
+
 "use client";
 import React, { useState, useEffect } from "react";
+import Swal from "sweetalert2"; // Import SweetAlert2
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
 import Link from "next/link";
-import Modal from "react-bootstrap/Modal";
 import Topbar from "../components/Topbar";
 import { generateMetadata } from "../components/Meta";
 
 const JobApplicationPage = () => {
   const [metadata, setMetadata] = useState({
-    title:
-      "مركز وقت الطفل لضيافة الأطفال | Child Time Center for Children's Hospitality",
-
-    description:
-      "تمكين الأطفال ليصبحوا مواطنين منتجين في كافة نواحي الحياة. | Empowering children to become productive citizens in all aspects of life.",
+    title: "مركز وقت الطفل لضيافة الأطفال | Child Time Center for Children's Hospitality",
+    description: "تمكين الأطفال ليصبحوا مواطنين منتجين في كافة نواحي الحياة. | Empowering children to become productive citizens in all aspects of life.",
   });
 
   useEffect(() => {
@@ -26,21 +23,14 @@ const JobApplicationPage = () => {
         console.error("Error fetching metadata:", error);
       }
     };
-
     fetchMetadata();
-
-    return () => {
-      // Cleanup function if needed
-    };
   }, []);
 
   useEffect(() => {
     if (typeof document !== "undefined") {
       document.title = metadata.title;
 
-      const descriptionMeta = document.querySelector(
-        'meta[name="description"]'
-      );
+      const descriptionMeta = document.querySelector('meta[name="description"]');
       if (descriptionMeta) {
         descriptionMeta.setAttribute("content", metadata.description);
       }
@@ -59,12 +49,6 @@ const JobApplicationPage = () => {
   const [job, setJob] = useState("");
   const [message, setMessage] = useState("");
   // const [cv, setCv] = useState(null);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [showError, setShowError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const handleCloseSuccess = () => setShowSuccess(false);
-  const handleCloseError = () => setShowError(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -87,7 +71,12 @@ const JobApplicationPage = () => {
       const data = await response.json();
 
       if (data.success) {
-        setShowSuccess(true);
+        Swal.fire({
+          icon: "success",
+          title: "شكرا لك!",
+          text: "تم تقديم طلبك بنجاح. سنتصل بك قريباً.",
+          confirmButtonText: "إغلاق",
+        });
         setFirstName("");
         setFatherName("");
         setFamilyName("");
@@ -96,12 +85,20 @@ const JobApplicationPage = () => {
         setMessage("");
         // setCv(null);
       } else {
-        setErrorMessage(data.message || "Failed to submit application");
-        setShowError(true);
+        Swal.fire({
+          icon: "error",
+          title: "حدث خطأ",
+          text: data.message || "فشل في إرسال الطلب",
+          confirmButtonText: "إغلاق",
+        });
       }
     } catch (error) {
-      setErrorMessage(error.message);
-      setShowError(true);
+      Swal.fire({
+        icon: "error",
+        title: "حدث خطأ",
+        text: error.message,
+        confirmButtonText: "إغلاق",
+      });
     }
   };
 
@@ -145,21 +142,19 @@ const JobApplicationPage = () => {
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-6">
               <h1 className="text-2xl font-semibold mb-6">
-                نـــموذج الـــتقديم عـلــى وظـــيفة{" "}
+                نـــموذج الـــتقديم عـلــى وظـــيفة
               </h1>
               <div className="w-10/12 mx-auto mb-6 border-b-2 border-[#FAF5F2]"></div>
             </div>
 
-            <form
+             <form
               onSubmit={handleSubmit}
               className="space-y-6 p-8 bg-white rounded-lg shadow-md"
               style={{ boxShadow: "0px 4px 10px rgba(250, 245, 242, 0.5)" }}
             >
               <div className="flex flex-col space-y-4">
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">
-                    الاسم الأول
-                  </label>
+                  <label className="text-gray-700 mb-2 input-font">الاسم الأول</label>
                   <input
                     type="text"
                     placeholder="الاسم الأول"
@@ -171,9 +166,7 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font ">
-                    اسم الأب
-                  </label>
+                  <label className="text-gray-700 mb-2 input-font ">اسم الأب</label>
                   <input
                     type="text"
                     placeholder="اسم الأب"
@@ -185,9 +178,7 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">
-                    العائلة
-                  </label>
+                  <label className="text-gray-700 mb-2 input-font">العائلة</label>
                   <input
                     type="text"
                     placeholder="العائلة"
@@ -199,9 +190,7 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">
-                    البريد الالكتروني
-                  </label>
+                  <label className="text-gray-700 mb-2 input-font">البريد الالكتروني</label>
                   <input
                     type="email"
                     placeholder="البريد الالكتروني"
@@ -213,9 +202,7 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">
-                    الوظيفة المرغوبة
-                  </label>
+                  <label className="text-gray-700 mb-2 input-font">الوظيفة المرغوبة</label>
                   <select
                     className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367] select-optn"
                     value={job}
@@ -232,9 +219,7 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">
-                    اكتب رسالة
-                  </label>
+                  <label className="text-gray-700 mb-2 input-font">اكتب رسالة</label>
                   <textarea
                     placeholder="اكتب رسالتك"
                     className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
@@ -246,23 +231,27 @@ const JobApplicationPage = () => {
                 </div>
 
                 {/* <div className="flex flex-col">
-<label className="text-gray-700 mb-2 input-font">السيرة الذاتية</label>
-<input
-  type="file"
-  className="block w-full mb-4 p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700"
-  accept=".pdf,.docx"
-  onChange={(e) => setCv(e.target.files[0])}
-  required
-/>
-</div> */}
+                  <label className="text-gray-700 mb-2 input-font">السيرة الذاتية</label>
+                  <input
+                    type="file"
+                    className="block w-full mb-4 p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700"
+                    accept=".pdf,.docx"
+                    onChange={(e) => setCv(e.target.files[0])}
+                    required
+                  />
+                </div> */}
 
                 <div className="text-center">
+
+
                   <button
                     type="submit"
-                    className="bg-[#f25334] text-white py-2.5 px-20 rounded-lg shadow-md hover:bg-[#0b2038] jobbtn"
+                   className="bg-[#f25334] text-white py-2.5 px-20 rounded-lg shadow-md hover:bg-[#0b2038] jobbtn"
                   >
                     التقديم الآن
                   </button>
+
+
                 </div>
               </div>
             </form>
@@ -270,55 +259,6 @@ const JobApplicationPage = () => {
         </section>
 
         <Footer />
-        {/* <Footer1 /> */}
-
-        <Modal
-          show={showSuccess}
-          onHide={handleCloseSuccess}
-          className="main-model"
-        >
-          <Modal.Header className="modelhead">
-            <Modal.Title className="model-title">
-              <i
-                className="bx bx-check-circle"
-                style={{ color: "green", fontSize: "50px" }}
-              ></i>
-              <h4>شكرا لك!</h4>
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body className="model-body">
-            <p>تم تقديم طلبك بنجاح. سنتصل بك قريباً.</p>
-          </Modal.Body>
-          <Modal.Footer>
-            <button onClick={handleCloseSuccess} className="btn btn-secondary">
-              إغلاق
-            </button>
-          </Modal.Footer>
-        </Modal>
-
-        <Modal
-          show={showError}
-          onHide={handleCloseError}
-          className="main-model"
-        >
-          <Modal.Header className="modelhead">
-            <Modal.Title className="model-title">
-              <i
-                className="bx bx-error-circle"
-                style={{ color: "red", fontSize: "50px" }}
-              ></i>
-              <h4>حدث خطأ</h4>
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body className="model-body">
-            <p>{errorMessage}</p>
-          </Modal.Body>
-          <Modal.Footer>
-            <button onClick={handleCloseError} className="btn btn-secondary">
-              إغلاق
-            </button>
-          </Modal.Footer>
-        </Modal>
       </div>
     </div>
   );
