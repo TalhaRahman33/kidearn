@@ -64,7 +64,7 @@ const ContactPage = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://backend.baytummi.sa/api/contact",
+        "https://backend.baytummi.sa/api/contactleads",
         {
           method: "POST",
           headers: {

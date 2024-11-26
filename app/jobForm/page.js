@@ -9,7 +9,6 @@ import Topbar from "../components/Topbar";
 import { generateMetadata } from "../components/Meta";
 
 const JobApplicationPage = () => {
-
   const [metadata, setMetadata] = useState({
     title:
       "مركز وقت الطفل لضيافة الأطفال | Child Time Center for Children's Hospitality",
@@ -36,10 +35,12 @@ const JobApplicationPage = () => {
   }, []);
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
+    if (typeof document !== "undefined") {
       document.title = metadata.title;
 
-      const descriptionMeta = document.querySelector('meta[name="description"]');
+      const descriptionMeta = document.querySelector(
+        'meta[name="description"]'
+      );
       if (descriptionMeta) {
         descriptionMeta.setAttribute("content", metadata.description);
       }
@@ -57,7 +58,7 @@ const JobApplicationPage = () => {
   const [email, setEmail] = useState("");
   const [job, setJob] = useState("");
   const [message, setMessage] = useState("");
-  const [cv, setCv] = useState(null);
+  // const [cv, setCv] = useState(null);
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -75,10 +76,10 @@ const JobApplicationPage = () => {
     formData.append("email", email);
     formData.append("job", job);
     formData.append("message", message);
-    formData.append("cv", cv);
+    // formData.append("cv", cv);
 
     try {
-      const response = await fetch("https://backend.baytummi.sa/api/apply", {
+      const response = await fetch("https://backend.baytummi.sa/api/job", {
         method: "POST",
         body: formData,
       });
@@ -93,7 +94,7 @@ const JobApplicationPage = () => {
         setEmail("");
         setJob("");
         setMessage("");
-        setCv(null);
+        // setCv(null);
       } else {
         setErrorMessage(data.message || "Failed to submit application");
         setShowError(true);
@@ -105,9 +106,7 @@ const JobApplicationPage = () => {
   };
 
   return (
-
-    <div className='custom-cursor'>
-
+    <div className="custom-cursor">
       <div className="custom-cursor__cursor"></div>
       <div className="custom-cursor__cursor-two"></div>
 
@@ -115,19 +114,20 @@ const JobApplicationPage = () => {
         <Topbar />
         <Header />
 
-
-        <section className="page-header" style={{position:"relative"}}>
+        <section className="page-header" style={{ position: "relative" }}>
           <div className="page-header__bg_job" />
-          <div style={{
-        position: 'absolute',
-        top: '0',
-        right: '0',
-        bottom: '0',
-        left: '0',
-        background: 'rgba(0, 0, 0, 0.5)',
-        transition: 'opacity 0.5s ease',
-        zIndex: 0,
-      }} />
+          <div
+            style={{
+              position: "absolute",
+              top: "0",
+              right: "0",
+              bottom: "0",
+              left: "0",
+              background: "rgba(0, 0, 0, 0.5)",
+              transition: "opacity 0.5s ease",
+              zIndex: 0,
+            }}
+          />
           <div className="container">
             <h2 className="page-header__title">نموذج التقديم على وظيفة</h2>
             <ul className="kidearn-breadcrumb list-unstyled">
@@ -144,7 +144,9 @@ const JobApplicationPage = () => {
         <section className="py-8">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-6">
-              <h1 className="text-2xl font-semibold mb-6">نـــموذج الـــتقديم عـلــى وظـــيفة   </h1>
+              <h1 className="text-2xl font-semibold mb-6">
+                نـــموذج الـــتقديم عـلــى وظـــيفة{" "}
+              </h1>
               <div className="w-10/12 mx-auto mb-6 border-b-2 border-[#FAF5F2]"></div>
             </div>
 
@@ -155,7 +157,9 @@ const JobApplicationPage = () => {
             >
               <div className="flex flex-col space-y-4">
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">الاسم الأول</label>
+                  <label className="text-gray-700 mb-2 input-font">
+                    الاسم الأول
+                  </label>
                   <input
                     type="text"
                     placeholder="الاسم الأول"
@@ -167,7 +171,9 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font ">اسم الأب</label>
+                  <label className="text-gray-700 mb-2 input-font ">
+                    اسم الأب
+                  </label>
                   <input
                     type="text"
                     placeholder="اسم الأب"
@@ -179,7 +185,9 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">العائلة</label>
+                  <label className="text-gray-700 mb-2 input-font">
+                    العائلة
+                  </label>
                   <input
                     type="text"
                     placeholder="العائلة"
@@ -191,7 +199,9 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">البريد الالكتروني</label>
+                  <label className="text-gray-700 mb-2 input-font">
+                    البريد الالكتروني
+                  </label>
                   <input
                     type="email"
                     placeholder="البريد الالكتروني"
@@ -203,7 +213,9 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">الوظيفة المرغوبة</label>
+                  <label className="text-gray-700 mb-2 input-font">
+                    الوظيفة المرغوبة
+                  </label>
                   <select
                     className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367] select-optn"
                     value={job}
@@ -220,7 +232,9 @@ const JobApplicationPage = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">اكتب رسالة</label>
+                  <label className="text-gray-700 mb-2 input-font">
+                    اكتب رسالة
+                  </label>
                   <textarea
                     placeholder="اكتب رسالتك"
                     className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
@@ -231,21 +245,21 @@ const JobApplicationPage = () => {
                   />
                 </div>
 
-                <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">السيرة الذاتية</label>
-                  <input
-                    type="file"
-                    className="block w-full mb-4 p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700"
-                    accept=".pdf,.docx"
-                    onChange={(e) => setCv(e.target.files[0])}
-                    required
-                  />
-                </div>
+                {/* <div className="flex flex-col">
+<label className="text-gray-700 mb-2 input-font">السيرة الذاتية</label>
+<input
+  type="file"
+  className="block w-full mb-4 p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700"
+  accept=".pdf,.docx"
+  onChange={(e) => setCv(e.target.files[0])}
+  required
+/>
+</div> */}
 
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="bg-[#fe6367] text-white py-2.5 px-20 rounded-lg shadow-md hover:bg-[#ff4a4a]"
+                    className="bg-[#f25334] text-white py-2.5 px-20 rounded-lg shadow-md hover:bg-[#0b2038] jobbtn"
                   >
                     التقديم الآن
                   </button>
@@ -255,14 +269,20 @@ const JobApplicationPage = () => {
           </div>
         </section>
 
-
         <Footer />
         {/* <Footer1 /> */}
 
-        <Modal show={showSuccess} onHide={handleCloseSuccess} className="main-model">
+        <Modal
+          show={showSuccess}
+          onHide={handleCloseSuccess}
+          className="main-model"
+        >
           <Modal.Header className="modelhead">
             <Modal.Title className="model-title">
-              <i className="bx bx-check-circle" style={{ color: "green", fontSize: "50px" }}></i>
+              <i
+                className="bx bx-check-circle"
+                style={{ color: "green", fontSize: "50px" }}
+              ></i>
               <h4>شكرا لك!</h4>
             </Modal.Title>
           </Modal.Header>
@@ -276,10 +296,17 @@ const JobApplicationPage = () => {
           </Modal.Footer>
         </Modal>
 
-        <Modal show={showError} onHide={handleCloseError} className="main-model">
+        <Modal
+          show={showError}
+          onHide={handleCloseError}
+          className="main-model"
+        >
           <Modal.Header className="modelhead">
             <Modal.Title className="model-title">
-              <i className="bx bx-error-circle" style={{ color: "red", fontSize: "50px" }}></i>
+              <i
+                className="bx bx-error-circle"
+                style={{ color: "red", fontSize: "50px" }}
+              ></i>
               <h4>حدث خطأ</h4>
             </Modal.Title>
           </Modal.Header>
@@ -292,7 +319,6 @@ const JobApplicationPage = () => {
             </button>
           </Modal.Footer>
         </Modal>
-
       </div>
     </div>
   );
