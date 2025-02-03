@@ -95,7 +95,7 @@ const OffcanvasNavbar = () => {
                         <Link href="/event" className="header-Links">الفعاليات</Link>
                         <Link href="/jobForm" className="header-Links">التوظيف</Link>
                         {/* <Link href="/register" className="header-Links">Register</Link> */}
-                   
+
                         <Link href="/contact" className="header-Links">اتصل بنا</Link>
                     </ul>
                     <div className="footer-widget footer-widget--about">
@@ -129,8 +129,8 @@ const OffcanvasNavbar = () => {
                                 <span className="sr-only">Instagram</span>
                             </Link>
                         </div> */}
-                         <div className="footer-widget__social">
-                    {/* <Link
+                        <div className="footer-widget__social">
+                            {/* <Link
                       href="https
 :
 //x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g"
@@ -139,33 +139,74 @@ const OffcanvasNavbar = () => {
                       <i className="fab fa-twitter" aria-hidden="true"></i>
                       <span className="sr-only">Twitter</span>
                     </Link> */}
-                    <Link href="https://x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g" aria-label="X">
-    <i className="fas fa-times" aria-hidden="true"></i>
-    <span className="sr-only">X</span>
-</Link>
-                    <Link
-                      href="https://www.snapchat.com/add/baytummi"
-                      aria-label="Facebook"
-                    >
-                      <i className="fab fa-snapchat" aria-hidden="true"></i>
-                      <span className="sr-only">Snapchat</span>
-                    </Link>
-                    <Link
-                      href="https://www.tiktok.com/@baytummi"
-                      aria-label="TikTok"
-                      target="_blank"
-                    >
-                      <i className="fab fa-tiktok" aria-hidden="true"></i>
-                      <span className="sr-only">TikTok</span>
-                    </Link>
-                    <Link
-                      href="https://www.instagram.com/baytummi"
-                      aria-label="Instagram"
-                    >
-                      <i className="fab fa-instagram" aria-hidden="true"></i>
-                      <span className="sr-only">Instagram</span>
-                    </Link>
-                  </div>
+                            <Link href="https://x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g" aria-label="X">
+                                <i className="bx bxl-twitter" aria-hidden="true"></i>
+                                <span className="sr-only">X</span>
+                            </Link>
+                            <Link
+                                href="https://www.snapchat.com/add/baytummi"
+                                aria-label="Snapchat"
+                            >
+                                <i className="bx bxl-snapchat" aria-hidden="true"></i>
+                                <span className="sr-only">Snapchat</span>
+                            </Link>
+                            <Link
+                                href="https://www.tiktok.com/@baytummi"
+                                aria-label="TikTok"
+                                target="_blank"
+                            >
+                                <i className="bx bxl-tiktok" aria-hidden="true"></i>
+                                <span className="sr-only">TikTok</span>
+                            </Link>
+                            <Link
+                                href="https://www.instagram.com/baytummi"
+                                aria-label="Instagram"
+                            >
+                                <i className="bx bxl-instagram" aria-hidden="true"></i>
+                                <span className="sr-only">Instagram</span>
+                            </Link>
+
+
+
+                        </div>
+                        <div style={{
+                            marginTop: '2rem',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '1rem'
+                        }}>
+                            <Link href="/login"
+                                style={{
+                                    width: '130px',
+                                    backgroundColor: '#F25334',
+                                    color: 'white',
+                                    fontSize: '14px',
+                                    fontWeight: '500',
+                                    padding: '7px 7px',
+                                    borderRadius: '12px',
+                                    height: '45px',
+                                    textAlign: 'center',
+                                }}
+                            >
+                                تسجيل الدخول
+                            </Link>
+
+                            <Link href="/signup"
+                                style={{
+                                    width: '130px',
+                                    backgroundColor: '#F25334',
+                                    color: 'white',
+                                    fontSize: '14px',
+                                    fontWeight: '500',
+                                    padding: '7px 7px',
+                                    borderRadius: '12px',
+                                    height: '45px',
+                                    textAlign: 'center',
+                                }}
+                            >
+                                قم بالتسجيل الآن
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div >

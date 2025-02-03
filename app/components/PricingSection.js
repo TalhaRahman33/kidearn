@@ -51,16 +51,16 @@ const PricingSection = () => {
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> رعاية شاملة
+                        <i className="bx bx-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
+                        <i className="bx bx-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i>برامج تعليمية
+                        <i className="bx bx-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> تنمية مهارات
+                        <i className="bx bx-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
                     <h3 className="pricing">٧٠ ر.س</h3>
@@ -97,16 +97,16 @@ const PricingSection = () => {
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> رعاية شاملة
+                        <i className="bx bx-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
+                        <i className="bx bx-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i>برامج تعليمية
+                        <i className="bx bx-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> تنمية مهارات
+                        <i className="bx bx-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
                     <h3 className="pricing">٢٠٠ ر.س</h3>
@@ -135,7 +135,7 @@ const PricingSection = () => {
                     style={{ "--accent-color": "#75C137" }}
                   >
                     <h4 className="pricing-one__card__tagline">خطة أسبوعية</h4>
-                   
+
                     <h4 className="pricing-one__card__month">من ٧:٠٠ ص إلى ٥:٠٠ م</h4>
 
                     <div className="pricing-one__card__icon">
@@ -143,16 +143,16 @@ const PricingSection = () => {
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> رعاية شاملة
+                        <i className="bx bx-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
+                        <i className="bx bx-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i>برامج تعليمية
+                        <i className="bx bx-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> تنمية مهارات
+                        <i className="bx bx-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
                     <h3 className="pricing">٨٥٠ ر.س</h3>
@@ -181,7 +181,7 @@ const PricingSection = () => {
                     style={{ "--accent-color": "#F25334" }}
                   >
                     <h4 className="pricing-one__card__tagline">شهر واحد</h4>
-                   
+
                     <h4 className="pricing-one__card__month">من ٧:٠٠ ص إلى ٥:٠٠ م</h4>
 
                     <div className="pricing-one__card__icon">
@@ -189,16 +189,16 @@ const PricingSection = () => {
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> رعاية شاملة
+                        <i className="bx bx-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
+                        <i className="bx bx-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i>برامج تعليمية
+                        <i className="bx bx-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> تنمية مهارات
+                        <i className="bx bx-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
                     <h3 className="pricing"> ٣٢٥٠ ر.س</h3>
@@ -228,7 +228,7 @@ const PricingSection = () => {
                     style={{ "--accent-color": "#2390FF" }}
                   >
                     <h4 className="pricing-one__card__tagline">أربعة أشهر</h4>
-                  
+
                     <h4 className="pricing-one__card__month">من ٧:٠٠ ص إلى ٥:٠٠ م</h4>
 
                     <div className="pricing-one__card__icon">
@@ -236,16 +236,16 @@ const PricingSection = () => {
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> رعاية شاملة
+                        <i className="bx bx-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
+                        <i className="bx bx-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i>برامج تعليمية
+                        <i className="bx bx-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> تنمية مهارات
+                        <i className="bx bx-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
                     <h3 className="pricing">١٢٤٢٧ ر.س</h3>
@@ -281,16 +281,16 @@ const PricingSection = () => {
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> رعاية شاملة
+                        <i className="bx bx-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
+                        <i className="bx bx-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i>برامج تعليمية
+                        <i className="bx bx-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> تنمية مهارات
+                        <i className="bx bx-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
                     <h3 className="pricing">١٨٤٢٧ ر.س</h3>
@@ -312,7 +312,7 @@ const PricingSection = () => {
                     </h3>
                   </div>
                 </SwiperSlide>
-               
+
 
                 <SwiperSlide>
                   <div
@@ -326,16 +326,16 @@ const PricingSection = () => {
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> رعاية شاملة
+                        <i className="bx bx-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
+                        <i className="bx bx-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i>برامج تعليمية
+                        <i className="bx bx-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> تنمية مهارات
+                        <i className="bx bx-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
                     <h3 className="pricing">١٥٠٠ ر.س</h3>
@@ -346,7 +346,7 @@ const PricingSection = () => {
                           query: {
                             packageName: "رعاية بعد المدرسة",
                             price: "١٥٠٠ ر.س",
-                            amount:1500,
+                            amount: 1500,
                           },
                         }}
                       >
@@ -371,16 +371,16 @@ const PricingSection = () => {
                     </div>
                     <ul className="list-unstyled pricing-one__card__list">
                       <li>
-                        <i className="fa fa-check-circle"></i> رعاية شاملة
+                        <i className="bx bx-check-circle"></i> رعاية شاملة
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> أنشطة وفعاليات
+                        <i className="bx bx-check-circle"></i> أنشطة وفعاليات
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i>برامج تعليمية
+                        <i className="bx bx-check-circle"></i>برامج تعليمية
                       </li>
                       <li>
-                        <i className="fa fa-check-circle"></i> تنمية مهارات
+                        <i className="bx bx-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
                     <h3 className="pricing">٥٠٠ ر.س</h3>
@@ -391,7 +391,7 @@ const PricingSection = () => {
                           query: {
                             packageName: "دوام جزئي مسائي",
                             price: "٥٠٠ ر.س",
-                            amount:500,
+                            amount: 500,
                           },
                         }}
                       >

@@ -93,14 +93,14 @@ const Footer = () => {
                       href="https://x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g"
                       aria-label="X"
                     >
-                      <i className="fas fa-times" aria-hidden="true"></i>
+                      <i className="bx bxl-twitter" aria-hidden="true"></i>
                       <span className="sr-only">X</span>
                     </Link>
                     <Link
                       href="https://www.snapchat.com/add/baytummi"
-                      aria-label="Facebook"
+                      aria-label="Snapchat"
                     >
-                      <i className="fab fa-snapchat" aria-hidden="true"></i>
+                      <i className="bx bxl-snapchat" aria-hidden="true"></i>
                       <span className="sr-only">Snapchat</span>
                     </Link>
                     <Link
@@ -108,14 +108,14 @@ const Footer = () => {
                       aria-label="TikTok"
                       target="_blank"
                     >
-                      <i className="fab fa-tiktok" aria-hidden="true"></i>
+                      <i className="bx bxl-tiktok" aria-hidden="true"></i>
                       <span className="sr-only">TikTok</span>
                     </Link>
                     <Link
                       href="https://www.instagram.com/baytummi"
                       aria-label="Instagram"
                     >
-                      <i className="fab fa-instagram" aria-hidden="true"></i>
+                      <i className="bx bxl-instagram" aria-hidden="true"></i>
                       <span className="sr-only">Instagram</span>
                     </Link>
                   </div>
@@ -287,8 +287,8 @@ const Footer = () => {
                     height={35}
                     className="px-1"
                   />
-                   <span className="pt-1">       Developed By</span>
-      
+                  <span className="pt-1">       Developed By</span>
+
                 </Link>
                 {/* <span className="dynamic-year"></span> */}
               </p>

@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: "YourFont";
-  src: url("/fonts/FS-Albert-Arabic-Web.ttf") format("opentype"); 
+  src: url("/fonts/FS-Albert-Arabic-Web.ttf") format("opentype");
   /* src: url("/fonts/Janna-LT-Regular.ttf") format("opentype");  */
 
   /* font-weight: normal;
   font-style: normal; */
 }
 
-*{
+* {
   font-family: "YourFont" !important;
 }
 
@@ -37,24 +37,31 @@ li {
 
 /* General styling for the header links */
 .header-Links {
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
+  /* Remove underline */
   color: #286c7e !important;
   /* color: #0B2038 !important; */
   font-family: "YourFont";
-  padding: 10px; /* Padding for the links */
-  transition: color 0.3s; /* Smooth transition for color change */
+  padding: 10px;
+  /* Padding for the links */
+  transition: color 0.3s;
+  /* Smooth transition for color change */
 }
 
 /* Active link styling */
 .header-Links.active {
-  color: #f25334 !important; /* Active link color */
-  font-weight: bold; /* Make the active link bold */
-  border-bottom: 2px solid #f25334; /* Optional: underline effect */
+  color: #f25334 !important;
+  /* Active link color */
+  font-weight: bold;
+  /* Make the active link bold */
+  border-bottom: 2px solid #f25334;
+  /* Optional: underline effect */
 }
 
 /* Add hover effect for links */
 .header-Links:hover {
-  color: #f25334; /* Change color on hover */
+  color: #f25334;
+  /* Change color on hover */
 }
 
 .custom-btn {
@@ -75,6 +82,7 @@ li {
     color 0.3s ease;
   cursor: pointer;
 }
+
 .custom-btn:hover {
   background-color: #fff;
   color: #f25334;
@@ -91,9 +99,12 @@ li {
 
 @media (max-width: 576px) {
   .insta-btn {
-    margin-right: 50px !important; /* Decrease the margin for small screens */
-    padding: 8px 16px; /* Adjust button size */
-    font-size: 14px; /* Reduce font size */
+    margin-right: 50px !important;
+    /* Decrease the margin for small screens */
+    padding: 8px 16px;
+    /* Adjust button size */
+    font-size: 14px;
+    /* Reduce font size */
   }
 }
 
@@ -104,59 +115,74 @@ li {
 
 /* footer */
 .main-footer__bottom {
-  display: flex; /* Use Flexbox for layout */
-  align-items: center !important; /* Vertically center items */
-  justify-content: center !important; /* Center items horizontally */
+  display: flex;
+  /* Use Flexbox for layout */
+  align-items: center !important;
+  /* Vertically center items */
+  justify-content: center !important;
+  /* Center items horizontally */
 }
 
 .main-footer__copyright {
-  display: flex; /* Use Flexbox for the copyright text */
-  align-items: center !important; /* Vertically center items */
+  display: flex;
+  /* Use Flexbox for the copyright text */
+  align-items: center !important;
+  /* Vertically center items */
   justify-content: center !important;
-  
+
 }
 
 .dynamic-year {
-  margin: 0 5px; /* Add margin around the dynamic year */
+  margin: 0 5px;
+  /* Add margin around the dynamic year */
 }
 
 .main-footer__copyright a {
-  display: flex; /* Ensure the link and image are inline */
-  align-items: center; /* Vertically center the link content */
-  margin-left: 5px; /* Optional: add space between text and image */
+  display: flex;
+  /* Ensure the link and image are inline */
+  align-items: center;
+  /* Vertically center the link content */
+  margin-left: 5px;
+  /* Optional: add space between text and image */
 }
 
 .main-footer__copyright img {
-  margin-left: 5px; /* Optional: add space between text and image */
+  margin-left: 5px;
+  /* Optional: add space between text and image */
 }
 
 @media (max-width: 768px) {
   .main-footer__copyright {
-    font-size: 12px; /* Smaller text on tablets and small screens */
+    font-size: 12px;
+    /* Smaller text on tablets and small screens */
   }
 }
 
 @media (max-width: 576px) {
   .main-footer__copyright {
-    flex-direction: column; /* Stack the text vertically on small screens */
-    font-size: 12px; /* Even smaller text for extra small screens */
+    flex-direction: column;
+    /* Stack the text vertically on small screens */
+    font-size: 12px;
+    /* Even smaller text for extra small screens */
   }
 }
 
-.foot{
+.foot {
   /* color: #fff !important; */
   color: #f25334 !important;
   font-weight: 700 !important;
 }
-.foot:hover{
+
+.foot:hover {
   /* color: #fff !important; */
   color: #ffffff !important;
   font-weight: bold !important;
 }
 
-.footpara{
+.footpara {
   color: #ffffff !important;
 }
+
 /* @media (max-width: 768px) {
   .banner-one__bg {
     background-image: none !important;
@@ -164,11 +190,12 @@ li {
   }
 } */
 
-.title{
+.title {
   text-align: center !important;
   margin-right: 35px !important;
   font-size: 45px !important;
 }
+
 /* .title{
   text-align: center !important;
   font-size: 45px !important;
@@ -176,17 +203,17 @@ li {
 
 
 
-.partner{
+.partner {
   font-weight: bold;
   font-size: 30px !important;
 }
 
-.jobbtn{
+.jobbtn {
   font-family: "YourFont" !important;
 }
 
 
-.logomargin{
+.logomargin {
   margin-left: 20px !important;
 }
 
@@ -277,7 +304,8 @@ li {
 .signlogo {
   width: 40%;
   max-width: 150px;
-  margin-left:28%; 
+  margin: auto;
+  padding-bottom: 5px;
 }
 
 .input-field {
@@ -327,7 +355,7 @@ li {
 }
 
 .submit-btn:hover {
-  background-color: #f5874f;
+  background-color: #126c94;
 }
 
 .register-link {
@@ -431,6 +459,3 @@ li {
     font-size: 16px;
   }
 }
-
-
-

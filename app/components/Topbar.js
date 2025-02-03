@@ -15,7 +15,7 @@ const Topbar = () => {
                 href="https://x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g"
                 aria-label="X"
               >
-                <i className="fas fa-times" aria-hidden="true"></i>
+                <i className="bx bx-x" aria-hidden="true"></i>
                 <span className="sr-only">X</span>
               </Link>
               <Link
@@ -23,30 +23,29 @@ const Topbar = () => {
                 aria-label="TikTok"
                 target="_blank"
               >
-                <i className="fab fa-tiktok" aria-hidden="true"></i>
+                <i className="bx bxl-tiktok" aria-hidden="true"></i>
                 <span className="sr-only">TikTok</span>
               </Link>
               <Link href="https://www.snapchat.com/add/baytummi">
-                <i className="fab fa-snapchat" aria-hidden="true"></i>
-                <span className="sr-only">Pinterest</span>
+                <i className="bx bxl-snapchat" aria-hidden="true"></i>
+                <span className="sr-only">Snapchat</span>
               </Link>
               <Link href="https://www.instagram.com/baytummi">
-                <i className="fab fa-instagram" aria-hidden="true"></i>
+                <i className="bx bxl-instagram" aria-hidden="true"></i>
                 <span className="sr-only">Instagram</span>
               </Link>
             </div>
-            {/* <p className="topbar-one__text">Mon to Sat: 8.00 am - 7.00 pm</p> */}
           </div>
           <ul className="list-unstyled topbar-one__info">
             <li className="topbar-one__info__item">
-              <i className="fas fa-map-marker topbar-one__info__icon"></i>
+              <i className="bx bxs-map topbar-one__info__icon"></i>
               <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7">
                 {" "}
                 شارع أبي بكر الصديق، النرجس{" "}
               </Link>
             </li>
             <li className="topbar-one__info__item">
-              <i className="fas fa-envelope topbar-one__info__icon"></i>
+              <i className="bx bxs-envelope topbar-one__info__icon"></i>
               <Link href="mailto:info@baytummi.sa"> info@baytummi.sa</Link>
             </li>
           </ul>

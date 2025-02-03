@@ -21,14 +21,14 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/* favicons Icons */}
-       
+
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
           href="images/favicon-32x32.png"
         />
-      
+
 
         {/* fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,6 +60,9 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="css/kidearn-rtl.css" />
         <link rel="stylesheet" href="css/kidearn-custom-rtl.css" />
         <link rel="stylesheet" href="css/kidearn-toolbar.css" />
+
+        {/* <!-- fontawesome icons --> */}
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
 
         <Script src="js/jquery-3.7.0.min.js"></Script>
         <Script src="js/bootstrap.bundle.min.js"></Script>

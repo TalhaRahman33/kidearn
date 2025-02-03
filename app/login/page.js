@@ -38,20 +38,20 @@ const Login = () => {
           },
           body: JSON.stringify(values),
         });
-    
+
         const data = await response.json();
-    
+
         if (response.ok) {
           console.log("Login successful:", data);
           // Get 'code' and 'centerId' from the backend response
           const { code, centerId } = data;
-    
+
           // Redirect to the desired URL with 'code' and 'centerId' as query parameters
           // router.push(`http://localhost:3000/signin/?code=${code}&centerId=${centerId}`);
           router.push(`https://rawdhat.com/signin/?code=${code}&centerId=${centerId}`);
         } else {
           console.error("Login failed:", data.message);
-    
+
           if (data.message === "Email not found") {
             // Show SweetAlert if "Email not found"
             Swal.fire({
@@ -104,10 +104,10 @@ const Login = () => {
     <div className="login-container">
       <div className="left-side">
         <ExportedImage
-        unoptimized = "true"
-        width={500}
-        height={500}
-          src="./images/login.png"
+          unoptimized="true"
+          width={500}
+          height={500}
+          src="./images/bayt-login.png"
           alt="Login Illustration"
           className="signup-image"
         />
@@ -117,9 +117,9 @@ const Login = () => {
         <div className="form-container">
           <div className="form-header">
             <ExportedImage
-            unoptimized = "true"
-            width={100}
-            height={100}
+              unoptimized="true"
+              width={100}
+              height={100}
               src="./images/logo-dark.png"
               alt="Logo"
               className="signlogo"
@@ -152,7 +152,7 @@ const Login = () => {
                 value={formik.values.password}
                 onChange={formik.handleChange}
               />
-              <span 
+              <span
                 style={passwordStyles.eye}
                 onClick={() => setShowPassword(!showPassword)}
               >

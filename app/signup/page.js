@@ -45,7 +45,7 @@ const Signup = () => {
       setEmailError(""); // Reset email error before submitting
       try {
         const response = await fetch("https://backend.kidstime.com.sa/api/gardianregister", {
-        // const response = await fetch("http://localhost:5000/api/gardianregister", {
+          // const response = await fetch("http://localhost:5000/api/gardianregister", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -115,26 +115,26 @@ const Signup = () => {
           unoptimized="true"
           width={500}
           height={500}
-          src="./images/signup.png"
+          src="./images/bayt-signup.png"
           alt="Signup Illustration"
           className="signup-image"
         />
-       
+
       </div>
 
       <div className="right-side">
         <div className="form-container">
-        <ExportedImage
+          <ExportedImage
             unoptimized="true"
             width={100}
             height={100}
-              src="./images/logo-dark.png"
-              alt="Logo"
-              className="signlogo"
-            />
-              {/* <h6 className="green login-title">مركز وقت الطفل لضيافة الأطفال</h6> */}
+            src="./images/logo-dark.png"
+            alt="Logo"
+            className="signlogo"
+          />
+          {/* <h6 className="green login-title">مركز وقت الطفل لضيافة الأطفال</h6> */}
           <h4 className="form-title pb-1">
-          
+
             إنشاء حساب
           </h4>
 
@@ -212,7 +212,7 @@ const Signup = () => {
                 value={formik.values.password}
                 onChange={formik.handleChange}
               />
-              <span 
+              <span
                 style={passwordStyles.eye}
                 onClick={() => setShowPassword(!showPassword)}
               >
@@ -233,7 +233,7 @@ const Signup = () => {
                 value={formik.values.confirmPassword}
                 onChange={formik.handleChange}
               />
-              <span 
+              <span
                 style={passwordStyles.eye}
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
