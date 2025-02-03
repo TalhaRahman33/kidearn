@@ -44,7 +44,7 @@ const Signup = () => {
     onSubmit: async (values) => {
       setEmailError(""); // Reset email error before submitting
       try {
-        const response = await fetch("https://backend.kidstime.com.sa/api/gardianregister", {
+        const response = await fetch("https://backend.baytummi.sa/api/gardianregister", {
           // const response = await fetch("http://localhost:5000/api/gardianregister", {
           method: "POST",
           headers: {
