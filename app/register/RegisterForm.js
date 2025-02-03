@@ -132,7 +132,7 @@ const RegisterFormContent = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-[#fe6367] text-white py-2.5 px-20 rounded-lg shadow hover:bg-[#ff4a4a]"
+                className="bg-[#F25334] text-white py-2.5 px-20 rounded-lg shadow hover:bg-[#F25334]"
               >
                 {loading ? "Processing..." : "التقديم الآن"}
               </button>

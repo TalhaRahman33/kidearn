@@ -65,7 +65,8 @@ const Footer = () => {
                     <li>
                       <i className="icon-location2 footer-widget__info__icon"></i>
                       <Link href="https://maps.app.goo.gl/fhUFU1J1xG3L98uw7">
-                      الرياض ، حي النرجس                      </Link>
+                        الرياض ، حي النرجس{" "}
+                      </Link>
                     </li>
                     <li>
                       <i className="icon-call footer-widget__info__icon"></i>
@@ -75,7 +76,6 @@ const Footer = () => {
                       <i className="icon-email1 footer-widget__info__icon"></i>
                       <Link href="mailto:info@baytummi.sa">
                         info@baytummi.sa
-                       
                       </Link>
                     </li>
                   </ul>
@@ -89,10 +89,13 @@ const Footer = () => {
                       <i className="fab fa-twitter" aria-hidden="true"></i>
                       <span className="sr-only">Twitter</span>
                     </Link> */}
-                    <Link href="https://x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g" aria-label="X">
-    <i className="fas fa-times" aria-hidden="true"></i>
-    <span className="sr-only">X</span>
-</Link>
+                    <Link
+                      href="https://x.com/baytummi?s=11&t=BbD-NZe-07NQuIIabZQk1g"
+                      aria-label="X"
+                    >
+                      <i className="fas fa-times" aria-hidden="true"></i>
+                      <span className="sr-only">X</span>
+                    </Link>
                     <Link
                       href="https://www.snapchat.com/add/baytummi"
                       aria-label="Facebook"
@@ -164,7 +167,11 @@ const Footer = () => {
                   <h2 className="footer-widget__title"> مـــعرض الـــصور</h2>
                   <ul className="list-unstyled footer-widget__gallery">
                     <li>
-                      <Link className="img-popup" href="/images/footer1.jpg" target="_blank">
+                      <Link
+                        className="img-popup"
+                        href="/images/footer1.jpg"
+                        target="_blank"
+                      >
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer1.jpg"
@@ -175,7 +182,11 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/images/footer2.jpg" target="_blank">
+                      <Link
+                        className="img-popup"
+                        href="/images/footer2.jpg"
+                        target="_blank"
+                      >
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer2.jpg"
@@ -186,7 +197,11 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/images/footer3.jpg" target="_blank">
+                      <Link
+                        className="img-popup"
+                        href="/images/footer3.jpg"
+                        target="_blank"
+                      >
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer3.jpg"
@@ -197,7 +212,11 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/images/footer4.jpg" target="_blank">
+                      <Link
+                        className="img-popup"
+                        href="/images/footer4.jpg"
+                        target="_blank"
+                      >
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer4.jpg"
@@ -208,7 +227,11 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/images/footer5.jpg" target="_blank">
+                      <Link
+                        className="img-popup"
+                        href="/images/footer5.jpg"
+                        target="_blank"
+                      >
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer5.jpg"
@@ -219,7 +242,11 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="img-popup" href="/images/footer6.jpg" target="_blank">
+                      <Link
+                        className="img-popup"
+                        href="/images/footer6.jpg"
+                        target="_blank"
+                      >
                         <ExportedImage
                           unoptimized={true}
                           src="/images/footer6.jpg"
@@ -241,26 +268,36 @@ const Footer = () => {
         <div className="main-footer__bottom">
           <div className="container">
             <div className="main-footer__bottom__inner">
-              <p className="main-footer__copyright">
-                <Link href="https://www.selsla.net/" target="_blank" className="foot">
-                  Developed By Selsla Technology
+              <p className="m-0 footpara">
+                {" "}
+                Copyright © Bayt Ummi Day Care Center © 2024
+              </p>
+              <p className="main-footer__copyright foot">
+                <Link
+                  href="https://www.selsla.net/"
+                  target="_blank"
+                  className="foot"
+                >
+                  <span className="ps-1 pt-1">Selsla Technology</span>
                   <ExportedImage
                     unoptimized={true}
                     src="/images/heart.png"
                     alt="Heart"
-                    width={25}
-                    height={20}
+                    width={35}
+                    height={35}
                     className="px-1"
                   />
+                   <span className="pt-1">       Developed By</span>
+      
                 </Link>
-                © Copyright <span className="dynamic-year"></span>
+                {/* <span className="dynamic-year"></span> */}
               </p>
             </div>
           </div>
         </div>
       </footer>
-      
-<ScrollTopButton />
+
+      <ScrollTopButton />
     </div>
   );
 };

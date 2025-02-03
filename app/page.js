@@ -306,11 +306,11 @@ export default function Home() {
                       <Link
                         href="https://www.instagram.com/baytummi"
                         // href="https://www.youtube.com/watch?v=0MuL8fd3pb8"
-                        className="video-popup"
+                        // className="video-popup"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <i className="fa fa-play"></i>
+                        {/* <i className="fa fa-play"></i> */}
                       </Link>
                     </div>
                   </div>
