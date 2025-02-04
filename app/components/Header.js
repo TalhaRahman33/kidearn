@@ -28,10 +28,10 @@ export default function Header() {
                 <Link href="/" >
                     <ExportedImage
                         unoptimized={true}
-                        src="/images/logo-dark.png" 
+                        src="/images/logo-dark.png"
                         alt="Kidearn HTML"
                         width={180}
-                        height={56} 
+                        height={56}
                     />
                 </Link>
             </div>
@@ -90,7 +90,6 @@ export default function Header() {
                     <Link href="/login"
                         style={{
                             width: '130px',
-                            
                             backgroundColor: '#F25334',
                             color: 'white',
                             fontSize: '14px',
@@ -99,16 +98,20 @@ export default function Header() {
                             borderRadius: '12px',
                             height: '45px',
                             textAlign: 'center',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '5px'
                         }}
                     >
-                              تسجيل الدخول
+                        <i className="bx bx-log-in-circle"></i>
+                        تسجيل الدخول
                     </Link>
                 </div>
                 <div className="headerButton">
                     <Link href="/signup"
                         style={{
                             width: '130px',
-                            
                             backgroundColor: '#F25334',
                             color: 'white',
                             fontSize: '14px',
@@ -117,8 +120,13 @@ export default function Header() {
                             borderRadius: '12px',
                             height: '45px',
                             textAlign: 'center',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '5px'
                         }}
                     >
+                        <i className="bx bx-user-plus"></i>
                         قم بالتسجيل الآن
                     </Link>
                 </div>

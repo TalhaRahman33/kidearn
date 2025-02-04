@@ -186,8 +186,13 @@ const OffcanvasNavbar = () => {
                                     borderRadius: '12px',
                                     height: '45px',
                                     textAlign: 'center',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '5px'
                                 }}
                             >
+                                <i className="bx bx-log-in-circle"></i>
                                 تسجيل الدخول
                             </Link>
 
@@ -202,8 +207,13 @@ const OffcanvasNavbar = () => {
                                     borderRadius: '12px',
                                     height: '45px',
                                     textAlign: 'center',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '5px'
                                 }}
                             >
+                                <i className="bx bx-user-plus"></i>
                                 قم بالتسجيل الآن
                             </Link>
                         </div>
