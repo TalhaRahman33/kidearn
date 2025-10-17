@@ -14,7 +14,16 @@ export default function Header() {
     const isActive = (href) => pathname === href; // Check if the link is active
 
     return (
-        <header className="headerContainer">
+        <header className="headerContainer" style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            width: '100%',
+            zIndex: 1000,
+            backgroundColor: '#fff',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+        }}>
             <div className="header-inner"
                 style={{
                     display: 'flex',
