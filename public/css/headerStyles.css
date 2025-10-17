@@ -9,17 +9,33 @@
   color: #0b2038 !important;
 }
 
+.Header-NavContainer li .nav-link:hover {
+  color: #0b2038 !important;
+}
+
 .home-li {
   color: #0b2038 !important;
   font-family: "YourFont" !important;
 }
 
+.Header-NavContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .Header-NavContainer li {
   font-weight: bold;
+  list-style-type: none;
+  margin: 0 10px;
 }
 
 .navbar {
   display: flex;
+  background-color: white;
+  justify-content: center;
 }
 
 @media (max-width: 1024px) {
@@ -30,11 +46,34 @@
 
 .headerContainer {
   padding: 0px 60px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+  .headerContainer {
+    padding: 0px 30px;
+  }
 }
 
 @media (max-width: 1024px) {
   .headerContainer {
     padding: 0px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .headerContainer {
+    padding: 0px 10px;
   }
 }
 
@@ -84,8 +123,8 @@
   align-items: center;
 }
 
-.navbar {
-  background-color: white;
+/* Styling for mobile menu */
+.offcanvas .navbar {
   padding: 20px;
   border-radius: 5px;
 }
@@ -118,6 +157,36 @@
   text-align: center;
 }
 
+.headerButton a {
+  width: 130px;
+  background-color: #f25334;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 7px;
+  border-radius: 12px;
+  height: 45px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.headerButton a:hover {
+  background-color: #d03821;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+  .headerButton a {
+    width: 110px;
+    font-size: 12px;
+    height: 40px;
+  }
+}
+
 @media (max-width: 425px) {
   .headerButton {
     display: none;
@@ -147,12 +216,43 @@
 /* Default link styles */
 .nav-link {
   color: black;
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  padding: 0.5rem 0;
+  position: relative;
 }
 
 /* Active link styles */
 .nav-link.active {
   color: #0b2038;
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0b2038;
+  transform: scaleX(1);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0b2038;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 .ToggleButton {
@@ -168,5 +268,75 @@
 .togglemenuUL li {
   padding: 5px;
   border-bottom: thin solid rgba(255, 255, 255, 0.2);
-  width: 340px;
+  width: 100%;
+  list-style: none;
+}
+
+.togglemenuUL .nav-link {
+  color: white;
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding: 10px 0;
+}
+
+.togglemenuUL .nav-link:hover {
+  color: #f25334;
+}
+
+/* Hamburger button styling */
+.hamburger-toggle {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.hamburger-toggle:focus {
+  box-shadow: none !important;
+}
+
+/* Offcanvas styling enhancements */
+.offcanvas-end {
+  width: 300px;
+}
+
+/* Header logo responsiveness */
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .header-logo img {
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo img {
+    width: 120px;
+  }
+}
+
+/* Header actions area responsiveness */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+@media (max-width: 1024px) {
+  .header-actions {
+    gap: 10px;
+  }
+}
+
+/* RTL specific styles for better alignment */
+html[dir="rtl"] .Header-NavContainer {
+  padding-right: 0;
+}
+
+html[dir="rtl"] .nav-link {
+  text-align: right;
 }

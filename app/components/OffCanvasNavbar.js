@@ -11,15 +11,17 @@ const OffcanvasNavbar = () => {
             {/* Button to trigger the offcanvas */}
             <button
                 style={{
-                    backgroundColor: 'white',
+                    backgroundColor: 'transparent',
                     color: 'black',
                     border: 'none',
+                    padding: '5px',
                 }}
-                className="btn btn-primary"
+                className="btn hamburger-toggle"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasWithBothOptions"
                 aria-controls="offcanvasWithBothOptions"
+                aria-label="Toggle navigation"
             >
                 {/* Hamburger menu icon */}
                 <svg
@@ -88,15 +90,15 @@ const OffcanvasNavbar = () => {
                             alignItems: 'start',
                             textAlign: 'right',
                             padding: '5px',
+                            margin: '0',
+                            listStyle: 'none',
                         }}>
-                        <Link href="/" className="header-Links">الصفحة الرئيسية</Link>
-                        <Link href="/about" className="header-Links">من نحن</Link>
-                        <Link href="/pricing" className="header-Links">الأسعار</Link>
-                        <Link href="/event" className="header-Links">الفعاليات</Link>
-                        <Link href="/jobForm" className="header-Links">التوظيف</Link>
-                        {/* <Link href="/register" className="header-Links">Register</Link> */}
-
-                        <Link href="/contact" className="header-Links">اتصل بنا</Link>
+                        <li><Link href="/" className="nav-link" data-bs-dismiss="offcanvas">الصفحة الرئيسية</Link></li>
+                        <li><Link href="/about" className="nav-link" data-bs-dismiss="offcanvas">من نحن</Link></li>
+                        <li><Link href="/pricing" className="nav-link" data-bs-dismiss="offcanvas">الأسعار</Link></li>
+                        <li><Link href="/event" className="nav-link" data-bs-dismiss="offcanvas">الفعاليات</Link></li>
+                        <li><Link href="/jobForm" className="nav-link" data-bs-dismiss="offcanvas">التوظيف</Link></li>
+                        <li><Link href="/contact" className="nav-link" data-bs-dismiss="offcanvas">اتصل بنا</Link></li>
                     </ul>
                     <div className="footer-widget footer-widget--about">
                         <ul className="list-unstyled footer-widget__info">
