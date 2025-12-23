@@ -52,7 +52,8 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://backend.baytummi.sa/api/contactleads", {
+      // const response = await fetch("https://backend.baytummi.sa/api/contactleads", {
+      const response = await fetch("https://rawdhat.com/api/public/contactleads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -63,6 +64,7 @@ const ContactPage = () => {
           phone,
           subject,
           message,
+          centerId: 1,
         }),
       });
 

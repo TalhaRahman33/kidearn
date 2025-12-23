@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation"; // to handle redirects
 import Swal from "sweetalert2"; // Import SweetAlert
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
-
+import { FiMail } from "react-icons/fi";
 // Validation Schema
 const validationSchema = Yup.object({
   email: Yup.string().email("البريد الإلكتروني غير صالح").required("البريد الإلكتروني مطلوب"),
@@ -99,7 +99,30 @@ const Login = () => {
       width: '100%'
     }
   };
-
+const inputIconStyles = {
+    wrapper: {
+      position: 'relative',
+      width: '100%',
+      marginBottom: '10px'
+    },
+    icon: {
+      position: 'absolute',
+      left: '10px',
+      top: '42%', // match signup page
+      transform: 'translateY(-50%)',
+      fontSize: '20px',
+      color: '#888',
+      userSelect: 'none',
+      pointerEvents: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      height: '100%',
+    },
+    input: {
+      paddingLeft: '38px',
+      width: '100%'
+    }
+  };
   return (
     <div className="login-container">
       <div className="left-side">
@@ -130,14 +153,18 @@ const Login = () => {
           </div>
 
           <form onSubmit={formik.handleSubmit}>
-            <input
-              className="input-field"
-              type="email"
-              name="email"
-              placeholder=":البريد الإلكتروني"
-              value={formik.values.email}
-              onChange={formik.handleChange}
-            />
+         <div style={inputIconStyles.wrapper}>
+              <input
+                className="input-field"
+                type="email"
+                name="email"
+                placeholder=":البريد الإلكتروني"
+                style={inputIconStyles.input}
+                value={formik.values.email}
+                onChange={formik.handleChange}
+              />
+              <span style={inputIconStyles.icon}><FiMail /></span>
+            </div>
             {formik.touched.email && formik.errors.email && (
               <div className="error-message">{formik.errors.email}</div>
             )}

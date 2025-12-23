@@ -48,7 +48,7 @@ const JobApplicationPage = () => {
   const [email, setEmail] = useState("");
   const [job, setJob] = useState("");
   const [message, setMessage] = useState("");
-  // const [cv, setCv] = useState(null);
+  const [cv, setCv] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,10 +60,21 @@ const JobApplicationPage = () => {
     formData.append("email", email);
     formData.append("job", job);
     formData.append("message", message);
-    // formData.append("cv", cv);
+// append file safely
+    if (cv) formData.append('cv', cv, cv.name);
+
+    // ensure these are set (use set so duplicates won't occur)
+    formData.set('centerId', 1);
+    formData.set('rawdhatToken', 'password1234');
+
+    // debug: inspect formData entries in console
+    for (const [key, value] of formData.entries()) {
+      console.log('formData:', key, value);
+    }
 
     try {
-      const response = await fetch("https://backend.baytummi.sa/api/job", {
+      const response = await fetch("https://rawdhat.com/api/public/job", {
+      // const response = await fetch("http://localhost:5000/api/public/job", {
         method: "POST",
         body: formData,
       });
@@ -83,7 +94,7 @@ const JobApplicationPage = () => {
         setEmail("");
         setJob("");
         setMessage("");
-        // setCv(null);
+        setCv(null);
       } else {
         Swal.fire({
           icon: "error",
@@ -230,7 +241,7 @@ const JobApplicationPage = () => {
                   />
                 </div>
 
-                {/* <div className="flex flex-col">
+                <div className="flex flex-col">
                   <label className="text-gray-700 mb-2 input-font">السيرة الذاتية</label>
                   <input
                     type="file"
@@ -239,7 +250,7 @@ const JobApplicationPage = () => {
                     onChange={(e) => setCv(e.target.files[0])}
                     required
                   />
-                </div> */}
+                </div>
 
                 <div className="text-center">
 
