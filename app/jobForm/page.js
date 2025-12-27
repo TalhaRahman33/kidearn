@@ -64,7 +64,7 @@ const JobApplicationPage = () => {
     if (cv) formData.append('cv', cv, cv.name);
 
     // ensure these are set (use set so duplicates won't occur)
-    formData.set('centerId', 1);
+    formData.set('centerId', 56);
     formData.set('rawdhatToken', 'password1234');
 
     // debug: inspect formData entries in console
