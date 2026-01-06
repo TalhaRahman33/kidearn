@@ -247,7 +247,7 @@ const ContactPage = () => {
                         alignItems: "center"
                       }}
                     >
-                      <div style={{ display: "flex", alignItems: "center", gap: "7px" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "7px", flexDirection: "row-reverse", }}>
                         <Phone size={18} strokeWidth={2} />
                         <span>SA +966</span>
                       </div>
@@ -268,7 +268,7 @@ const ContactPage = () => {
                         outline: "none",
                         borderRadius: "8px",
                         backgroundColor: "#faf5f2",
-                       
+
 
                       }}
                       pattern="5\d{8}"
