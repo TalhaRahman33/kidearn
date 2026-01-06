@@ -7,12 +7,12 @@ import Link from "next/link";
 import { generateMetadata } from "../components/Meta";
 import Topbar from "../components/Topbar";
 import {
-  FaUser,
-  FaEnvelope,
-  FaMobile,
-  FaInfoCircle,
-  FaCommentAlt
-} from "react-icons/fa";
+  User,
+  Mail,
+  Phone,
+  Info,
+  MessageSquare
+} from "lucide-react";
 
 const ContactPage = () => {
   const [metadata, setMetadata] = useState({
@@ -180,15 +180,22 @@ const ContactPage = () => {
                       left: "15px",
                       top: "50%",
                       transform: "translateY(-50%)",
-                      color: "#666"
+                      color: "#666",
+                      display: "flex"
                     }}>
-                      <FaUser />
+                      <User size={18} strokeWidth={2} />
                     </span>
                     <input
                       type="text"
                       name="name"
                       placeholder=" اسمك "
-                      style={{ paddingLeft: "40px" }}
+                      style={{
+                        paddingLeft: "40px",
+                        borderRadius: "8px",
+                        boxShadow: "0 2px 6px rgba(0, 0, 0, 0.05)",
+                        transition: "all 0.3s ease",
+                        border: "1px solid #eaeaea"
+                      }}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
@@ -202,49 +209,68 @@ const ContactPage = () => {
                       left: "15px",
                       top: "50%",
                       transform: "translateY(-50%)",
-                      color: "#666"
+                      color: "#666",
+                      display: "flex"
                     }}>
-                      <FaEnvelope />
+                      <Mail size={18} strokeWidth={2} />
                     </span>
                     <input
                       type="email"
                       name="email"
                       placeholder=" بريدك الالكتروني "
-                      style={{ paddingLeft: "40px" }}
+                      style={{
+                        paddingLeft: "40px",
+                        borderRadius: "8px",
+                        boxShadow: "0 2px 6px rgba(0, 0, 0, 0.05)",
+                        transition: "all 0.3s ease",
+                        border: "1px solid #eaeaea"
+                      }}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
                     />
                   </div>
                 </div>
-                <div className="form-one__control">
-                  <div style={{ position: "relative" }}>
+                <div className="form-one__control111">
+                  <div style={{
+                    position: "relative",
+                  }}>
                     <div
                       style={{
                         position: "absolute",
-                        left: "40px",
+                        left: "15px",
                         top: "50%",
                         transform: "translateY(-50%)",
                         color: "#333",
-                        fontWeight: "600"
+                        fontWeight: "600",
+                        display: "flex",
+                        alignItems: "center"
                       }}
                     >
-                      SA +966
+                      <div style={{ display: "flex", alignItems: "center", gap: "7px" }}>
+                        <Phone size={18} strokeWidth={2} />
+                        <span>SA +966</span>
+                      </div>
                     </div>
-                    <span style={{
-                      position: "absolute",
-                      left: "15px",
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      color: "#666"
-                    }}>
-                      <FaMobile />
-                    </span>
                     <input
                       type="tel"
                       name="phone"
                       placeholder="5xxxxxxxx"
-                      style={{ padding: "10px 40px 10px 80px" }}
+                      style={{
+                        padding: "14px 15px",
+                        color: "#666",
+                        fontWeight: "500",
+                        paddingLeft: "120px",
+                        width: "100%",
+                        border: "1px solid #eaeaea",
+                        fontSize: "16px",
+                        transition: "all 0.3s ease",
+                        outline: "none",
+                        borderRadius: "8px",
+                        backgroundColor: "#faf5f2",
+                       
+
+                      }}
                       pattern="5\d{8}"
                       title="رقم الجوال يجب أن يبدأ بـ 5 ويتكون من 9 أرقام"
                       value={phone}
@@ -254,6 +280,7 @@ const ContactPage = () => {
                           setPhone(value);
                         }
                       }}
+
                       maxLength={9}
                       required
                     />
@@ -264,8 +291,7 @@ const ContactPage = () => {
                       display: "block",
                       textAlign: "right",
                       marginRight: "12px",
-                      marginTop: "4px",
-                      fontSize: "12px",
+                      marginTop: "8px",
                       fontSize: "12px"
                     }}
                   >
@@ -279,15 +305,22 @@ const ContactPage = () => {
                       left: "15px",
                       top: "50%",
                       transform: "translateY(-50%)",
-                      color: "#666"
+                      color: "#666",
+                      display: "flex"
                     }}>
-                      <FaInfoCircle />
+                      <Info size={18} strokeWidth={2} />
                     </span>
                     <input
                       type="text"
                       name="subject"
                       placeholder="  الموضوع "
-                      style={{ paddingLeft: "40px" }}
+                      style={{
+                        paddingLeft: "40px",
+                        borderRadius: "8px",
+                        boxShadow: "0 2px 6px rgba(0, 0, 0, 0.05)",
+                        transition: "all 0.3s ease",
+                        border: "1px solid #eaeaea"
+                      }}
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
                       required
@@ -301,14 +334,22 @@ const ContactPage = () => {
                       position: "absolute",
                       left: "15px",
                       top: "15px",
-                      color: "#666"
+                      color: "#666",
+                      display: "flex"
                     }}>
-                      <FaCommentAlt />
+                      <MessageSquare size={18} strokeWidth={2} />
                     </span>
                     <textarea
                       name="message"
                       placeholder="  اكتب رسالتك …  "
-                      style={{ paddingLeft: "40px" }}
+                      style={{
+                        paddingLeft: "40px",
+                        borderRadius: "8px",
+                        boxShadow: "0 2px 6px rgba(0, 0, 0, 0.05)",
+                        transition: "all 0.3s ease",
+                        border: "1px solid #eaeaea",
+                        minHeight: "150px"
+                      }}
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       required
@@ -317,7 +358,16 @@ const ContactPage = () => {
                 </div>
 
                 <div className="form-one__control form-one__control--full text-center">
-                  <button type="submit" className="kidearn-btn kidearn-btn--xl">
+                  <button
+                    type="submit"
+                    className="kidearn-btn kidearn-btn--xl"
+                    style={{
+                      borderRadius: "8px",
+                      transition: "all 0.3s ease",
+                      position: "relative",
+                      overflow: "hidden"
+                    }}
+                  >
                     <span> ارسل رسالتك </span>
                   </button>
                 </div>
