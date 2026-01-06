@@ -6,6 +6,13 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import { generateMetadata } from "../components/Meta";
 import Topbar from "../components/Topbar";
+import {
+  FaUser,
+  FaEnvelope,
+  FaMobile,
+  FaInfoCircle,
+  FaCommentAlt
+} from "react-icons/fa";
 
 const ContactPage = () => {
   const [metadata, setMetadata] = useState({
@@ -49,8 +56,22 @@ const ContactPage = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  const isValidSaudiPhone = (phone) => {
+    return /^5\d{8}$/.test(phone);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!isValidSaudiPhone(phone)) {
+      Swal.fire({
+        title: "رقم غير صحيح",
+        text: "رقم الجوال يجب أن يبدأ بـ 5 ويتكون من 9 أرقام",
+        icon: "warning",
+        confirmButtonText: "موافق",
+      });
+      return;
+    }
     try {
       // const response = await fetch("https://backend.baytummi.sa/api/contactleads", {
       const response = await fetch("https://rawdhat.com/api/public/contactleads", {
@@ -61,7 +82,7 @@ const ContactPage = () => {
         body: JSON.stringify({
           name,
           email,
-          phone,
+          phone: `+966${phone}`, // Prepend Saudi Arabia country code
           subject,
           message,
           centerId: 56,
@@ -153,54 +174,146 @@ const ContactPage = () => {
             >
               <div className="form-one__group">
                 <div className="form-one__control">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder=" اسمك "
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                  />
+                  <div style={{ position: "relative" }}>
+                    <span style={{
+                      position: "absolute",
+                      left: "15px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      color: "#666"
+                    }}>
+                      <FaUser />
+                    </span>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder=" اسمك "
+                      style={{ paddingLeft: "40px" }}
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="form-one__control">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder=" بريدك الالكتروني "
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
+                  <div style={{ position: "relative" }}>
+                    <span style={{
+                      position: "absolute",
+                      left: "15px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      color: "#666"
+                    }}>
+                      <FaEnvelope />
+                    </span>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder=" بريدك الالكتروني "
+                      style={{ paddingLeft: "40px" }}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="form-one__control">
-                  <input
-                    type="text"
-                    name="phone"
-                    placeholder="  رقم هاتفك "
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    required
-                  />
+                  <div style={{ position: "relative" }}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        left: "40px",
+                        top: "50%",
+                        transform: "translateY(-50%)",
+                        color: "#333",
+                        fontWeight: "600"
+                      }}
+                    >
+                      SA +966
+                    </div>
+                    <span style={{
+                      position: "absolute",
+                      left: "15px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      color: "#666"
+                    }}>
+                      <FaMobile />
+                    </span>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="5xxxxxxxx"
+                      style={{ padding: "10px 40px 10px 80px" }}
+                      pattern="5\d{8}"
+                      title="رقم الجوال يجب أن يبدأ بـ 5 ويتكون من 9 أرقام"
+                      value={phone}
+                      onChange={(e) => {
+                        const value = e.target.value.replace(/\D/g, "");
+                        if ((value.startsWith("5") || value === "") && value.length <= 9) {
+                          setPhone(value);
+                        }
+                      }}
+                      maxLength={9}
+                      required
+                    />
+                  </div>
+                  <small
+                    style={{
+                      color: "#666",
+                      display: "block",
+                      textAlign: "right",
+                      marginRight: "12px",
+                      marginTop: "4px",
+                      fontSize: "12px",
+                      fontSize: "12px"
+                    }}
+                  >
+                    اكتب الأرقام بعد 966+ — يجب أن تبدأ بـ 5 وتتكون من 9 أرقام
+                  </small>
                 </div>
                 <div className="form-one__control">
-                  <input
-                    type="text"
-                    name="subject"
-                    placeholder="  الموضوع "
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    required
-                  />
+                  <div style={{ position: "relative" }}>
+                    <span style={{
+                      position: "absolute",
+                      left: "15px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      color: "#666"
+                    }}>
+                      <FaInfoCircle />
+                    </span>
+                    <input
+                      type="text"
+                      name="subject"
+                      placeholder="  الموضوع "
+                      style={{ paddingLeft: "40px" }}
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div className="form-one__control form-one__control--full">
-                  <textarea
-                    name="message"
-                    placeholder="  اكتب رسالتك …  "
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    required
-                  />
+                  <div style={{ position: "relative" }}>
+                    <span style={{
+                      position: "absolute",
+                      left: "15px",
+                      top: "15px",
+                      color: "#666"
+                    }}>
+                      <FaCommentAlt />
+                    </span>
+                    <textarea
+                      name="message"
+                      placeholder="  اكتب رسالتك …  "
+                      style={{ paddingLeft: "40px" }}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                    ></textarea>
+                  </div>
                 </div>
 
                 <div className="form-one__control form-one__control--full text-center">

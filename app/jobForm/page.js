@@ -7,6 +7,13 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import Topbar from "../components/Topbar";
 import { generateMetadata } from "../components/Meta";
+import {
+  FaUser,
+  FaEnvelope,
+  FaBriefcase,
+  FaFileUpload,
+  FaPen
+} from "react-icons/fa";
 
 const JobApplicationPage = () => {
   const [metadata, setMetadata] = useState({
@@ -60,7 +67,7 @@ const JobApplicationPage = () => {
     formData.append("email", email);
     formData.append("job", job);
     formData.append("message", message);
-// append file safely
+    // append file safely
     if (cv) formData.append('cv', cv, cv.name);
 
     // ensure these are set (use set so duplicates won't occur)
@@ -74,7 +81,7 @@ const JobApplicationPage = () => {
 
     try {
       const response = await fetch("https://rawdhat.com/api/public/job", {
-      // const response = await fetch("http://localhost:5000/api/public/job", {
+        // const response = await fetch("http://localhost:5000/api/public/job", {
         method: "POST",
         body: formData,
       });
@@ -158,7 +165,7 @@ const JobApplicationPage = () => {
               <div className="w-10/12 mx-auto mb-6 border-b-2 border-[#FAF5F2]"></div>
             </div>
 
-             <form
+            <form
               onSubmit={handleSubmit}
               className="space-y-6 p-8 bg-white rounded-lg shadow-md"
               style={{ boxShadow: "0px 4px 10px rgba(250, 245, 242, 0.5)" }}
@@ -166,103 +173,134 @@ const JobApplicationPage = () => {
               <div className="flex flex-col space-y-4">
                 <div className="flex flex-col">
                   <label className="text-gray-700 mb-2 input-font">الاسم الأول</label>
-                  <input
-                    type="text"
-                    placeholder="الاسم الأول"
-                    className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    required
-                  />
+                  <div className="relative">
+                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                      <FaUser />
+                    </span>
+                    <input
+                      type="text"
+                      placeholder="الاسم الأول"
+                      className="w-full p-3 pl-10 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div className="flex flex-col">
                   <label className="text-gray-700 mb-2 input-font ">اسم الأب</label>
-                  <input
-                    type="text"
-                    placeholder="اسم الأب"
-                    className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
-                    value={fatherName}
-                    onChange={(e) => setFatherName(e.target.value)}
-                    required
-                  />
+                  <div className="relative">
+                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                      <FaUser />
+                    </span>
+                    <input
+                      type="text"
+                      placeholder="اسم الأب"
+                      className="w-full p-3 pl-10 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
+                      value={fatherName}
+                      onChange={(e) => setFatherName(e.target.value)}
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div className="flex flex-col">
                   <label className="text-gray-700 mb-2 input-font">العائلة</label>
-                  <input
-                    type="text"
-                    placeholder="العائلة"
-                    className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
-                    value={familyName}
-                    onChange={(e) => setFamilyName(e.target.value)}
-                    required
-                  />
+                  <div className="relative">
+                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                      <FaUser />
+                    </span>
+                    <input
+                      type="text"
+                      placeholder="العائلة"
+                      className="w-full p-3 pl-10 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
+                      value={familyName}
+                      onChange={(e) => setFamilyName(e.target.value)}
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div className="flex flex-col">
                   <label className="text-gray-700 mb-2 input-font">البريد الالكتروني</label>
-                  <input
-                    type="email"
-                    placeholder="البريد الالكتروني"
-                    className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
+                  <div className="relative">
+                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                      <FaEnvelope />
+                    </span>
+                    <input
+                      type="email"
+                      placeholder="البريد الالكتروني"
+                      className="w-full p-3 pl-10 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div className="flex flex-col">
                   <label className="text-gray-700 mb-2 input-font">الوظيفة المرغوبة</label>
-                  <select
-                    className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367] select-optn"
-                    value={job}
-                    onChange={(e) => setJob(e.target.value)}
-                    required
-                  >
-                    <option value="">اختر الوظيفة</option>
-                    <option value="حاضنة">حاضنة</option>
-                    <option value="معلمة">معلمة</option>
-                    <option value="إدارية">إدارية</option>
-                    <option value="عاملة نظافة">عاملة نظافة</option>
-                    <option value="متطوعة">متطوعة</option>
-                  </select>
+                  <div className="relative">
+                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                      <FaBriefcase />
+                    </span>
+                    <select
+                      className="w-full p-3 pl-10 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367] select-optn"
+                      value={job}
+                      onChange={(e) => setJob(e.target.value)}
+                      required
+                    >
+                      <option value="">اختر الوظيفة</option>
+                      <option value="حاضنة">حاضنة</option>
+                      <option value="معلمة">معلمة</option>
+                      <option value="إدارية">إدارية</option>
+                      <option value="عاملة نظافة">عاملة نظافة</option>
+                      <option value="متطوعة">متطوعة</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div className="flex flex-col">
                   <label className="text-gray-700 mb-2 input-font">اكتب رسالة</label>
-                  <textarea
-                    placeholder="اكتب رسالتك"
-                    className="w-full p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
-                    rows={4}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    required
-                  />
+                  <div className="relative">
+                    <span className="absolute left-3 top-3 text-gray-500">
+                      <FaPen />
+                    </span>
+                    <textarea
+                      placeholder="اكتب رسالتك"
+                      className="w-full p-3 pl-10 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367]"
+                      rows={4}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div className="flex flex-col">
                   <label className="text-gray-700 mb-2 input-font">السيرة الذاتية</label>
-                  <input
-                    type="file"
-                    className="block w-full mb-4 p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700"
-                    accept=".pdf,.docx"
-                    onChange={(e) => setCv(e.target.files[0])}
-                    required
-                  />
+                  <div className="relative">
+                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                      <FaFileUpload />
+                    </span>
+                    <input
+                      type="file"
+                      className="block w-full mb-4 p-3 pl-10 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700"
+                      accept=".pdf,.docx"
+                      onChange={(e) => setCv(e.target.files[0])}
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div className="text-center">
-
-
                   <button
                     type="submit"
-                   className="bg-[#f25334] text-white py-2.5 px-20 rounded-lg shadow-md hover:bg-[#0b2038] jobbtn"
+                    className="bg-[#f25334] text-white py-2.5 px-20 rounded-lg shadow-md hover:bg-[#0b2038] jobbtn"
                   >
                     التقديم الآن
                   </button>
-
-
                 </div>
               </div>
             </form>
