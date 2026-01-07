@@ -88,7 +88,7 @@ const Login = () => {
     eye: {
       position: 'absolute',
       left: '10px',
-      top: '40%',
+      top: '46%',
       transform: 'translateY(-50%)',
       cursor: 'pointer',
       userSelect: 'none',

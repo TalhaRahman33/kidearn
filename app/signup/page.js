@@ -167,7 +167,7 @@ const Signup = () => {
     eye: {
       position: 'absolute',
       left: '10px',
-      top: '35%',
+      top: '50%',
       transform: 'translateY(-50%)',
       cursor: 'pointer',
       userSelect: 'none',

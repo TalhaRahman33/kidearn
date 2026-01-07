@@ -8,12 +8,12 @@ import Link from "next/link";
 import Topbar from "../components/Topbar";
 import { generateMetadata } from "../components/Meta";
 import {
-  FaUser,
-  FaEnvelope,
-  FaBriefcase,
-  FaFileUpload,
-  FaPen
-} from "react-icons/fa";
+  User,
+  Mail,
+  Briefcase,
+  Upload,
+  Pen
+} from "lucide-react";
 
 const JobApplicationPage = () => {
   const [metadata, setMetadata] = useState({
@@ -175,7 +175,7 @@ const JobApplicationPage = () => {
                   <label className="text-gray-700 mb-2 input-font">الاسم الأول</label>
                   <div className="relative">
                     <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                      <FaUser />
+                      <User size={16} />
                     </span>
                     <input
                       type="text"
@@ -192,7 +192,7 @@ const JobApplicationPage = () => {
                   <label className="text-gray-700 mb-2 input-font ">اسم الأب</label>
                   <div className="relative">
                     <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                      <FaUser />
+                      <User size={18} strokeWidth={2} />
                     </span>
                     <input
                       type="text"
@@ -209,7 +209,7 @@ const JobApplicationPage = () => {
                   <label className="text-gray-700 mb-2 input-font">العائلة</label>
                   <div className="relative">
                     <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                      <FaUser />
+                      <User size={18} strokeWidth={2} />
                     </span>
                     <input
                       type="text"
@@ -226,7 +226,7 @@ const JobApplicationPage = () => {
                   <label className="text-gray-700 mb-2 input-font">البريد الالكتروني</label>
                   <div className="relative">
                     <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                      <FaEnvelope />
+                      <Mail size={18} strokeWidth={2} />
                     </span>
                     <input
                       type="email"
@@ -243,7 +243,7 @@ const JobApplicationPage = () => {
                   <label className="text-gray-700 mb-2 input-font">الوظيفة المرغوبة</label>
                   <div className="relative">
                     <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                      <FaBriefcase />
+                      <Briefcase size={18} strokeWidth={2} />
                     </span>
                     <select
                       className="w-full p-3 pl-10 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] focus:outline-none focus:ring-2 focus:ring-[#fe6367] select-optn"
@@ -265,7 +265,7 @@ const JobApplicationPage = () => {
                   <label className="text-gray-700 mb-2 input-font">اكتب رسالة</label>
                   <div className="relative">
                     <span className="absolute left-3 top-3 text-gray-500">
-                      <FaPen />
+                      <Pen size={18} strokeWidth={2} />
                     </span>
                     <textarea
                       placeholder="اكتب رسالتك"
@@ -278,20 +278,19 @@ const JobApplicationPage = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col">
-                  <label className="text-gray-700 mb-2 input-font">السيرة الذاتية</label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                      <FaFileUpload />
-                    </span>
+                <div className="relative mb-4">
+                  <label className="flex items-center justify-center gap-2 w-full h-14 cursor-pointer rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-500 hover:bg-[#f3ebe6] transition">
+                    <Upload size={18} strokeWidth={2} />
+                    <span className="text-sm">Upload your CV</span>
+
                     <input
                       type="file"
-                      className="block w-full mb-4 p-3 pl-10 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700"
+                      className="hidden"
                       accept=".pdf,.docx"
                       onChange={(e) => setCv(e.target.files[0])}
                       required
                     />
-                  </div>
+                  </label>
                 </div>
 
                 <div className="text-center">
