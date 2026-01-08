@@ -7,7 +7,7 @@ import * as Yup from "yup";
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
-import { FiX ,FiUser, FiMail, FiGlobe, FiChevronDown,} from 'react-icons/fi';
+import { FiX, FiUser, FiMail, FiGlobe, FiChevronDown, } from 'react-icons/fi';
 
 
 const riyadhDistricts = [
@@ -46,7 +46,7 @@ const validationSchema = Yup.object({
   confirmPassword: Yup.string()
     .required("تأكيد كلمة المرور مطلوب")
     .oneOf([Yup.ref("password")], "كلمتا المرور غير متطابقتين"),
-    isQurrahEligible: Yup.boolean(),
+  isQurrahEligible: Yup.boolean(),
   pdplConsent: Yup.number()
     .oneOf([1], "يجب الموافقة على قانون حماية البيانات الشخصية")
     .required("يجب الموافقة على قانون حماية البيانات الشخصية")
@@ -91,7 +91,7 @@ const Signup = () => {
   const [emailError, setEmailError] = useState(""); // State for custom email error
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-   const [showPdplDialog, setShowPdplDialog] = useState(false);
+  const [showPdplDialog, setShowPdplDialog] = useState(false);
   const router = useRouter();
   const formik = useFormik({
     initialValues: {
@@ -102,12 +102,12 @@ const Signup = () => {
       nationality: "",
       password: "",
       confirmPassword: "",
-         isQurrahEligible: false,
+      isQurrahEligible: false,
       pdplConsent: 0,
-      centerId:56,
+      centerId: 56,
     },
     validationSchema: validationSchema,
-  onSubmit: async (values) => {
+    onSubmit: async (values) => {
       const payload = {
         ...values,
         contact1: `966${values.contact1}`,
@@ -115,7 +115,7 @@ const Signup = () => {
       };
       try {
         // const response = await fetch("https://backend.baytummi.sa/api/gardianregister", {
-           const response = await fetch("https://rawdhat.com/api/public/gardianregister", {
+        const response = await fetch("https://rawdhat.com/api/public/gardianregister", {
           // const response = await fetch("http://localhost:5000/api/gardianregister", {
           method: "POST",
           headers: {
@@ -178,7 +178,7 @@ const Signup = () => {
       width: '100%'
     }
   };
-  
+
   const handlePhoneChange = (e) => {
     let v = e.target.value || "";
     v = arabicToEnglishDigits(v);
@@ -187,7 +187,7 @@ const Signup = () => {
     if (v.length > 9) v = v.slice(0, 9);
     formik.setFieldValue("contact1", v);
   };
-const handlePdplCheckboxClick = (e) => {
+  const handlePdplCheckboxClick = (e) => {
     if (formik.values.pdplConsent === 1) {
       formik.setFieldValue("pdplConsent", 0);
     } else {
@@ -210,7 +210,7 @@ const handlePdplCheckboxClick = (e) => {
     }
   };
   return (
-   <div
+    <div
       className="signup-container"
       style={{
         margin: '0',
@@ -313,56 +313,56 @@ const handlePdplCheckboxClick = (e) => {
         }
       `}</style>
 
-   {/* PDPL Terms Dialog */}
-{showPdplDialog && (
-  <div className="dialog-backdrop" onClick={handleBackdropClick}>
-    <div className="dialog-box">
-      <button className="close-button" onClick={handleCloseDialog}>
-        <FiX />
-      </button>
+      {/* PDPL Terms Dialog */}
+      {showPdplDialog && (
+        <div className="dialog-backdrop" onClick={handleBackdropClick}>
+          <div className="dialog-box">
+            <button className="close-button" onClick={handleCloseDialog}>
+              <FiX />
+            </button>
 
-      <h2 className="dialog-title">
-        الموافقة على معالجة بياناتي الشخصية – نظام حماية البيانات (PDPL)
-      </h2>
+            <h2 className="dialog-title">
+              الموافقة على معالجة بياناتي الشخصية – نظام حماية البيانات (PDPL)
+            </h2>
 
-      <p className="dialog-text">
-        نحن في بوابة روضات ملتزمون بحماية بياناتك الشخصية وفقًا لنظام حماية البيانات
-        الشخصية (PDPL) في المملكة العربية السعودية.
-      </p>
+            <p className="dialog-text">
+              نحن في بوابة روضات ملتزمون بحماية بياناتك الشخصية وفقًا لنظام حماية البيانات
+              الشخصية (PDPL) في المملكة العربية السعودية.
+            </p>
 
-      <p className="dialog-text">
-        هذه الموافقة ضرورية حتى نتمكن من تقديم وإدارة خدمات مراكز الحضانة من خلال
-        بوابة إدارة المراكز.
-      </p>
+            <p className="dialog-text">
+              هذه الموافقة ضرورية حتى نتمكن من تقديم وإدارة خدمات مراكز الحضانة من خلال
+              بوابة إدارة المراكز.
+            </p>
 
-      <ul className="dialog-list">
-        <li>
-          - يتم جمع بياناتك الشخصية فقط لغرض إنشاء حساب مركزك وإدارة خدماته والتواصل
-          معك.
-        </li>
-        <li>
-          - لن تتم مشاركة بياناتك الشخصية مع أي جهة خارجية دون موافقتك الصريحة، إلا
-          إذا تطلّب النظام السعودي ذلك.
-        </li>
-        <li>
-          - يتم تخزين بياناتك الشخصية بشكل آمن وفق معايير الأمن في المملكة العربية
-          السعودية.
-        </li>
-        <li>
-          - لديك الحق في الوصول إلى بياناتك أو تعديلها أو حذفها في أي وقت.
-        </li>
-      </ul>
+            <ul className="dialog-list">
+              <li>
+                - يتم جمع بياناتك الشخصية فقط لغرض إنشاء حساب مركزك وإدارة خدماته والتواصل
+                معك.
+              </li>
+              <li>
+                - لن تتم مشاركة بياناتك الشخصية مع أي جهة خارجية دون موافقتك الصريحة، إلا
+                إذا تطلّب النظام السعودي ذلك.
+              </li>
+              <li>
+                - يتم تخزين بياناتك الشخصية بشكل آمن وفق معايير الأمن في المملكة العربية
+                السعودية.
+              </li>
+              <li>
+                - لديك الحق في الوصول إلى بياناتك أو تعديلها أو حذفها في أي وقت.
+              </li>
+            </ul>
 
-      <p className="dialog-text">
-        بتسجيلك، فإنك تمنح الموافقة على معالجة بياناتي الشخصية كما هو موضح أعلاه.
-      </p>
+            <p className="dialog-text">
+              بتسجيلك، فإنك تمنح الموافقة على معالجة بياناتي الشخصية كما هو موضح أعلاه.
+            </p>
 
-      <button className="dialog-btn" onClick={handleAgreeToTerms}>
-        تم الفهم والموافقة
-      </button>
-    </div>
-  </div>
-)}
+            <button className="dialog-btn" onClick={handleAgreeToTerms}>
+              تم الفهم والموافقة
+            </button>
+          </div>
+        </div>
+      )}
       <div className="left-side">
         <ExportedImage
           unoptimized="true"
@@ -454,7 +454,7 @@ const handlePdplCheckboxClick = (e) => {
             {formik.touched.nationality && formik.errors.nationality && (
               <div className="error">{formik.errors.nationality}</div>
             )} */}
- {/* Name with icon */}
+            {/* Name with icon */}
             <div style={inputIconStyles.wrapper}>
               <input
                 type="text"
@@ -647,7 +647,7 @@ const handlePdplCheckboxClick = (e) => {
 
             {/* Display email error if exists */}
             {emailError && <div className="error">{emailError}</div>}
- {/* Qurrah Eligibility Checkbox */}
+            {/* Qurrah Eligibility Checkbox */}
             <div
               className="checkbox-field"
               style={{
@@ -661,7 +661,7 @@ const handlePdplCheckboxClick = (e) => {
             >
               <label
                 htmlFor="isQurrahEligible"
-                style={{ fontSize: "15px", cursor: "pointer", marginLeft: "10px" ,color: "#1f1e1eff"}}
+                style={{ fontSize: "15px", cursor: "pointer", marginLeft: "10px", color: "#1f1e1eff" }}
               >
                 هل إنت مؤهّل لبرنامج قُرّة؟
                 <br />
@@ -697,12 +697,12 @@ const handlePdplCheckboxClick = (e) => {
             >
               <label
                 htmlFor="pdplConsent"
-                style={{ fontSize: "15px", cursor: "pointer", marginLeft: "10px",color: "#1f1e1eff" }}
+                style={{ fontSize: "15px", cursor: "pointer", marginLeft: "10px", color: "#1f1e1eff" }}
               >
-            منح الموافقة على معالجة بياناتي الشخصية وفقًا لنظام حماية البيانات (PDPL)
+                منح الموافقة على معالجة بياناتي الشخصية وفقًا لنظام حماية البيانات (PDPL)
                 {/* <br /> */}
                 <span style={{ color: "#555", fontSize: "11px" }}>
-                 {/* <br/> */}
+                  {/* <br/> */}
                 </span>
               </label>
               <input

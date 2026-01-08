@@ -203,7 +203,7 @@ const BlogThree = () => {
       author: {
         name: "Wade Warren",
         designation: "CEO",
-        image: "/images/blog-3-author-1.png",
+        image: "/images/blog-3-author-1.webp",
       },
       accentColor: "#F25334",
     },
@@ -216,7 +216,7 @@ const BlogThree = () => {
       author: {
         name: "Darlene Robertson",
         designation: "Art Teacher",
-        image: "/images/blog-3-author-2.png",
+        image: "/images/blog-3-author-2.webp",
       },
       accentColor: "#2390FF",
     },
@@ -229,7 +229,7 @@ const BlogThree = () => {
       author: {
         name: "Cody Fisher",
         designation: "CEO",
-        image: "/images/blog-3-author-3.png",
+        image: "/images/blog-3-author-3.webp",
       },
       accentColor: "#75C137",
     },
@@ -240,7 +240,7 @@ const BlogThree = () => {
       <div className="blog-three__shape-right">
         <ExportedImage
           unoptimized={true}
-          src="/images/blog-3-shape-1.png"
+          src="/images/blog-3-shape-1.webp"
           alt="shape"
           width={200}
           height={200}
@@ -249,7 +249,7 @@ const BlogThree = () => {
       <div className="blog-three__shape-left">
         <ExportedImage
           unoptimized={true}
-          src="/images/blog-3-shape-2.png"
+          src="/images/blog-3-shape-2.webp"
           alt="shape"
           width={200}
           height={200}

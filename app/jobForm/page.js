@@ -278,20 +278,7 @@ const JobApplicationPage = () => {
                   </div>
                 </div>
 
-                <div className="relative mb-4">
-                  <label className="flex items-center justify-center gap-2 w-full h-14 cursor-pointer rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-500 hover:bg-[#f3ebe6] transition">
-                    <Upload size={18} strokeWidth={2} />
-                    <span className="text-sm">Upload your CV</span>
-
-                    <input
-                      type="file"
-                      className="hidden"
-                      accept=".pdf,.docx"
-                      onChange={(e) => setCv(e.target.files[0])}
-                      required
-                    />
-                  </label>
-                </div>
+                <div className="relative"> <span className="absolute left-3 top-[29px] flex items-center justify-center text-gray-500 pointer-events-none"> <Upload size={18} strokeWidth={2} /> </span> <input type="file" className="block w-full mb-4 p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700" accept=".pdf,.docx" onChange={(e) => setCv(e.target.files[0])} required /> </div>
 
                 <div className="text-center">
                   <button

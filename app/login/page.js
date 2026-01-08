@@ -99,7 +99,7 @@ const Login = () => {
       width: '100%'
     }
   };
-const inputIconStyles = {
+  const inputIconStyles = {
     wrapper: {
       position: 'relative',
       width: '100%',
@@ -153,7 +153,7 @@ const inputIconStyles = {
           </div>
 
           <form onSubmit={formik.handleSubmit}>
-         <div style={inputIconStyles.wrapper}>
+            <div style={inputIconStyles.wrapper}>
               <input
                 className="input-field"
                 type="email"

@@ -41,7 +41,7 @@ const Testimonials = () => {
         data-para-options='{"orientation": "left", "scale": 2.5, "overflow": true}'
       >
         <ExportedImage
-          src="/images/pen-rtl.png"
+          src="/images/pen-rtl.webp"
           alt="kidearn"
           unoptimized={true}
           // layout="responsive"
@@ -59,7 +59,7 @@ const Testimonials = () => {
           ></div>
           <div className="testimonial-one__star-left">
             <ExportedImage
-              src="/images/star1.png"
+              src="/images/star1.webp"
               alt="kidearn"
               unoptimized={true}
               // layout="responsive"
@@ -69,7 +69,7 @@ const Testimonials = () => {
           </div>
           <div className="testimonial-one__star-right">
             <ExportedImage
-              src="/images/star2.png"
+              src="/images/star2.webp"
               alt="kidearn"
               unoptimized={true}
               // layout="responsive"

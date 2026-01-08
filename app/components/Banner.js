@@ -33,10 +33,10 @@ const Banner = () => {
   };
 
   const bannerImages = [
-    { src: "/images/bb2.png", alt: "Hero Banner 1" },
+    { src: "/images/bb2.webp", alt: "Hero Banner 1" },
     // { src: "/images/homebaner.webp", alt: "Hero Banner 1" },
     // { src: '/images/event.png', alt: 'Hero Banner 2' },
-    { src: "/images/b1.png", alt: "Hero Banner 3" },
+    { src: "/images/b1.webp", alt: "Hero Banner 3" },
     // { src: '/images/home2.jpg', alt: 'Hero Banner 3' },
   ];
 
@@ -92,7 +92,7 @@ const Banner = () => {
                           className="banner-one__shape1 kidearn-splax"
                           style={{
                             backgroundImage:
-                              "url(/images/banner-1-shape-1.png)",
+                              "url(/images/banner-1-shape-1.webp)",
                           }}
                         ></div>
                       </div>
