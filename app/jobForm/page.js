@@ -1,7 +1,6 @@
-
 "use client";
-import React, { useState, useEffect } from "react";
-import Swal from "sweetalert2"; // Import SweetAlert2
+import React, { useState, useEffect, useRef } from "react"; // <-- added useRef
+import Swal from "sweetalert2";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
@@ -20,6 +19,9 @@ const JobApplicationPage = () => {
     title: "مركز وقت الطفل لضيافة الأطفال | Child Time Center for Children's Hospitality",
     description: "تمكين الأطفال ليصبحوا مواطنين منتجين في كافة نواحي الحياة. | Empowering children to become productive citizens in all aspects of life.",
   });
+
+  // Create a ref for the file input
+  const fileInputRef = useRef(null);
 
   useEffect(() => {
     const fetchMetadata = async () => {
@@ -81,7 +83,6 @@ const JobApplicationPage = () => {
 
     try {
       const response = await fetch("https://rawdhat.com/api/public/job", {
-        // const response = await fetch("http://localhost:5000/api/public/job", {
         method: "POST",
         body: formData,
       });
@@ -95,12 +96,18 @@ const JobApplicationPage = () => {
           text: "تم تقديم طلبك بنجاح. سنتصل بك قريباً.",
           confirmButtonText: "إغلاق",
         });
+
+        // Clear all form fields
         setFirstName("");
         setFatherName("");
         setFamilyName("");
         setEmail("");
         setJob("");
         setMessage("");
+        // Reset the file input value and state
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
+        }
         setCv(null);
       } else {
         Swal.fire({
@@ -278,7 +285,19 @@ const JobApplicationPage = () => {
                   </div>
                 </div>
 
-                <div className="relative"> <span className="absolute left-3 top-[29px] flex items-center justify-center text-gray-500 pointer-events-none"> <Upload size={18} strokeWidth={2} /> </span> <input type="file" className="block w-full mb-4 p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700" accept=".pdf,.docx" onChange={(e) => setCv(e.target.files[0])} required /> </div>
+                <div className="relative">
+                  <span className="absolute left-3 top-[29px] flex items-center justify-center text-gray-500 pointer-events-none">
+                    <Upload size={18} strokeWidth={2} />
+                  </span>
+                  <input
+                    ref={fileInputRef} // <-- added ref
+                    type="file"
+                    className="block w-full mb-4 p-3 rounded-lg bg-[#FAF5F2] border border-[#FAF5F2] text-gray-700"
+                    accept=".pdf,.docx"
+                    onChange={(e) => setCv(e.target.files[0])}
+                    required
+                  />
+                </div>
 
                 <div className="text-center">
                   <button
