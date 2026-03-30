@@ -245,15 +245,13 @@ li {
 
 .signup-container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;       /* ✅ can grow taller than viewport */
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* ✅ starts from top, margins now work */
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 40px 20px;      /* ✅ top/bottom breathing room */
   direction: ltr;
-  /* margin-top: 30px !important; */
 }
-
 .login-container {
   display: flex;
   height: 100vh;
@@ -299,9 +297,9 @@ li {
   padding: 30px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin-top: 85px !important;
+  margin-top: 30px;             /* ✅ no !important, reasonable value */
+  margin-bottom: 30px;          /* ✅ bottom margin too */
 }
-
 .signlogo {
   width: 40%;
   max-width: 150px;
