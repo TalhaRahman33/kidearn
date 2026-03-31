@@ -20,7 +20,7 @@ export default function Header() {
             left: 0,
             right: 0,
             width: '100%',
-            zIndex: 1000,
+            zIndex: 999,
             backgroundColor: '#fff',
             boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
         }}>
