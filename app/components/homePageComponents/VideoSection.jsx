@@ -30,19 +30,19 @@ const VideoSection = () => {
         className="video-one__bg-shape4 kidearn-splax"
         data-para-options='{"orientation": "right", "scale": 1.6, "delay": ".6", "transition": "cubic-bezier(0,0,0,1)", "overflow": true}'
       >
-        <ExportedImage src="/images/video-shape-4.webp" alt="kidearn" unoptimized={true} width={133} height={134} />
+        <ExportedImage src="/images/video-shape-4.png" alt="kidearn" unoptimized={true} width={133} height={134} />
       </div>
       <div
         className="video-one__bg-shape5 kidearn-splax"
         data-para-options='{"orientation": "left", "scale": 1.6, "delay": ".6", "transition": "cubic-bezier(0,0,0,1)", "overflow": true}'
       >
-        <ExportedImage src="/images/video-shape-5.webp" alt="kidearn" unoptimized={true} width={106} height={109} />
+        <ExportedImage src="/images/video-shape-5.png" alt="kidearn" unoptimized={true} width={106} height={109} />
       </div>
       <div
         className="video-one__bg-shape6 kidearn-splax"
         data-para-options='{"orientation": "right", "scale": 1.7, "delay": ".6", "transition": "cubic-bezier(0,0,0,1)", "overflow": true}'
       >
-        <ExportedImage src="/images/video-shape-6.webp" alt="kidearn" unoptimized={true} width={147} height={103} />
+        <ExportedImage src="/images/video-shape-6.png" alt="kidearn" unoptimized={true} width={147} height={103} />
       </div>
       <div
         className="video-one__bg-shape7 kidearn-splax"
