@@ -383,8 +383,8 @@ const PricingSection = () => {
                         <i className="bx bx-check-circle"></i> تنمية مهارات
                       </li>
                     </ul>
-                    <h3 className="pricing">٥٠٠ ر.س</h3>
-                    <h3 className="pricing-one__card__price">
+<h3 className="pricing">١٥٠٠ ر.س</h3>              
+      <h3 className="pricing-one__card__price">
                       <Link
                         href={{
                           pathname: "/register",
