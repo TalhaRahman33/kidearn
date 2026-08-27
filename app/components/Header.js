@@ -24,6 +24,44 @@ export default function Header() {
             backgroundColor: '#fff',
             boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
         }}>
+            <style jsx>{`
+                .headerButton-mobile {
+                    display: flex !important;
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                    white-space: nowrap !important;
+                    font-size: 12px !important;
+                    padding: 6px 10px !important;
+                    gap: 4px !important;
+                }
+                .header-actions-mobile-visible {
+                    display: flex !important;
+                    gap: 8px !important;
+                }
+                @media (max-width: 480px) {
+                    .headerButton-mobile {
+                        font-size: 11px !important;
+                        padding: 5px 8px !important;
+                    }
+                }
+                @media (max-width: 991px) {
+                    .navbar-desktop-only {
+                        display: none !important;
+                    }
+                    .header-actions-mobile-visible {
+                        align-items: center !important;
+                    }
+                    .headerButton-mobile {
+                        height: 36px !important;
+                        line-height: 1 !important;
+                        box-sizing: border-box !important;
+                    }
+                    .ToggleButton {
+                        display: flex !important;
+                        align-items: center !important;
+                    }
+                }
+            `}</style>
             <div className="header-inner"
                 style={{
                     display: 'flex',
@@ -50,7 +88,7 @@ export default function Header() {
                 </div>
 
                 <nav
-                    className="navbar"
+                    className="navbar navbar-desktop-only"
                     style={{
                         justifyContent: 'center',
                         alignItems: 'center',
@@ -75,16 +113,16 @@ export default function Header() {
                             padding: '0',
                         }}
                     >
-                        <li><Link href="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>الصفحة الرئيسية</Link></li>
-                        <li><Link href="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`}>من نحن</Link></li>
-                        <li><Link href="/pricing" className={`nav-link ${isActive('/pricing') ? 'active' : ''}`}>الأسعار</Link></li>
-                        <li><Link href="/event" className={`nav-link ${isActive('/event') ? 'active' : ''}`}>الفعاليات</Link></li>
-                        <li><Link href="/jobForm" className={`nav-link ${isActive('/jobForm') ? 'active' : ''}`}>التوظيف</Link></li>
-                        <li><Link href="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>اتصل بنا</Link></li>
+                        <li style={{ whiteSpace: 'nowrap' }}><Link href="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>الصفحة الرئيسية</Link></li>
+                        <li style={{ whiteSpace: 'nowrap' }}><Link href="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`}>من نحن</Link></li>
+                        <li style={{ whiteSpace: 'nowrap' }}><Link href="/pricing" className={`nav-link ${isActive('/pricing') ? 'active' : ''}`}>الأسعار</Link></li>
+                        <li style={{ whiteSpace: 'nowrap' }}><Link href="/event" className={`nav-link ${isActive('/event') ? 'active' : ''}`}>الفعاليات</Link></li>
+                        <li style={{ whiteSpace: 'nowrap' }}><Link href="/jobForm" className={`nav-link ${isActive('/jobForm') ? 'active' : ''}`}>التوظيف</Link></li>
+                        <li style={{ whiteSpace: 'nowrap' }}><Link href="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>اتصل بنا</Link></li>
                     </ul>
                 </nav>
 
-                <div className="header-actions"
+                <div className="header-actions header-actions-mobile-visible"
                     style={{
                         display: 'flex',
                         flexDirection: 'row',
@@ -93,19 +131,19 @@ export default function Header() {
                         alignItems: 'center',
                     }}
                 >
-                    <div className="ToggleButton"><OffcanvasNavbar /></div>
-                    <div className="headerButton">
+                    <div className="headerButton headerButton-mobile">
                         <Link href="/login">
                             <i className="bx bx-log-in-circle"></i>
                             تسجيل الدخول
                         </Link>
                     </div>
-                    <div className="headerButton">
+                    <div className="headerButton headerButton-mobile">
                         <Link href="/signup">
                             <i className="bx bx-user-plus"></i>
                             قم بالتسجيل الآن
                         </Link>
                     </div>
+                    <div className="ToggleButton"><OffcanvasNavbar /></div>
                 </div>
             </div>
         </header>

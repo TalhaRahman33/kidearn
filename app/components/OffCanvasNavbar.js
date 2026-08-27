@@ -159,46 +159,11 @@ export default function OffcanvasNavbar() {
               </Link>
             </div>
 
-            {/* Buttons */}
-            <div style={{ marginTop: "2rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
-              <a
-                href="/login"
-                onClick={(e) => { e.preventDefault(); go("/login"); }}
-                style={btnStyle}
-              >
-                <i className="bx bx-log-in-circle"></i>
-                تسجيل الدخول
-              </a>
-
-              <a
-                href="/signup"
-                onClick={(e) => { e.preventDefault(); go("/signup"); }}
-                style={btnStyle}
-              >
-                <i className="bx bx-user-plus"></i>
-                قم بالتسجيل الآن
-              </a>
-            </div>
-          </div>
+                      </div>
         </div>
       </div>
     </>
   );
 }
 
-const btnStyle = {
-  width: "130px",
-  backgroundColor: "#F25334",
-  color: "white",
-  fontSize: "14px",
-  fontWeight: "500",
-  padding: "7px 7px",
-  borderRadius: "12px",
-  height: "45px",
-  textAlign: "center",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "5px",
-  textDecoration: "none",
-};
+

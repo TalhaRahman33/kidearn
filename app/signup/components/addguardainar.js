@@ -131,10 +131,10 @@ const GlassSection = styled(Box)(() => ({
   background: "#fff",
   borderRadius: "16px",
   border: "1px solid #e0e0e0",
-  padding: "12px",
+  padding: "24px",
   position: "relative",
   transition: "all 0.3s ease",
-  marginBottom: "6px",
+  marginBottom: "24px",
   direction: "rtl",
   textAlign: "right",
 }));
@@ -178,7 +178,7 @@ const SubSectionContainer = ({ children, sx = {} }) => (
   <Box
     sx={{
       mb: 3,
-      p: 1,
+      p: 2.5,
       bgcolor: "#f8f9fa",
       borderRadius: 1.5,
       border: "1px solid #e0e0e0",
@@ -216,10 +216,32 @@ const rtlSelectSx = {
     whiteSpace: "nowrap",
     overflow: "hidden",
     textOverflow: "ellipsis",
+    textAlign: "right",
   },
   "& .MuiSelect-icon": {
     right: "auto !important",
     left: "7px !important",
+  },
+};
+
+const rtlMenuProps = {
+  disableScrollLock: true,
+  anchorOrigin: { vertical: "bottom", horizontal: "right" },
+  transformOrigin: { vertical: "top", horizontal: "right" },
+  PaperProps: {
+    sx: {
+      direction: "rtl",
+      "& .MuiList-root": {
+        direction: "rtl",
+      },
+      "& .MuiMenuItem-root": {
+        direction: "rtl !important",
+        justifyContent: "flex-end !important",
+        textAlign: "right !important",
+        width: "100% !important",
+        display: "block !important",
+      },
+    },
   },
 };
 
@@ -1209,8 +1231,8 @@ export default function AddGuardianPage({ centerId }) {
 
           <SubSectionContainer>
             <SubSectionHeader title="تفاصيل الحساب" />
-            <Grid container spacing={3}>
-              <Grid size={{ xs: 12, md: 6 }}>
+            <Grid container spacing={3} alignItems="flex-end">
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -1235,7 +1257,7 @@ export default function AddGuardianPage({ centerId }) {
                   InputProps={{ sx: { textAlign: "right" } }}
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <PhoneInput
                   name="accountPhoneNumber"
                   value={values.accountPhoneNumber}
@@ -1248,7 +1270,7 @@ export default function AddGuardianPage({ centerId }) {
                   label="رقم هاتف الحساب"
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -1271,9 +1293,9 @@ export default function AddGuardianPage({ centerId }) {
                     sx: { textAlign: "right", marginRight: 0 },
                   }}
                   InputProps={{
-                    sx: { textAlign: "right" },
+                    sx: { textAlign: "right", paddingLeft: "8px" },
                     endAdornment: (
-                      <InputAdornment position="end">
+                      <InputAdornment position="end" sx={{ ml: 0, mr: 1 }}>
                         <IconButton
                           aria-label={showPassword ? "إخفاء كلمة المرور" : "إظهار كلمة المرور"}
                           onClick={() => setShowPassword((visible) => !visible)}
@@ -1287,7 +1309,7 @@ export default function AddGuardianPage({ centerId }) {
                   }}
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -1310,9 +1332,9 @@ export default function AddGuardianPage({ centerId }) {
                     sx: { textAlign: "right", marginRight: 0 },
                   }}
                   InputProps={{
-                    sx: { textAlign: "right" },
+                    sx: { textAlign: "right", paddingLeft: "8px" },
                     endAdornment: (
-                      <InputAdornment position="end">
+                      <InputAdornment position="end" sx={{ ml: 0, mr: 1 }}>
                         <IconButton
                           aria-label={showConfirmPassword ? "إخفاء تأكيد كلمة المرور" : "إظهار تأكيد كلمة المرور"}
                           onClick={() => setShowConfirmPassword((visible) => !visible)}
@@ -1332,7 +1354,7 @@ export default function AddGuardianPage({ centerId }) {
           <SubSectionContainer>
             <SubSectionHeader title="المعلومات الشخصية" />
             <Grid container spacing={3}>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid item xs={12} md={6}>
               <FormControl
                 variant="standard"
                 fullWidth
@@ -1355,17 +1377,7 @@ export default function AddGuardianPage({ centerId }) {
                   label="العلاقة بالطفل *"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  MenuProps={{
-                    disableScrollLock: true,
-                    anchorOrigin: {
-                      vertical: "bottom",
-                      horizontal: "right",
-                    },
-                    transformOrigin: {
-                      vertical: "top",
-                      horizontal: "right",
-                    },
-                  }}
+                  MenuProps={rtlMenuProps}
                   sx={rtlSelectSx}
                   IconComponent={CustomSelectIcon}
                 >
@@ -1373,7 +1385,7 @@ export default function AddGuardianPage({ centerId }) {
                     <MenuItem
                       key={option.value}
                       value={option.value}
-                      sx={{ justifyContent: "flex-end" }}
+                      sx={{ justifyContent: "flex-end", textAlign: "right", width: "100%" }}
                     >
                       {option.label}
                     </MenuItem>
@@ -1390,7 +1402,7 @@ export default function AddGuardianPage({ centerId }) {
                   )}
               </FormControl>
             </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -1414,7 +1426,7 @@ export default function AddGuardianPage({ centerId }) {
                   InputProps={{ sx: { textAlign: "right" } }}
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <FormControl variant="standard" fullWidth error={err("gender")}>
                   <InputLabel
                     id="genderLabel"
@@ -1433,26 +1445,16 @@ export default function AddGuardianPage({ centerId }) {
                     label="الجنس *"
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    MenuProps={{
-                      disableScrollLock: true,
-                      anchorOrigin: {
-                        vertical: "bottom",
-                        horizontal: "right",
-                      },
-                      transformOrigin: {
-                        vertical: "top",
-                        horizontal: "right",
-                      },
-                    }}
+                    MenuProps={rtlMenuProps}
                     sx={rtlSelectSx}
                     IconComponent={CustomSelectIcon}
                   >
-                    <MenuItem value="Male" sx={{ justifyContent: "flex-end" }}>
+                    <MenuItem value="Male" sx={{ justifyContent: "flex-end", textAlign: "right", width: "100%" }}>
                       ذكر
                     </MenuItem>
                     <MenuItem
                       value="Female"
-                      sx={{ justifyContent: "flex-end" }}
+                      sx={{ justifyContent: "flex-end", textAlign: "right", width: "100%" }}
                     >
                       أنثى
                     </MenuItem>
@@ -1468,7 +1470,7 @@ export default function AddGuardianPage({ centerId }) {
                   )}
                 </FormControl>
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -1486,10 +1488,15 @@ export default function AddGuardianPage({ centerId }) {
                       transformOrigin: "top right",
                     },
                   }}
-                  InputProps={{ sx: { textAlign: "right" } }}
+                  InputProps={{
+                    sx: {
+                      textAlign: "right",
+                      "& input": { direction: "ltr", textAlign: "right" },
+                    },
+                  }}
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <FormControl
                   variant="standard"
                   fullWidth
@@ -1512,17 +1519,7 @@ export default function AddGuardianPage({ centerId }) {
                     label="الجنسية *"
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    MenuProps={{
-                      disableScrollLock: true,
-                      anchorOrigin: {
-                        vertical: "bottom",
-                        horizontal: "right",
-                      },
-                      transformOrigin: {
-                        vertical: "top",
-                        horizontal: "right",
-                      },
-                    }}
+                    MenuProps={rtlMenuProps}
                     sx={rtlSelectSx}
                     IconComponent={CustomSelectIcon}
                   >
@@ -1530,7 +1527,7 @@ export default function AddGuardianPage({ centerId }) {
                       <MenuItem
                         key={o}
                         value={o}
-                        sx={{ justifyContent: "flex-end" }}
+                        sx={{ justifyContent: "flex-end", textAlign: "right", width: "100%" }}
                       >
                         {o}
                       </MenuItem>
@@ -1547,7 +1544,7 @@ export default function AddGuardianPage({ centerId }) {
                   )}
                 </FormControl>
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <FormControl
                   variant="standard"
                   fullWidth
@@ -1570,17 +1567,7 @@ export default function AddGuardianPage({ centerId }) {
                     label="نوع الهوية *"
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    MenuProps={{
-                      disableScrollLock: true,
-                      anchorOrigin: {
-                        vertical: "bottom",
-                        horizontal: "right",
-                      },
-                      transformOrigin: {
-                        vertical: "top",
-                        horizontal: "right",
-                      },
-                    }}
+                    MenuProps={rtlMenuProps}
                     sx={rtlSelectSx}
                     IconComponent={CustomSelectIcon}
                   >
@@ -1588,7 +1575,7 @@ export default function AddGuardianPage({ centerId }) {
                       <MenuItem
                         key={o}
                         value={o}
-                        sx={{ justifyContent: "flex-end" }}
+                        sx={{ justifyContent: "flex-end", textAlign: "right", width: "100%" }}
                       >
                         {o}
                       </MenuItem>
@@ -1605,7 +1592,7 @@ export default function AddGuardianPage({ centerId }) {
                   )}
                 </FormControl>
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -1635,7 +1622,7 @@ export default function AddGuardianPage({ centerId }) {
           <SubSectionContainer>
             <SubSectionHeader title="عنوان السكن الشخصي" />
             <Grid container spacing={3}>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -1657,7 +1644,7 @@ export default function AddGuardianPage({ centerId }) {
                   InputProps={{ sx: { textAlign: "right" } }}
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -1681,7 +1668,7 @@ export default function AddGuardianPage({ centerId }) {
                   InputProps={{ sx: { textAlign: "right" } }}
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <FormControl variant="standard" fullWidth error={err("city")}>
                   <InputLabel
                     id="cityLabel"
@@ -1703,17 +1690,7 @@ export default function AddGuardianPage({ centerId }) {
                       if (!e.target.value) setFieldValue("district", "");
                     }}
                     onBlur={handleBlur}
-                    MenuProps={{
-                      disableScrollLock: true,
-                      anchorOrigin: {
-                        vertical: "bottom",
-                        horizontal: "right",
-                      },
-                      transformOrigin: {
-                        vertical: "top",
-                        horizontal: "right",
-                      },
-                    }}
+                    MenuProps={rtlMenuProps}
                     sx={rtlSelectSx}
                     IconComponent={CustomSelectIcon}
                   >
@@ -1721,7 +1698,7 @@ export default function AddGuardianPage({ centerId }) {
                       <MenuItem
                         key={c}
                         value={c}
-                        sx={{ justifyContent: "flex-end" }}
+                        sx={{ justifyContent: "flex-end", textAlign: "right", width: "100%" }}
                       >
                         {c}
                       </MenuItem>
@@ -1738,7 +1715,7 @@ export default function AddGuardianPage({ centerId }) {
                   )}
                 </FormControl>
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <Autocomplete
                   freeSolo
                   options={districtOptions}
@@ -1827,6 +1804,7 @@ export default function AddGuardianPage({ centerId }) {
                       sx: {
                         "& .MuiAutocomplete-option": {
                           justifyContent: "flex-end",
+                          textAlign: "right",
                         },
                       },
                     },
@@ -1838,8 +1816,8 @@ export default function AddGuardianPage({ centerId }) {
 
           <SubSectionContainer sx={{ mb: 0 }}>
             <SubSectionHeader title="تفاصيل مكان العمل" />
-            <Grid container spacing={3}>
-              <Grid size={{ xs: 12, md: 6 }}>
+            <Grid container spacing={3} alignItems="flex-end">
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -1858,7 +1836,7 @@ export default function AddGuardianPage({ centerId }) {
                   InputProps={{ sx: { textAlign: "right" } }}
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -1877,7 +1855,7 @@ export default function AddGuardianPage({ centerId }) {
                   InputProps={{ sx: { textAlign: "right" } }}
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <PhoneInput
                   name="officePhoneNo"
                   value={values.officePhoneNo}
@@ -1890,7 +1868,7 @@ export default function AddGuardianPage({ centerId }) {
                   label="رقم هاتف المكتب"
                 />
               </Grid>
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid item xs={12} md={6}>
                 <TextField
                   variant="standard"
                   fullWidth
@@ -2012,7 +1990,7 @@ export default function AddGuardianPage({ centerId }) {
                     err("contact1") ||
                     err("contactPerson1"));
                 return (
-                  <Grid size={{ xs: 12, md: 4 }} key={num}>
+                  <Grid item xs={12} md={4} key={num}>
                     <Card
                       sx={{
                         p: 2,
@@ -2088,7 +2066,7 @@ export default function AddGuardianPage({ centerId }) {
                             <MenuItem
                               key={r}
                               value={r}
-                              sx={{ justifyContent: "flex-end" }}
+                              sx={{ justifyContent: "flex-end", textAlign: "right", width: "100%" }}
                             >
                               {r}
                             </MenuItem>
@@ -2174,7 +2152,7 @@ export default function AddGuardianPage({ centerId }) {
           sx={{ p: { xs: 2, md: 2 }, mb: 0 }}
         >
           <Grid container spacing={{ xs: 1, md: 2 }}>
-            <Grid size={{ xs: 12 }}>
+            <Grid item xs={12}>
               <SubSectionContainer sx={{ mb: 0 }}>
                 <SubSectionHeader title="الموافقة على الخصوصية" />
                 <FormControlLabel
