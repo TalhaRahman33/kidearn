@@ -18,13 +18,10 @@ import {
 import { CheckCircle } from "@mui/icons-material";
 import Swal from "sweetalert2";
 import Link from "next/link";
+import AddGuardianPage from "./components/addguardainar";
 
-import Step1Personal from "./components/Step1Personal";
-import Step2Contact from "./components/Step2Contact";
-import Step3Address from "./components/Step3Address";
-import Step4Review from "./components/Step4Review";
 
-const CENTER_ID = 56; // Replace with your actual center ID
+const CENTER_ID = 56;
 
 const steps = [
   "المعلومات الشخصية",
@@ -131,7 +128,7 @@ const showMissingFieldsSwal = (missingFields) => {
       <div style="text-align: right; direction: rtl;">
         <div style="text-align: center; margin-bottom: 20px;">
           <div style="display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 50%; background-color: #FFEAA7; border: 3px solid #FDCB6E; margin-bottom: 15px;">
-            <span style="font-size: 28px; font-weight: bold; color: #E17055;">!</span>
+            <span style="font-size: 28px; font-weight: bold; color: #126c94;">!</span>
           </div>
         </div>
         <p style="font-size: 16px; margin-bottom: 15px;"><strong>يرجى ملء جميع الحقول المطلوبة قبل المتابعة:</strong></p>
@@ -139,7 +136,7 @@ const showMissingFieldsSwal = (missingFields) => {
           ${missingFields.map(f => `<li style="margin-bottom: 5px;">${FIELD_LABELS[f] || f}</li>`).join("")}
         </ul>
       </div>`,
-    confirmButtonColor: "#00AFEF",
+    confirmButtonColor: "#126c94",
     confirmButtonText: "حسناً",
     width: 500,
   });
@@ -150,7 +147,7 @@ const showValidationErrorsSwal = (stepErrors, errors) => {
     title: "تحقق من البيانات",
     html: `<div style="text-align: right; direction: rtl;"><ul>${stepErrors.map(f => `<li>${FIELD_LABELS[f] || f}: ${errors[f]}</li>`).join("")}</ul></div>`,
     icon: "error",
-    confirmButtonColor: "#FF5722",
+    confirmButtonColor: "#126c94",
     confirmButtonText: "حسناً",
     width: 500,
   });
@@ -186,8 +183,9 @@ const GuardianForm = () => {
 
           Swal.fire({
             title: "تم التسجيل بنجاح!",
-            html: `<div style="text-align: center;"><div style="font-size: 60px; color: #4CAF50;">✓</div><p>تم تسجيل وليّ الأمر بنجاح!</p><p>سيتم تحويلك إلى صفحة تسجيل الدخول...</p></div>`,
+            html: `<div style="text-align: center;"><div style="font-size: 60px; color: #126c94;">✓</div><p>تم تسجيل وليّ الأمر بنجاح!</p><p>سيتم تحويلك إلى صفحة تسجيل الدخول...</p></div>`,
             icon: "success",
+            confirmButtonColor: "#126c94",
             confirmButtonText: "الانتقال إلى تسجيل الدخول",
           }).then(() => {
             window.location.href = "/login";
@@ -235,121 +233,49 @@ const GuardianForm = () => {
   }, [activeStep]);
 
   return (
-  <Container maxWidth="lg" sx={{ py: 4 }}>
-  <Paper
-    elevation={0}
-    sx={{
-      borderRadius: 3,
-      overflow: "hidden",
-      border: "1px solid",
-      borderColor: "divider",
-      background: "linear-gradient(to bottom, #ffffff 0%, #fafafa 100%)",
-    }}
-  >
-    {/* Header */}
-    <Box
-      sx={{
-        background: "linear-gradient(135deg, #126c94 0%, #126c94 100%)",
-        color: "white",
-        p: 4,
-        textAlign: "center",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      <Box sx={{ position: "relative", zIndex: 1 }}>
-        <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
-          <Box
-            component="img"
-            src="/images/logo-dark.png"
-            alt="شعار المركز"
-            sx={{ width: 200, height: 120, objectFit: "contain", filter: "brightness(0) invert(1)" }}
-          />
-        </Box>
-        <Typography variant="h3" sx={{ fontWeight: 700,color:"white", fontSize: { xs: "2rem", md: "2.5rem" } }}>
-          تسجيل وليّ الأمر
-        </Typography>
-        <Typography variant="subtitle1" sx={{ opacity: 0.9,color:"white", mt: 1, fontSize: { xs: "1rem", md: "1.2rem" } }}>
-          يرجى تعبئة النموذج أدناه للتسجيل كوليّ أمر. جميع الحقول المعلّمة بعلامة * مطلوبة.
-        </Typography>
-      </Box>
-    </Box>
+    <Container maxWidth="lg" sx={{ py: 4 }}>
+      <Paper
+        elevation={0}
+        sx={{
+          borderRadius: 3,
+          overflow: "hidden",
+          border: "1px solid",
+          borderColor: "divider",
+          background: "linear-gradient(to bottom, #ffffff 0%, #fafafa 100%)",
+        }}
+      >
+         {/* Header */}
+           <Box
+             sx={{
+               background: "linear-gradient(135deg, #126c94 0%, #126c94 100%)",
+               color: "white",
+               p: 4,
+               textAlign: "center",
+               position: "relative",
+               overflow: "hidden",
+             }}
+           >
+             <Box sx={{ position: "relative", zIndex: 1 }}>
+               <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+                 <Box
+                   component="img"
+                   src="/images/logo-dark.png"
+                   alt="شعار المركز"
+                   sx={{ width: 200, height: 120, objectFit: "contain", filter: "brightness(0) invert(1)" }}
+                 />
+               </Box>
+               <Typography variant="h3" sx={{ fontWeight: 700,color:"white", fontSize: { xs: "2rem", md: "2.5rem" } }}>
+                 تسجيل وليّ الأمر
+               </Typography>
+               <Typography variant="subtitle1" sx={{ opacity: 0.9,color:"white", mt: 1, fontSize: { xs: "1rem", md: "1.2rem" } }}>
+                 يرجى تعبئة النموذج أدناه للتسجيل كوليّ أمر. جميع الحقول المعلّمة بعلامة * مطلوبة.
+               </Typography>
+             </Box>
+           </Box>
 
-    {/* Stepper – updated colors */}
-    <Box sx={{ px: 4, pt: 3 }} dir="ltr">
-      <Stepper activeStep={activeStep} alternativeLabel>
-        {steps.map(label => (
-          <Step key={label}>
-            <StepLabel StepIconProps={{ sx: { "&.Mui-completed": { color: "#a8cf45" }, "&.Mui-active": { color: "#f25334" } } }}>
-              <Typography variant="caption" sx={{ fontWeight: 600 }}>{label}</Typography>
-            </StepLabel>
-          </Step>
-        ))}
-      </Stepper>
-    </Box>
-
-    {/* Form Body */}
-    <Box sx={{ p: 4 }}>
-      {success && (
-        <Alert severity="success" sx={{ mb: 3, borderRadius: 2, bgcolor: "#f0f9e8", border: "1px solid #a8cf45" }} icon={<CheckCircle />}>
-          تم تسجيل وليّ الأمر بنجاح! تم إرسال رسالة ترحيب عبر البريد الإلكتروني وواتساب.
-        </Alert>
-      )}
-      {error && (
-        <Alert severity="error" sx={{ mb: 3, borderRadius: 2, border: "1px solid #FFCDD2" }}>
-          {error}
-        </Alert>
-      )}
-
-      <form onSubmit={formik.handleSubmit}>
-        {/* Force full remount on step change with unique key */}
-        <div key={`step-${activeStep}`}>
-          {activeStep === 0 && <Step1Personal formik={formik} />}
-          {activeStep === 1 && <Step2Contact formik={formik} />}
-          {activeStep === 2 && <Step3Address formik={formik} />}
-          {activeStep === 3 && <Step4Review formik={formik} />}
-        </div>
-
-        {/* Navigation Buttons – updated brand colors */}
-        <Box sx={{ display: "flex", justifyContent: "space-between", mt: 4, flexDirection: { xs: "column", sm: "row" }, gap: { xs: 2, sm: 0 } }}>
-          {activeStep > 0 && (
-            <Button
-              onClick={handleBack}
-              sx={{ minWidth: { xs: "100%", sm: 120 }, fontWeight: 600, color: "#126c94", border: "2px solid #126c94", "&:hover": { backgroundColor: "rgba(18, 108, 148, 0.08)" } }}
-            >
-              رجوع
-            </Button>
-          )}
-          {activeStep < steps.length - 1 ? (
-            <Button
-              variant="contained"
-              onClick={handleNext}
-              sx={{ minWidth: { xs: "100%", sm: 120 }, fontWeight: 600, background: "linear-gradient(135deg, #f25334 0%, #d94426 100%)" }}
-            >
-              التالي
-            </Button>
-          ) : (
-            <Button
-              type="submit"
-              variant="contained"
-              disabled={loading}
-              sx={{ minWidth: { xs: "100%", sm: 180 }, fontWeight: 600, background: "linear-gradient(135deg, #f25334 0%, #d94426 100%)" }}
-            >
-              {loading ? <CircularProgress size={20} sx={{ mr: 1 }} /> : "إكمال التسجيل"}
-            </Button>
-          )}
-        </Box>
-      </form>
-    </Box>
-
-    <p style={{ textAlign: "center", margin: "20px auto", fontSize: "16px" }}>
-      هل لديك حساب بالفعل؟{" "}
-      <Link href="/login" style={{ color: "#126c94", fontWeight: 600, textDecoration: "none" }}>
-        سجّل الدخول
-      </Link>
-    </p>
-  </Paper>
-</Container>
+        <AddGuardianPage centerId={CENTER_ID} />
+      </Paper>
+    </Container>
   );
 };
 
