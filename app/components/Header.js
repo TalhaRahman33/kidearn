@@ -25,14 +25,24 @@ export default function Header() {
             boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
         }}>
             <style jsx>{`
+                .Header-NavContainer .nav-link {
+                    font-weight: 700 !important;
+                }
                 .headerButton-mobile {
                     display: flex !important;
                     visibility: visible !important;
                     opacity: 1 !important;
                     white-space: nowrap !important;
                     font-size: 12px !important;
+                    font-weight: 800 !important;
+                    letter-spacing: 0.1px !important;
                     padding: 6px 10px !important;
                     gap: 4px !important;
+                }
+                .headerButton-mobile a {
+                    font-weight: 800 !important;
+                    -webkit-text-stroke: 0.3px currentColor;
+                    text-stroke: 0.3px currentColor;
                 }
                 .header-actions-mobile-visible {
                     display: flex !important;
@@ -40,8 +50,13 @@ export default function Header() {
                 }
                 @media (max-width: 480px) {
                     .headerButton-mobile {
-                        font-size: 11px !important;
-                        padding: 5px 8px !important;
+                        font-size: 10.5px !important;
+                        font-weight: 700 !important;
+                        padding: 4px 7px !important;
+                        border-radius: 6px !important;
+                    }
+                    .headerButton-mobile i {
+                        font-size: 13px !important;
                     }
                 }
                 @media (max-width: 991px) {
@@ -50,11 +65,18 @@ export default function Header() {
                     }
                     .header-actions-mobile-visible {
                         align-items: center !important;
+                        gap: 3px !important;
                     }
                     .headerButton-mobile {
-                        height: 36px !important;
+                        height: 30px !important;
                         line-height: 1 !important;
                         box-sizing: border-box !important;
+                        font-weight: 700 !important;
+                    }
+                    .headerButton-mobile a {
+                        display: flex !important;
+                        align-items: center !important;
+                        gap: 3px !important;
                     }
                     .ToggleButton {
                         display: flex !important;
